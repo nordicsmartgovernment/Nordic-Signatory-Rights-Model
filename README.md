@@ -1,5 +1,7 @@
 # Nordic-Signatory-Rights-Model
 
+# Note that this page is under construction !!
+
 Information about signatory rights is mainly registered in two different ways in various nations' business registers.
 
 1)	General provisions about signatory rights are registered either as free-text string or as textual code values, that specify terms for who can representent a legal entity. This is often only available in the national language. 
