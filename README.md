@@ -1,0 +1,1 @@
+# Nordic-Signatory-Rights-Model
