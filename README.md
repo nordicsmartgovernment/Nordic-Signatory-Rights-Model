@@ -44,9 +44,6 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
             Geopraphic Name: Literal
         }
 
-        class Post {
-
-        }
 
         class Agent {
             Name : String
