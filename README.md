@@ -2,6 +2,7 @@
 
 # Note that this page is under construction !!
 
+## Below text is going to be rewritten !! 
 Information about signatory rights is mainly registered in two different ways in various nations' business registers.
 
 1)	General provisions about signatory rights are registered either as free-text string or as textual code values, that specify terms for who can representent a legal entity. This is often only available in the national language. 
@@ -138,7 +139,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Association**          | Has Representation Rule |
 |---------------------|---------|
 | **English name**    | Has Representation Rule |
-| **Description**     | A reference to the representation rule for the mandate.<br>A rule that describes who or which agents a mandate is granted to                                                         |
+| **Description**     | A reference to the representation rule for the signatory rights.<br>A rule that describes who or which agents sigantory rights is granted to                                                         |
 | **URI**             | https://iri.suomi.fi/model/nsig/hasRepresentationRule |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 1..* |
@@ -154,118 +155,63 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Requirement Level** | Optional |
 | **Note** | The property hasMandator has an or-relationship with the property grantsMandate.<br>At least one of the properties must occur. |
 
+## Class Scope 
 
-## Legal entity
+| **Class**          | Scope |
+|---------------------|---------|
+| **English name**    | Scope |
+| **Description**     | A class to define what powers the Mandator grants to the Mandatee through the Mandate (in this case signatory rights). |
+| **URI**             | https://iri.suomi.fi/model/nsig/scope |
+| **Requirement Level** | Mandatory |
 
-A self-employed person, company, or organization that has legal rights and obligations.
+## Class Legal entity
 
-Class reused from [Core business vocabulary](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#Agent).
+| **Class**          | Legal Entity |
+|---------------------|---------|
+| **English name**    | Legal Entity |
+| **Description**     | A formal organization that is involved in economic activity. |
+| **URI**             | https://iri.suomi.fi/model/nsig/legalEntity |
+| **Requirement Level** | Mandatory |
 
-### Properties
+## Class Representation Rule
 
-**signatoryRights**: Relation from Legal Entity to Signatory Rights
+| **Class**          | Representation Rule |
+|---------------------|---------|
+| **English name**    | Representation Rule |
+| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
+| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **Requirement Level** | Mandatory |
 
-Note: Also other relevant properties from the Legal Entity.
+## Class Representation Rule
 
-## Signatory rights
+| **Class**          | Representation Rule |
+|---------------------|---------|
+| **English name**    | Representation Rule |
+| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
+| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **Requirement Level** | Mandatory |
 
-Signatory rights describe criterion for one or more mandates that gives power to an agent to represent a legal entity. Signatory rights can be defined as free text or structured as machine readable signatory rules.
 
-Subclass of [Criterion](https://semiceu.github.io/CCCEV/releases/2.00/#Criterion).
+## Class Representation Rule
 
-### Properties
+| **Class**          | Representation Rule |
+|---------------------|---------|
+| **English name**    | Representation Rule |
+| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
+| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **Requirement Level** | Mandatory |
 
-**description**: Free text description for the Signatory rights
 
-**signatoryRule**: Relation to structured signatory rule. Each referenced rule can give an agent or group of agents the signatory power (interpreted as OR clause).
+## Class Representation Rule
 
-## Signatory rule
+| **Class**          | Representation Rule |
+|---------------------|---------|
+| **English name**    | Representation Rule |
+| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
+| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **Requirement Level** | Mandatory |
 
-Structured constraint for one mandate that dictates the combination of posts, roles and agents to whom the power to represent a legal entity is granted. Rules can be used to structure signatory rights that can be granted alone to an individual agent or jointly for group of agents. The rule is interpreted jointly if it points to multiple posts using restriction properties.
-
-Subclass of [Constraint](https://semiceu.github.io/CCCEV/releases/2.00/#Constraint).
-
-Typically signatory rights have been described as freeform text which can be structured using following restrictions:
-
-* Alone
-* Jointly
-  * All of
-  * Majority of
-  * One of
-  * Two of
-  * Three of
-  * Four of
-  * Five of
-
-The model defines these restrictions as properties to be used by the Signatory Rules to constraint number of agents needed from Posts to have a signatory power to a Legal Entity.
-
-*Notes:*
-
-*The instance of signatory rule is interpreted jointly (AND clause) if it points to many Posts using multiple restriction properties.*
-
-### Properties
-
-* **constraint** (abstract) defines constraint for a spesific post
-
-  * **alone** requires exactly one of the agents holding a post to sign.
-
-  * **jointly** (abstract) requires the agents holding a post to sign jointly according to the rules
-  
-    * **allOf** requires all of the agents holding a post to sign.
-
-    * **majorityOf** requires majority of agents holding a post to sign.
-
-    * **numberOf** (abstract) requires defined number of agents holding a post to sign from a larger group of agents.
-      * **oneOf**
-      * **twoOf**
-      * **threeOf**
-      * **fourOf**
-      * **fiveOf**
-
-*Notes on constraints:*
-
-1. *The Alone constraint should always require exactly one Post (0..1) and should not be combined with other restriction properties within one signatory rule. In case of defining jointly restriction with singular requirement one should list of oneOf restriction instead. See [example](https://github.com/nordicsmartgovernment/Nordic-Smart-Government-Datamodel-Examples/blob/main/Examples/NO-signatory-rights-example.json)*
-
-2. *The need for numeric constraint was only up to 5 in all of Nordic countries. If requirement arises to model arbitrary numeric constraints this could be done using qualified relations, for example numberOf property and a blank node (or custom class) using rdf:value instead of creating explicit properties.*
-
-## Post
-
-A Post represents some position within an organization that exists independently of the agent or agents filling it. A post can be held by multiple persons or legal entities. 
-
-There can be multiple Posts using the same Role for different responsibilities and signatory rights. For example if Signatory right is given to external personnel, one agent may have signatory rights alone and other agents with the same role can have signatory rights jointly.
-
-The Post concept is reused from the [W3C Organization ontology](https://www.w3.org/TR/vocab-org/#class-post).
-
-### Properties
-
-**role** Points to a role for the Post
-
-**heldBy** Points to agents holding the Post
-
-Note: Could have identifier and description if needed
-
-## Agent
-
-Entity that is able to carry out actions.
-
-Class reused from FOAF / [Core business vocabulary](https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#Agent).
-
-### Properties
-
-All properties required to define the agent
-
-## Role
-
-Denotes a role that a Person or other Agent can take in an organization. 
-
-Class reused from [W3C Organization ontology](https://www.w3.org/TR/vocab-org/#class-role).
-
-### Properties
-
-**preferredLabel** Label for the role
-**notation** Identifier for the code in text form
-**inScheme** Reference to the classification
 
  # Examples
 
-See [Examples](https://github.com/nordicsmartgovernment/Nordic-Smart-Government-Datamodel-Examples/tree/main/Examples) folder for JSON and JSON-LD examples. OpenAPI examples can also be seen in the [NSG&B API documentation](https://nordicsmartgovernment.github.io/Nordic-Smart-Government-OpenAPI-Specifications/v2.html#tag/nordicinformation/operation/signatoryRights).
+We need a bunch of examples!
