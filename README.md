@@ -34,8 +34,46 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **English name**    | Date of Issue |
 | **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
-| **URI**             | [(https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue<br>https://iri.suomi.fi/model/ncbv/dateOfIssue)] |
+| **URI**             | (https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue<br>https://iri.suomi.fi/model/ncbv/dateOfIssue) |
 | **Range** | xsd:date |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Property**          | Delegable |
+|---------------------|---------|
+| **English name**    | Delegable |
+| **Description**     | Information about if the powers given by the mandate are transferable or not. |
+| **URI**             | (https://iri.suomi.fi/model/ncbv/0.0.3/delegable) |
+| **Range** | xsd:boolean |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Property**          | Date of issue |
+|---------------------|---------|
+| **English name**    | Date of Issue |
+| **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
+| **URI**             | (https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue<br>https://iri.suomi.fi/model/ncbv/dateOfIssue) |
+| **Range** | xsd:date |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Property**          | Identifier |
+|---------------------|---------|
+| **English name**    | Identifier |
+| **Description**     | Unique identifier for the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/identifierAt |
+| **Range** | xsd:string |
+| **Multiplicity** | 1..1 |
+| **Requirement Level** | Mandatory |
+
+| **Property**          | Modified |
+|---------------------|---------|
+| **English name**    | Modified |
+| **Description**     | The date of the last update of the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/modified |
+| **Range** | xsd:date |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
 
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
