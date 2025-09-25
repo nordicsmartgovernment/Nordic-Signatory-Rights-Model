@@ -34,9 +34,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **English name**    | Date of Issue |
 | **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
-| **URI**             | [[(https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue
-https://iri.suomi.fi/model/ncbv/dateOfIssue)](https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue
-https://iri.suomi.fi/model/ncbv/dateOfIssue) |
+| **URI**             | [(https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue
+https://iri.suomi.fi/model/ncbv/dateOfIssue)] |
 | **Range** | xsd:date |
 
 ```mermaid
