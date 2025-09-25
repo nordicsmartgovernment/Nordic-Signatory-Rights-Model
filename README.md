@@ -54,6 +54,13 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
         Representation Rule --> "0..*" Membership Based Representation Rule : has membership based representation rule
 
+        class Role Based Representation Rule {
+           Role like "Board member"
+        }
+
+        class Membership Based epresentation Rule {
+        }
+
         class Composite Representation Rule {
         }
 
