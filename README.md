@@ -34,9 +34,13 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         Signatory Rights --> "0..*" Representation Rule : has representation rule
         Signatory Rights --> "0..*" Scope : has scope
 
-
         class Agent {
-            Name : String
+        }
+
+        class Representation Rule {
+        }
+
+        class Scope {
         }
 
 ```
