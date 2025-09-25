@@ -78,20 +78,21 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Status |
 |---------------------|---------|
 | **English name**    | Status |
-| **Description**     | This property is used to specify the status of the mandate in the context of maturity lifecycle. Example: Completed, Withdrawn, Deprecated, Under development. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/modified |
-| **Range** | xsd:date |
+| **Description**     | This property is used to specify the status of the mandate in the context of maturity lifecycle.<br>Example: Completed, Withdrawn, Deprecated, Under development. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/status |
+| **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
-| **Requirement Level** | Recommended |
+| **Requirement Level** | Optional |
+| **Note** | The value MUST be selected from the EU's controlled vocabulary Distribution status https://publications.europa.eu/resource/authority/distribution-status|
 
 ### Mandate associations
 
-| **Association**          | Modified |
+| **Association**          | Geographical Scope |
 |---------------------|---------|
-| **English name**    | Modified |
-| **Description**     | The date of the last update of the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/modified |
-| **Range** | xsd:date |
+| **English name**    | Geographical Scope |
+| **Description**     | The association geographical scope points at a location; this describes the geographic region the mandate is valid in. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/geographicalScope |
+| **Range** | ncbv:Location |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
