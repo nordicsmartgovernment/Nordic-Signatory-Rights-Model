@@ -46,6 +46,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         }
 
         class Representation Rule {
+           A rule that describes who or which
+           agents a mandate is granted to.
         }
 
         Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
@@ -72,34 +74,16 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ```
 
-## Class Mandate 
+## Class Signatory Rights 
 
-| **Class**          | Mandate |
+| **Class**          | Signatory Rights |
 |---------------------|---------|
-| **English name**    | Mandate |
+| **English name**    | Signatory Rights |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
 | **URI**             | [https://iri.suomi.fi/model/ncbv/0.0.3/Mandate](https://iri.suomi.fi/model/ncbv/0.0.3/Mandate)<br>[https://iri.suomi.fi/model/ncbv/Mandate](https://iri.suomi.fi/model/ncbv/Mandate)<br>[https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3](https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3) |
 | **Requirement Level** | Mandatory |
 
-### Mandate attributes
-
-| **Attribute**          | Date of issue |
-|---------------------|---------|
-| **English name**    | Date of Issue |
-| **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
-| **URI**             | (https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue<br>https://iri.suomi.fi/model/ncbv/dateOfIssue) |
-| **Range** | xsd:date |
-| **Multiplicity** | 0..1 |
-| **Requirement Level** | Recommended |
-
-| **Attribute**          | Delegable |
-|---------------------|---------|
-| **English name**    | Delegable |
-| **Description**     | Information about if the powers given by the mandate are transferable or not. |
-| **URI**             | (https://iri.suomi.fi/model/ncbv/0.0.3/delegable) |
-| **Range** | xsd:boolean |
-| **Multiplicity** | 0..1 |
-| **Requirement Level** | Recommended |
+### Signatory Rights attributes
 
 | **Attribute**          | Date of issue |
 |---------------------|---------|
