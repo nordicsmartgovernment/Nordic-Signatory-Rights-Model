@@ -178,37 +178,37 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Class**          | Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
+| **Description**     | Rule that defines which agent(s) can act on behalf of another agent due to the fact that they have signatory power |
 | **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
 | **Requirement Level** | Mandatory |
 
-## Class Representation Rule
+## Role Based Class Representation Rule
 
-| **Class**          | Representation Rule |
+| **Class**          | Role Based Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
-| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **Description**     | A role based representation rule indicates which agent(s) have a role that give them signatory power and the power to represent another agent. |
+| **URI**             | https://iri.suomi.fi/model/nsig/roleBasedRepresentationRule |
 | **Requirement Level** | Mandatory |
 
 
-## Class Representation Rule
+## Class Membership Based Representation Rule
 
-| **Class**          | Representation Rule |
+| **Class**          | Membership Based Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
-| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **Description**     | A membership based representation rule indicates which agent(s) have a membership that give them signatory power and the power to represent another agent. |
+| **URI**             | https://iri.suomi.fi/model/nsig/membershipBasedRepresentationRule |
 | **Requirement Level** | Mandatory |
 
 
-## Class Representation Rule
+## Class Composite Representation Rule
 
-| **Class**          | Representation Rule |
+| **Class**          | Composite Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | Rule that defines which agent(s) can act on behalf of another agent |
-| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **Description**     | A composite representation rule needs to be broken down into two or more representation rules. An example: the composite rule "CEO alone or two board members jointly" is broken down into the representation rule "CEO alone" and the rule "two board members jointly" |
+| **URI**             | https://iri.suomi.fi/model/nsig/compositeRepresentationRule |
 | **Requirement Level** | Mandatory |
 
 
