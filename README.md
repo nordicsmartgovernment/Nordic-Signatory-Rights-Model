@@ -38,6 +38,10 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
            The legal entity that grants the signatory rights
         }
 
+        class Scope {
+           Not needed when we renamed mandate, it is always "Signatory rights"?
+        }
+
         class Representation Rule {
         }
 
