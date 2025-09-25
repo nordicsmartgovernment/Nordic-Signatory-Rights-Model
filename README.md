@@ -31,10 +31,11 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
             Status : String
         }
 
-        Mandate --> "0..*" SignatoryRights : signatoryRights
+        Mandate --> "0..*" Location : has geographical coverage
 
-        class SignatoryRights {
-            Description : String
+        class Location {
+            Geographic Identifier : Literal
+            Geopraphic Name: Literal
         }
 
         SignatoryRights --> "0..*" SignatoryRule : signatoryRule
