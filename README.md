@@ -21,7 +21,6 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ## Class Mandate 
 
-|---------------------|---------|
 | **English name**    | Mandate |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
 | **URI**             | [https://iri.suomi.fi/model/ncbv/0.0.3/Mandate](https://iri.suomi.fi/model/ncbv/0.0.3/Mandate)<br>[https://iri.suomi.fi/model/ncbv/Mandate](https://iri.suomi.fi/model/ncbv/Mandate)<br>[https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3](https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3) |
