@@ -28,9 +28,9 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **URI**             | [https://iri.suomi.fi/model/ncbv/0.0.3/Mandate](https://iri.suomi.fi/model/ncbv/0.0.3/Mandate)<br>[https://iri.suomi.fi/model/ncbv/Mandate](https://iri.suomi.fi/model/ncbv/Mandate)<br>[https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3](https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3) |
 | **Requirement Level** | Mandatory |
 
-### Mandate properties
+### Mandate attributes
 
-| **Property**          | Date of issue |
+| **Attribute**          | Date of issue |
 |---------------------|---------|
 | **English name**    | Date of Issue |
 | **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
@@ -39,7 +39,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-| **Property**          | Delegable |
+| **Attribute**          | Delegable |
 |---------------------|---------|
 | **English name**    | Delegable |
 | **Description**     | Information about if the powers given by the mandate are transferable or not. |
@@ -48,7 +48,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-| **Property**          | Date of issue |
+| **Attribute**          | Date of issue |
 |---------------------|---------|
 | **English name**    | Date of Issue |
 | **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
@@ -57,7 +57,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-| **Property**          | Identifier |
+| **Attribute**          | Identifier |
 |---------------------|---------|
 | **English name**    | Identifier |
 | **Description**     | Unique identifier for the mandate. |
@@ -66,7 +66,27 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
 
-| **Property**          | Modified |
+| **Attribute**          | Modified |
+|---------------------|---------|
+| **English name**    | Modified |
+| **Description**     | The date of the last update of the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/modified |
+| **Range** | xsd:date |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Attribute**          | Status |
+|---------------------|---------|
+| **English name**    | Status |
+| **Description**     | This property is used to specify the status of the mandate in the context of maturity lifecycle. Example: Completed, Withdrawn, Deprecated, Under development. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/modified |
+| **Range** | xsd:date |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+### Mandate associations
+
+| **Association**          | Modified |
 |---------------------|---------|
 | **English name**    | Modified |
 | **Description**     | The date of the last update of the mandate. |
