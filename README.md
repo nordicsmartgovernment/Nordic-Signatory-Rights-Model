@@ -32,6 +32,12 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         }
 
         Mandate --> "0..*" Location : has geographical coverage
+        Mandate --> "0..*" Agent : has mandator
+        Mandate --> "0..*" Period Of Time : has duration
+        Mandate --> "0..*" Representation Rule : has representation rule
+        Mandate --> "0..*" Restriction : has restriction
+        Mandate --> "0..*" Scope : has scope
+        Mandate --> "0..*" Source : has source
 
         class Location {
             Geographic Identifier : Literal
