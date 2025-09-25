@@ -83,12 +83,13 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **URI**             | https://iri.suomi.fi/model/nsig/mandate |
 | **Requirement Level** | Mandatory |
 
+
 ### Signatory Rights attributes
 
 | **Attribute**          | Date of issue |
 |---------------------|---------|
 | **English name**    | Date of Issue |
-| **Description**     | The date when the mandate (signatory rights) was issued. |
+| **Description**     | The date when the mandate (signatory rights) was issued.                                                                                                                             |
 | **URI**             | https://iri.suomi.fi/model/nsig/dateOfIssue |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
@@ -97,7 +98,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Identifier |
 |---------------------|---------|
 | **English name**    | Identifier |
-| **Description**     | Unique identifier for the mandate (signatory rights). |
+| **Description**     | Unique identifier for the mandate (signatory rights).                                                                                                                                |
 | **URI**             | https://iri.suomi.fi/model/nsig/identifierAt |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
@@ -106,7 +107,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Modified |
 |---------------------|---------|
 | **English name**    | Modified |
-| **Description**     | The date of the last update of the mandate (signatory rights). |
+| **Description**     | The date of the last update of the mandate (signatory rights).                                                                                                                       |
 | **URI**             | https://iri.suomi.fi/model/nsig/modified |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
@@ -116,18 +117,19 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **English name**    | Status |
 | **Description**     | This property is used to specify the status of the mandate (signatory rights) in the context of maturity lifecycle.<br>Example: Completed, Withdrawn, Deprecated, Under development. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/status |
+| **URI**             | https://iri.suomi.fi/model/nsig/status |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
 | **Note** | The value MUST be selected from the EU's controlled vocabulary Distribution status https://publications.europa.eu/resource/authority/distribution-status|
+
 
 ### Signatory Rights associations
 
 | **Association**          | Has Scope |
 |---------------------|---------|
 | **English name**    | Has Scope |
-| **Description**     | A reference to the specific type of the mandate, in this case Signatory rights. |
+| **Description**     | A reference to the specific type of the mandate, in this case Signatory rights.                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/nsig/hasScope |
 | **Range** | ncbv:Scope |
 | **Multiplicity** | 1..1 |
@@ -136,7 +138,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Association**          | Has Representation Rule |
 |---------------------|---------|
 | **English name**    | Has Representation Rule |
-| **Description**     | A reference to the representation rule for the mandate.<br>A rule that describes who or which agents a mandate is granted to |
+| **Description**     | A reference to the representation rule for the mandate.<br>A rule that describes who or which agents a mandate is granted to                                                         |
 | **URI**             | https://iri.suomi.fi/model/nsig/hasRepresentationRule |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 1..* |
@@ -145,8 +147,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Association**          | Has Mandator |
 |---------------------|---------|
 | **English name**    | Has Mandator |
-| **Description**     | A reference to the mandator (in this case a legal entity) of the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasMandator |
+| **Description**     | A reference to the mandator (in this case a legal entity) of the mandate.                                                                                                             |  
+| **URI**             | https://iri.suomi.fi/model/nsig/hasMandator |
 | **Range** | ncbv:Agent |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
