@@ -21,6 +21,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ## Class Mandate 
 
+| **Class**          | Mandate |
+|---------------------|---------|
 | **English name**    | Mandate |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
 | **URI**             | [https://iri.suomi.fi/model/ncbv/0.0.3/Mandate](https://iri.suomi.fi/model/ncbv/0.0.3/Mandate)<br>[https://iri.suomi.fi/model/ncbv/Mandate](https://iri.suomi.fi/model/ncbv/Mandate)<br>[https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3](https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3) |
@@ -28,12 +30,13 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ### Mandate properties
 
-| **Class**          | Mandate |
+| **Property**          | Date of issue |
 |---------------------|---------|
-| **English name**    | Mandate |
-| **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
-| **URI**             | [https://iri.suomi.fi/model/ncbv/0.0.3/Mandate](https://iri.suomi.fi/model/ncbv/0.0.3/Mandate)<br>[https://iri.suomi.fi/model/ncbv/Mandate](https://iri.suomi.fi/model/ncbv/Mandate)<br>[https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3](https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3) |
-| **Requirement Level** | Mandatory |
+| **English name**    | Date of Issue |
+| **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
+| **URI**             | [(https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue
+https://iri.suomi.fi/model/ncbv/dateOfIssue) |
+| **Range** | xsd:date |
 
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
