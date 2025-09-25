@@ -37,9 +37,6 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         class Legal Entity {
            The legal entity that grants
            the signatory rights.
-           Agent in the model
-           but this is easier to
-           understand?
         }
 
         class Scope {
@@ -63,6 +60,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         }
 
         class Composite Representation Rule {
+           A composite rule needs to be broken down
+           into two or more representation rules.
         }
 
         Composite Representation Rule --> "0..*" Representation Rule : and
