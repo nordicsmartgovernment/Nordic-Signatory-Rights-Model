@@ -23,11 +23,10 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
        
-        class Mandate {
+        class Signatory Rights {
             Identifier: String
             Date of issue : Date
             Modified: Date
-            Delegable : Boolean
             Status : String
         }
 
