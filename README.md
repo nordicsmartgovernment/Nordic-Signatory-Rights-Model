@@ -19,6 +19,53 @@ Signatory rights can consist of one or more signatory rules. Each rule describes
 
 The Signatory rights model is based on the [Core Criterion and Core Evidence Vocabulary](https://semiceu.github.io/CCCEV/releases/2.00/) defining Signatory rights and Signatory rule as subclasses of respectively Criterion and Constraint. The model is also related to [Core Vocabulary of Powers and Mandates](https://github.com/everis-rpam/RPaM-Ontology/wiki/Conceptual-Model-v1.1), which could be used to further define the type of the mandate. However, the Signatory rights model focuses on defining machine readable rules for determining if an Agent or group of Agents have signatory power.
 
+```mermaid
+ %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
+    classDiagram
+       
+        class Mandate {
+            Identifier: String
+            Date of issue : Date
+            Modified: Date
+            Delegable : Boolean
+            Status : String
+        }
+
+        Mandate --> "0..*" SignatoryRights : signatoryRights
+
+        class SignatoryRights {
+            Description : String
+        }
+
+        SignatoryRights --> "0..*" SignatoryRule : signatoryRule
+
+        class SignatoryRule {
+            Description : String
+        }
+
+        SignatoryRule --> "0..1" Post : alone
+        SignatoryRule --> "0..*" Post : allOf
+        SignatoryRule --> "0..*" Post : majorityOf
+        SignatoryRule ..> "0..*" Post : numberOf (one to five)
+
+        class Post {
+
+        }
+
+        Post --> "1..*" Agent : Held by
+        Post --> "1" Role : Role
+
+        class Role {
+            Preferred label : String
+            Notation : String
+        }
+
+        class Agent {
+            Name : String
+        }
+
+```
+
 ## Class Mandate 
 
 | **Class**          | Mandate |
@@ -160,50 +207,6 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Requirement Level** | Optional |
 | **Note** | The property hasMandator has an or-relationship with the property grantsMandate. At least one of the properties must occur. |
 
-```mermaid
- %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
-    classDiagram
-       
-        class Mandate {
-            Registration date : Date
-            Legal name : String
-            Alternative name : String
-        }
-
-        LegalEntity --> "0..*" SignatoryRights : signatoryRights
-
-        class SignatoryRights {
-            Description : String
-        }
-
-        SignatoryRights --> "0..*" SignatoryRule : signatoryRule
-
-        class SignatoryRule {
-            Description : String
-        }
-
-        SignatoryRule --> "0..1" Post : alone
-        SignatoryRule --> "0..*" Post : allOf
-        SignatoryRule --> "0..*" Post : majorityOf
-        SignatoryRule ..> "0..*" Post : numberOf (one to five)
-
-        class Post {
-
-        }
-
-        Post --> "1..*" Agent : Held by
-        Post --> "1" Role : Role
-
-        class Role {
-            Preferred label : String
-            Notation : String
-        }
-
-        class Agent {
-            Name : String
-        }
-
-```
 
 ## Legal entity
 
