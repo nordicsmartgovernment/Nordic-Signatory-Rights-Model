@@ -58,8 +58,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
            "Board member", "Managing Director"...
         }
 
-        class Membership Based epresentation Rule {
-           "Owner"
+        class Membership Based Representation Rule {
+           "Owner"...
         }
 
         class Composite Representation Rule {
