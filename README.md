@@ -40,14 +40,14 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         class Representation Rule {
         }
 
-        Role Based Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
-        Membership Based Representation Rule --> "0..*" Membership Based Representation Rule : has membership based representation rule
+        Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
+        Representation Rule --> "0..*" Membership Based Representation Rule : has membership based representation rule
 
-        class Compositie Representation Rule {
+        class Composite Representation Rule {
         }
 
-        Compositie Representation Rule --> "0..*" Representation Rule : and
-        Compositie Representation Rule --> "0..*" Representation Rule : or
+        Composite Representation Rule --> "0..*" Representation Rule : and
+        Composite Representation Rule --> "0..*" Representation Rule : or
 
         class Scope {
         }
