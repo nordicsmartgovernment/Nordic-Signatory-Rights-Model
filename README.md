@@ -47,7 +47,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
         class Representation Rule {
            A rule that describes who or which
-           agents a mandate is granted to.
+           agents signatory rights is granted to.
         }
 
         Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
@@ -80,7 +80,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **English name**    | Signatory Rights |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
-| **URI**             | [https://iri.suomi.fi/model/ncbv/0.0.3/Mandate](https://iri.suomi.fi/model/ncbv/0.0.3/Mandate)<br>[https://iri.suomi.fi/model/ncbv/Mandate](https://iri.suomi.fi/model/ncbv/Mandate)<br>[https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3](https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate?ver=0.0.3) |
+| **URI**             | https://iri.suomi.fi/model/nsig/mandate |
 | **Requirement Level** | Mandatory |
 
 ### Signatory Rights attributes
@@ -88,8 +88,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Date of issue |
 |---------------------|---------|
 | **English name**    | Date of Issue |
-| **Description**     | The date when the mandate was issued or when the registration of the legal entity was published or amended. |
-| **URI**             | (https://iri.suomi.fi/model/ncbv/0.0.3/dateOfIssue<br>https://iri.suomi.fi/model/ncbv/dateOfIssue) |
+| **Description**     | The date when the mandate (signatory rights) was issued. |
+| **URI**             | https://iri.suomi.fi/model/nsig/dateOfIssue |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -97,8 +97,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Identifier |
 |---------------------|---------|
 | **English name**    | Identifier |
-| **Description**     | Unique identifier for the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/identifierAt |
+| **Description**     | Unique identifier for the mandate (signatory rights). |
+| **URI**             | https://iri.suomi.fi/model/nsig/identifierAt |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
@@ -106,8 +106,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Modified |
 |---------------------|---------|
 | **English name**    | Modified |
-| **Description**     | The date of the last update of the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/modified |
+| **Description**     | The date of the last update of the mandate (signatory rights). |
+| **URI**             | https://iri.suomi.fi/model/nsig/modified |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -115,87 +115,42 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Status |
 |---------------------|---------|
 | **English name**    | Status |
-| **Description**     | This property is used to specify the status of the mandate in the context of maturity lifecycle.<br>Example: Completed, Withdrawn, Deprecated, Under development. |
+| **Description**     | This property is used to specify the status of the mandate (signatory rights) in the context of maturity lifecycle.<br>Example: Completed, Withdrawn, Deprecated, Under development. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/status |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
 | **Note** | The value MUST be selected from the EU's controlled vocabulary Distribution status https://publications.europa.eu/resource/authority/distribution-status|
 
-### Mandate associations
+### Signatory Rights associations
 
-| **Association**          | Geographical Scope |
+| **Association**          | Has Scope |
 |---------------------|---------|
-| **English name**    | Geographical Scope |
-| **Description**     | The association geographical scope points at a location; this describes the geographic region the mandate is valid in. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/geographicalScope |
-| **Range** | ncbv:Location |
-| **Multiplicity** | 0..1 |
-| **Requirement Level** | Recommended |
-
-| **Association**          | Has Duration |
-|---------------------|---------|
-| **English name**    | Has Duration |
-| **Description**     | A reference to the duration of the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasDuration |
-| **Range** | ncbv:PeriodOfTime |
-| **Multiplicity** | 0..1 |
-| **Requirement Level** | Optional |
-
-| **Association**          | Has Mandate Type |
-|---------------------|---------|
-| **English name**    | Has Mandate Type |
-| **Description**     | A reference to the specific type of the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/isType |
-| **Range** | ncbv:MandateType |
+| **English name**    | Has Scope |
+| **Description**     | A reference to the specific type of the mandate, in this case Signatory rights. |
+| **URI**             | https://iri.suomi.fi/model/nsig/hasScope |
+| **Range** | ncbv:Scope |
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
 
 | **Association**          | Has Representation Rule |
 |---------------------|---------|
 | **English name**    | Has Representation Rule |
-| **Description**     | A reference to the representation rule for the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasRepresentationRule |
+| **Description**     | A reference to the representation rule for the mandate.<br>A rule that describes who or which agents a mandate is granted to |
+| **URI**             | https://iri.suomi.fi/model/nsig/hasRepresentationRule |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 1..* |
 | **Requirement Level** | Mandatory |
 
-| **Association**          | Has Restriction |
-|---------------------|---------|
-| **English name**    | Has Restriction |
-| **Description**     | A reference to a restriction for the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasRestriction |
-| **Range** | ncbv:Restriction |
-| **Multiplicity** | 0..* |
-| **Requirement Level** | Optional |
-
-| **Association**          | Has Source |
-|---------------------|---------|
-| **English name**    | Has Source |
-| **Description**     | A reference to the source of the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasSource |
-| **Range** | ncbv:Source |
-| **Multiplicity** | 0..1 |
-| **Requirement Level** | Optional |
-
-| **Association**          | Has Scope |
-|---------------------|---------|
-| **English name**    | Has Scope |
-| **Description**     | A reference to the scope of the mandate. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasScope |
-| **Range** | ncbv:Scope |
-| **Multiplicity** | 0..* |
-| **Requirement Level** | Optional |
-
 | **Association**          | Has Mandator |
 |---------------------|---------|
 | **English name**    | Has Mandator |
-| **Description**     | A reference to the mandator of the mandate. |
+| **Description**     | A reference to the mandator (in this case a legal entity) of the mandate. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasMandator |
 | **Range** | ncbv:Agent |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
-| **Note** | The property hasMandator has an or-relationship with the property grantsMandate. At least one of the properties must occur. |
+| **Note** | The property hasMandator has an or-relationship with the property grantsMandate.<br>At least one of the properties must occur. |
 
 
 ## Legal entity
