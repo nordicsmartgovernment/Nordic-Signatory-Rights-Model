@@ -96,6 +96,70 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
+| **Association**          | Has Duration |
+|---------------------|---------|
+| **English name**    | Has Duration |
+| **Description**     | A reference to the duration of the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasDuration |
+| **Range** | ncbv:PeriodOfTime |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Optional |
+
+| **Association**          | Has Mandate Type |
+|---------------------|---------|
+| **English name**    | Has Mandate Type |
+| **Description**     | A reference to the specific type of the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/isType |
+| **Range** | ncbv:MandateType |
+| **Multiplicity** | 1..1 |
+| **Requirement Level** | Mandatory |
+
+| **Association**          | Has Representation Rule |
+|---------------------|---------|
+| **English name**    | Has Representation Rule |
+| **Description**     | A reference to the representation rule for the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasRepresentationRule |
+| **Range** | ncbv:RepresentationRule |
+| **Multiplicity** | 1..* |
+| **Requirement Level** | Mandatory |
+
+| **Association**          | Has Restriction |
+|---------------------|---------|
+| **English name**    | Has Restriction |
+| **Description**     | A reference to a restriction for the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasRestriction |
+| **Range** | ncbv:Restriction |
+| **Multiplicity** | 0..* |
+| **Requirement Level** | Optional |
+
+| **Association**          | Has Source |
+|---------------------|---------|
+| **English name**    | Has Source |
+| **Description**     | A reference to the source of the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasSource |
+| **Range** | ncbv:Source |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Optional |
+
+| **Association**          | Has Scope |
+|---------------------|---------|
+| **English name**    | Has Scope |
+| **Description**     | A reference to the scope of the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasScope |
+| **Range** | ncbv:Scope |
+| **Multiplicity** | 0..* |
+| **Requirement Level** | Optional |
+
+| **Association**          | Has Mandator |
+|---------------------|---------|
+| **English name**    | Has Mandator |
+| **Description**     | A reference to the mandator of the mandate. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/0.0.3/hasMandator |
+| **Range** | ncbv:Agent |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Optional |
+| **Note** | The property hasMandator has an or-relationship with the property grantsMandate. At least one of the properties must occur. |
+
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
