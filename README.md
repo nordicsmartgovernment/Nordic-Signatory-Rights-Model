@@ -44,27 +44,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
             Geopraphic Name: Literal
         }
 
-        SignatoryRights --> "0..*" SignatoryRule : signatoryRule
-
-        class SignatoryRule {
-            Description : String
-        }
-
-        SignatoryRule --> "0..1" Post : alone
-        SignatoryRule --> "0..*" Post : allOf
-        SignatoryRule --> "0..*" Post : majorityOf
-        SignatoryRule ..> "0..*" Post : numberOf (one to five)
-
         class Post {
 
-        }
-
-        Post --> "1..*" Agent : Held by
-        Post --> "1" Role : Role
-
-        class Role {
-            Preferred label : String
-            Notation : String
         }
 
         class Agent {
