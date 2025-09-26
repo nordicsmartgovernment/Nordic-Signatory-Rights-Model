@@ -220,7 +220,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Minimum Number of Memberships |
 |---------------------|---------|
 | **Name**    | Minimum Number of Memberships |
-| **Description**     | The number of Memberships required for the Representation Rule to be valid. |                                                                                                      |
+| **Description**     | The minimum number of membership required for the rule to be valid. |                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/nsig/minimumNumberOfMemberships |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
