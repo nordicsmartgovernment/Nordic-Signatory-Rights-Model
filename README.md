@@ -217,14 +217,28 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ### Attributes of the Role Based Representation Rule class
 
-| **Attribute**          | Minimum Number of Memberships |
+| **Attribute**          | Minimum Number of Memberships/Minimum Number of Role holders |
 |---------------------|---------|
-| **Name**    | Minimum Number of Memberships |
-| **Description**     | The minimum number of membership required for the rule to be valid. |                                                                                                      |
+| **Name**    | Minimum Number of Memberships/Minimum Number of Role holders |
+| **Description**     | Specifies the minimum number of individuals holding the specified role that must act for the representation rule to be valid. |                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/nsig/minimumNumberOfMemberships |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
+| **Usage note** | Use this property to indicate how many members of the legal entity are required for the rule to be valid. When the rule is part of a composite representation rule, this minimum applies to the specific membership-based rule within the composite. |
+
+### Associations of the Role Based Representation Rule class
+
+| **Association**          | MembershipQuantifier/RoleHolderQuantifier |
+|---------------------|---------|
+| **Name**    | Minimum number of Memberships/Minimum Number of Role holders |
+| **Description**     | Specifies a qualitative quantity or proportion of role holders required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
+| **URI**             | https://iri.suomi.fi/model/nsig/membershipQuantifier |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+| **Usage note** | Use this property when a role-based representation rule requires a non-numeric quantification of role holders. This property complements MinimumNumberOfRoleHolders and may be used in combination with numeric values if appropriate. |
+
 
 ## Class Membership Based Representation Rule
 
@@ -235,6 +249,30 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **URI**             | https://iri.suomi.fi/model/nsig/MembershipBasedRepresentationRule |
 | **Requirement Level** | Recommended|
 | **Usage note** | Use this class when a representation rule can be expressed in terms of members of the mandating legal entity and the number of such members required to act. For example, when two members of a partnership must act jointly, or when three members of an association can sign together. If a representation rule consists of a combination of membership-based rules, these must be expressed as separate membership-based representation rules within a composite representation rule. |
+
+### Attributes of the Membership Based Representation Rule class
+
+| **Attribute**          | Minimum Number of Memberships/Minimum Number of Members |
+|---------------------|---------|
+| **Name**    | Minimum Number of Memberships/Minimum Number of Members |
+| **Description**     | Specifies the minimum number of members of the mandating legal entity that must act for the representation rule to be valid. |                                                                                                      |
+| **URI**             | https://iri.suomi.fi/model/nsig/minimumNumberOfMemberships |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+| **Usage note** | Use this property to indicate how many members of the legal entity are required for the rule to be valid. When the rule is part of a composite representation rule, this minimum applies to the specific membership-based rule within the composite. |
+
+### Associations of the Membership Based Representation Rule class
+
+| **Association**          | Membership Quantifier/ Role Holder Quantifier |
+|---------------------|---------|
+| **Name**    | Membership Quantifier/ Role Holder Quantifier |
+| **Description**     | Specifies a qualitative quantity or proportion of role holders required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
+| **URI** | https://iri.suomi.fi/model/nsig/membershipQuantifier |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+| **Usage note** | Use this property when a role-based representation rule requires a non-numeric quantification of role holders. This property complements MinimumNumberOfRoleHolders and may be used in combination with numeric values if appropriate. |
 
 ## Class Composite Representation Rule
 
