@@ -241,6 +241,15 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Requirement Level** | Recommended |
 | **Usage note** | Use this property when a role-based representation rule requires a non-numeric quantification of role holders. This property complements MinimumNumberOfRoleHolders and may be used in combination with numeric values if appropriate. |
 
+| **Association**          | Defines Valid Role |
+|---------------------|---------|
+| **Name**    | Defines Valid Role |
+| **Description**     | Specifies the organizational role that an individual must hold for the role-based representation rule to be valid. |                                                                                                      |
+| **URI**             | https://iri.suomi.fi/model/nsig/definesValidRole |
+| **Range** | xsd:string |
+| **Multiplicity** | 1 |
+| **Requirement Level** | Mandatory |
+| **Usage note** | Use this property to indicate which role or roles qualify an individual to act under the rule. The rule is considered satisfied only if the required number of individuals holding the specified role(s) participate. |
 
 ## Class Membership Based Representation Rule
 
@@ -275,6 +284,16 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 | **Usage note** | Use this property when a membership-based representation rule requires a non-numeric quantification of members. This property complements MinimumNumberOfMembers and may be used in combination with numeric values if appropriate.|
+
+| **Association**          | Defines Valid Membership |
+|---------------------|---------|
+| **Name**    | Defines Valid Role |
+| **Description**     | Specifies the membership(s) in the mandating legal entity that qualify an individual to act under the membership-based representation rule. |                                                                                   
+| **URI**             | https://iri.suomi.fi/model/nsig/definesMembership |
+| **Range** | xsd:string |
+| **Multiplicity** | 1 .. *|
+| **Requirement Level** | Mandatory |
+| **Usage note** |Use this property to indicate which members of the legal entity are authorized to act. The rule is considered satisfied only if the required number of these members participate. |
 
 ## Class Composite Representation Rule
 
