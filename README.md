@@ -217,9 +217,9 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ### Attributes of the Role Based Representation Rule class
 
-| **Attribute**          | Minimum Number of Memberships/Minimum Number of Role holders |
+| **Attribute**          | Minimum Number of Memberships/ Minimum Number of Role holders |
 |---------------------|---------|
-| **Name**    | Minimum Number of Memberships/Minimum Number of Role holders |
+| **Name**    | Minimum Number of Memberships/ Minimum Number of Role holders |
 | **Description**     | Specifies the minimum number of individuals holding the specified role that must act for the representation rule to be valid. |                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/nsig/minimumNumberOfMemberships |
 | **Range** | xsd:string |
@@ -229,7 +229,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ### Associations of the Role Based Representation Rule class
 
-| **Association**          | MembershipQuantifier/RoleHolderQuantifier |
+| **Association**          | MembershipQuantifier/ Role Holde Quantifier |
 |---------------------|---------|
 | **Name**    | Minimum number of Memberships/Minimum Number of Role holders |
 | **Description**     | Specifies a qualitative quantity or proportion of role holders required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
