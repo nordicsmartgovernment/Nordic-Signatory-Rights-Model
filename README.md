@@ -85,7 +85,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Requirement Level** | Mandatory |
 
 
-### Signatory Rights attributes
+### Attributes of the Signatory Rights class 
 
 | **Attribute**          | Date of issue |
 |---------------------|---------|
@@ -99,7 +99,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Identifier |
 |---------------------|---------|
 | **English name**    | Identifier |
-| **Description**     | Unique identifier for the mandate (signatory rights).                                                                                                                                |
+| **Description**     | Unique identifier for the mandate (signatory rights).                                                                                                                               |
 | **URI**             | https://iri.suomi.fi/model/nsig/identifierAt |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
@@ -125,7 +125,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Note** | The value MUST be selected from the EU's controlled vocabulary Distribution status https://publications.europa.eu/resource/authority/distribution-status|
 
 
-### Signatory Rights associations
+### Aassociations of the Signatory Rights class
 
 | **Association**          | Has Scope |
 |---------------------|---------|
@@ -183,6 +183,27 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Requirement Level** | Recommended |
 | **Usage note** | Use this class when a representation rule is available only in written or unstructured form and cannot be expressed using structured data. Where the rule can be broken down into structured components, one or more of the specific subclasses should be used instead. |
 
+### Attributes of the Representation Rule class 
+| **Attribute**          | Description |
+|---------------------|---------|
+| **English name**    | Description |
+| **Description**     | A textual representation of the rule in a human-readable form.                                                                                                                             |
+| **URI**             | https://iri.suomi.fi/model/nsig/description |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+| **Usage note** | Use to provide the rule in text when structured representation is not possible, or together with structured data to convey the rule in a human-readable form. |
+
+
+| **Attribute**          | Sequence |
+|---------------------|---------|
+| **English name**    | Sequence |
+| **Description**     | Indicates the position of a representation rule within a composite representation rule, defining the order in which the rules are applied or evaluated. |                                                                                                      |
+| **URI**             | https://iri.suomi.fi/model/nsig/sequence |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
 ## Role Based Class Representation Rule
 
 | **Class**          | Role Based Representation Rule |
@@ -202,7 +223,6 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **URI**             | https://iri.suomi.fi/model/nsig/membershipBasedRepresentationRule |
 | **Requirement Level** | Mandatory |
 
-
 ## Class Composite Representation Rule
 
 | **Class**          | Composite Representation Rule |
@@ -212,6 +232,25 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **URI**             | https://iri.suomi.fi/model/nsig/compositeRepresentationRule |
 | **Requirement Level** | Recommended |
 
+### Associations of the Representation Rule class 
+
+| **Association**          | And |
+|---------------------|---------|
+| **English name**    | And |
+| **Description**     | A cumulative logical connection between two or more rules (equivalent to logical AND operator). |                                                                                                      |
+| **URI**             | https://iri.suomi.fi/model/nsig/and |
+| **Range** | ncbv:RepresentationRule |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Association**          | Or |
+|---------------------|---------|
+| **English name**    | Or |
+| **Description**     | An alternative logical connection between two or more rules (equivalent to logical OR operator). |                                                                                                      |
+| **URI**             | https://iri.suomi.fi/model/nsig/or |
+| **Range** | ncbv:RepresentationRule |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
 
  # Examples
 
