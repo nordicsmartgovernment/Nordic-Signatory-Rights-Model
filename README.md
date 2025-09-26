@@ -70,9 +70,9 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ## Class Signatory Rights 
 
-| **Class**          | SignatoryRights |
+| **Class**          | Signatory Rights |
 |---------------------|---------|
-| **Name**    | SignatoryRights |
+| **Name**    | Signatory Rights |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
 | **URI**             | https://iri.suomi.fi/model/nsig/mandate |
 | **Requirement Level** | Mandatory |
