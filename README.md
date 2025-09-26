@@ -178,9 +178,10 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Class**          | Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | Rule that defines which agent(s) can act on behalf of another agent due to the fact that they have signatory power |
+| **Description**     | A rule that describes to whom the signatory rights are granted.|
 | **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
-| **Requirement Level** | Mandatory |
+| **Requirement Level** | Recommended |
+| **Usage note** | Use this class when a representation rule is available only in written or unstructured form and cannot be expressed using structured data. Where the rule can be broken down into structured components, one or more of the specific subclasses should be used instead. |
 
 ## Role Based Class Representation Rule
 
@@ -207,9 +208,9 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Class**          | Composite Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | A composite representation rule needs to be broken down into two or more representation rules. An example: the composite rule "CEO alone or two board members jointly" is broken down into the representation rule "CEO alone" and the rule "two board members jointly" |
+| **Description**     | A rule consisting of one or more representation rules, each of which may be role-based, membership-based, or composite. |
 | **URI**             | https://iri.suomi.fi/model/nsig/compositeRepresentationRule |
-| **Requirement Level** | Mandatory |
+| **Requirement Level** | Recommended |
 
 
  # Examples
