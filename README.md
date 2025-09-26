@@ -55,11 +55,13 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         Representation Rule --> "0..*" Membership Based Representation Rule : has membership based representation rule
 
         class Role Based Representation Rule {
-           "Board member", "Managing Director"...
+           "Board member",
+           "Managing Director"...
         }
 
         class Membership Based Representation Rule {
-           "Members of an association", "Members of a partnership"...
+           "Members of an association",
+           "Members of a partnership"...
         }
 
         class Composite Representation Rule {
