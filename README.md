@@ -32,18 +32,11 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         }
 
         Signatory Rights --> "0..1" Legal Entity : has mandator
-        Signatory Rights --> "0..*" Scope : has scope
         Signatory Rights --> "1..*" Representation Rule : has representation rule
 
         class Legal Entity {
            The legal entity that grants
            the signatory rights.
-        }
-
-        class Scope {
-           Not needed when we
-           renamed mandate, it is
-           always "Signatory rights"?
         }
 
         class Representation Rule {
