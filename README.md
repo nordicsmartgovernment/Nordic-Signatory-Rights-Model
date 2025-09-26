@@ -215,6 +215,16 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Requirement Level** | Recommended |
 | **Usage note** | Use this class when a representation rule can be expressed in terms of organizational roles and the number of individuals holding those roles who must act. For example, when two board members must sign jointly, or when the CEO can act alone. If a representation rule consists of a combination of roles, this must be expressed as separate role-based representation rules within a composite representation rule. |
 
+### Attributes of the Role Based Representation Rule class
+
+| **Attribute**          | Minimum Number of Memberships |
+|---------------------|---------|
+| **Name**    | Minimum Number of Memberships |
+| **Description**     | The number of Memberships required for the Representation Rule to be valid. |                                                                                                      |
+| **URI**             | https://iri.suomi.fi/model/nsig/minimumNumberOfMemberships |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
 
 ## Class Membership Based Representation Rule
 
