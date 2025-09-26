@@ -265,6 +265,22 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
- # Examples
+# References
+
+## Nordic Core Business Vocabulary
+The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
+
+Link to Tietomallit
+Link to RDF
+Link to JSON-LD
+
+## Nordic Signatory Rights
+Application profile for signatory rights, defined in collaboration by the Nordic countries.
+
+Link to Tietomallit
+Link to RDF
+Link to JSON-LD
+
+# Examples
 
 We need a bunch of examples!
