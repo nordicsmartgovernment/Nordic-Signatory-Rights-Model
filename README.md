@@ -264,15 +264,15 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ### Associations of the Membership Based Representation Rule class
 
-| **Association**          | Membership Quantifier/ Role Holder Quantifier |
+| **Association**          | Membership Quantifier/ Membership Quantifier |
 |---------------------|---------|
 | **Name**    | Membership Quantifier/ Role Holder Quantifier |
-| **Description**     | Specifies a qualitative quantity or proportion of role holders required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
+| **Description**     | Specifies a qualitative quantity or proportion of members of the mandating legal entity required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
 | **URI** | https://iri.suomi.fi/model/nsig/membershipQuantifier |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
-| **Usage note** | Use this property when a role-based representation rule requires a non-numeric quantification of role holders. This property complements MinimumNumberOfRoleHolders and may be used in combination with numeric values if appropriate. |
+| **Usage note** | Use this property when a membership-based representation rule requires a non-numeric quantification of members. This property complements MinimumNumberOfMembers and may be used in combination with numeric values if appropriate.|
 
 ## Class Composite Representation Rule
 
