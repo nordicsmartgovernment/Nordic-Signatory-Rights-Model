@@ -264,9 +264,9 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ### Associations of the Membership Based Representation Rule class
 
-| **Association**          | Membership Quantifier/ Membership Quantifier |
+| **Association**          | Membership Quantifier/ Member Quantifier |
 |---------------------|---------|
-| **Name**    | Membership Quantifier/ Role Holder Quantifier |
+| **Name**    | Membership Quantifier/ Member Quantifier |
 | **Description**     | Specifies a qualitative quantity or proportion of members of the mandating legal entity required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
 | **URI** | https://iri.suomi.fi/model/nsig/membershipQuantifier |
 | **Range** | xsd:string |
