@@ -180,7 +180,8 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **English name**    | Representation Rule |
 | **Description**     | A rule that describes to whom the signatory rights are granted.|
 | **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
-| **Requirement Level** | Recommended |
+| **Requirement Level** | Mandatory |
+| **Note** | At least one representation rule, expressed either as an instance of this class or of one of its subclasses, must always be provided. Use of the more specific subclasses is recommended whenever the rule can be represented in a structured form. |
 | **Usage note** | Use this class when a representation rule is available only in written or unstructured form and cannot be expressed using structured data. Where the rule can be broken down into structured components, one or more of the specific subclasses should be used instead. |
 
 ### Attributes of the Representation Rule class 
@@ -204,14 +205,15 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-## Role Based Class Representation Rule
+## Class Role Based Representation Rule
 
 | **Class**          | Role Based Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | A role based representation rule indicates which agent(s) have a role that give them signatory power and the power to represent another agent. |
-| **URI**             | https://iri.suomi.fi/model/nsig/roleBasedRepresentationRule |
-| **Requirement Level** | Mandatory |
+| **Description**     | A rule that specifies representation based on organizational roles and the number of role holders required to act. |
+| **URI**             | https://iri.suomi.fi/model/nsig/RoleBasedRepresentationRule |
+| **Requirement Level** | Recommended |
+| **Usage note** | Use this class when a representation rule can be expressed in terms of organizational roles and the number of individuals holding those roles who must act. For example, when two board members must sign jointly, or when the CEO can act alone. If a representation rule consists of a combination of roles, this must be expressed as separate role-based representation rules within a composite representation rule. |
 
 
 ## Class Membership Based Representation Rule
@@ -219,9 +221,10 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Class**          | Membership Based Representation Rule |
 |---------------------|---------|
 | **English name**    | Representation Rule |
-| **Description**     | A membership based representation rule indicates which agent(s) have a membership that give them signatory power and the power to represent another agent. |
-| **URI**             | https://iri.suomi.fi/model/nsig/membershipBasedRepresentationRule |
-| **Requirement Level** | Mandatory |
+| **Description**     | A rule that specifies representation based on being a member of the mandating legal entity, and the number of such members required to act. |
+| **URI**             | https://iri.suomi.fi/model/nsig/MembershipBasedRepresentationRule |
+| **Requirement Level** | Recommended|
+| **Usage note** | Use this class when a representation rule can be expressed in terms of members of the mandating legal entity and the number of such members required to act. For example, when two members of a partnership must act jointly, or when three members of an association can sign together. If a representation rule consists of a combination of membership-based rules, these must be expressed as separate membership-based representation rules within a composite representation rule. |
 
 ## Class Composite Representation Rule
 
