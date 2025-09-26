@@ -65,16 +65,14 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         Composite Representation Rule --> "0..*" Representation Rule : and
         Composite Representation Rule --> "0..*" Representation Rule : or
 
-        class Scope {
-        }
 
 ```
 
 ## Class Signatory Rights 
 
-| **Class**          | Signatory Rights |
+| **Class**          | SignatoryRights |
 |---------------------|---------|
-| **Name**    | Signatory Rights |
+| **Name**    | SignatoryRights |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
 | **URI**             | https://iri.suomi.fi/model/nsig/mandate |
 | **Requirement Level** | Mandatory |
