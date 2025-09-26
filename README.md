@@ -59,7 +59,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
         }
 
         class Membership Based Representation Rule {
-           "Owner"?
+           "Members of an association", "Members of a partnership"...
         }
 
         class Composite Representation Rule {
