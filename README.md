@@ -125,7 +125,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Note** | The value MUST be selected from the EU's controlled vocabulary Distribution status https://publications.europa.eu/resource/authority/distribution-status|
 
 
-### Aassociations of the Signatory Rights class
+### Associations of the Signatory Rights class
 
 | **Association**          | Has Scope |
 |---------------------|---------|
