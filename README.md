@@ -201,6 +201,15 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Multiplicity** |  |
 | **Requirement Level** | Recommended |
 
+| **Association**          | Has Member |
+|---------------------|---------|
+| **Name**    | Has Member |
+| **Description**     | A name under which the legal entity is registered. |
+| **URI**             | https://iri.suomi.fi/model/nsig/hasMember |
+| **Range** | ncbv:Membership |
+| **Multiplicity** | 1..* |
+| **Requirement Level** | Mandatory |
+
 ## Class Person
 
 | **Class**          | Person |
@@ -213,7 +222,34 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ### Attributes of the Person class
 
+| **Attribute**          | Date of Birth |
+|---------------------|---------|
+| **Name**    | Date of Birth |
+| **Description**     | A point in time on which a person was born. |
+| **URI**             | https://iri.suomi.fi/model/nsig/dateOfBirth |
+| **Range** | xsd:date |
+| **Multiplicity** | 1..1 |
+| **Requirement Level** | Mandatory |
+
+| **Attribute**          | Full Name |
+|---------------------|---------|
+| **Name**    | Full Name |
+| **Description**     | The complete name of the Person as one string. |
+| **URI**             | https://iri.suomi.fi/model/nsig/fullName |
+| **Range** |  |
+| **Multiplicity** |  |
+| **Requirement Level** | Mandatory |
+
 ### Associations of the Person class
+
+| **Association**          | Identifier |
+|---------------------|---------|
+| **Name**    | Identifier |
+| **Description**     | A structured reference that identifies a person. |
+| **URI**             | https://iri.suomi.fi/model/nsig/identifier_ |
+| **Range** |  |
+| **Multiplicity** |  |
+| **Requirement Level** | Mandatory |
 
 ## Class Identifier
 | **Class**          | Identifier |
@@ -228,13 +264,31 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Class**          | Membership |
 |---------------------|---------|
 | **Name**    | Membership |
-| **Description**     |  |
+| **Description**     | Indicates the nature of an agent's membership of an legal entity. |
 | **URI**             | https://iri.suomi.fi/model/nsig/Membership |
 | **Requirement Level** | Recommended |
 
 ### Attributes of the Membership class
 
 ### Associations of the Membership  class
+
+| **Association**          | Member |
+|---------------------|---------|
+| **Name**    | Member |
+| **Description**     | Indicates the Agent involved in the Membership relationship. |
+| **URI**             | https://iri.suomi.fi/model/nsig/member |
+| **Range** | ncvb:Membership |
+| **Multiplicity** |1..1|
+| **Requirement Level** | Mandatory |
+
+| **Association**          | Role |
+|---------------------|---------|
+| **Name**    | Role |
+| **Description**     |Indicates the role that the agent plays in a membership relationship with an legal entity. |
+| **URI**             | https://iri.suomi.fi/model/nsig/role |
+| **Range** | ncvb:Role |
+| **Multiplicity** |0..1|
+| **Requirement Level** | Recommended |
 
 ## Class Representation Rule
 
