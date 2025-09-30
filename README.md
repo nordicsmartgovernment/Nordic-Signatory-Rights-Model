@@ -160,7 +160,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 
 ## Class Agent
 
-| **Class**          | Legal Entity |
+| **Class**          | Agent |
 |---------------------|---------|
 | **Name**    | Agent |
 | **Description**     |  |
@@ -176,11 +176,30 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Name**    | Legal Entity |
 | **Description**     | A formal organization that is involved in economic activity. |
 | **URI**             | https://iri.suomi.fi/model/nsig/legalEntity |
+| **Subclass of**             | ncbv:Agent |
 | **Requirement Level** | Mandatory |
 
 ### Attributes of the Legal Entity class
 
+| **Attribute**          | Legal Name |
+|---------------------|---------|
+| **Name**    | Legal Name |
+| **Description**     | A name under which the legal entity is registered. |
+| **URI**             | https://iri.suomi.fi/model/nsig/legalName |
+| **Range** | xsd:string |
+| **Multiplicity** |  |
+| **Requirement Level** | Recommended |
+
 ### Associations of the Legal Entity class
+
+| **Association**          | Legal Identifier |
+|---------------------|---------|
+| **Name**    | Legal Identifier |
+| **Description**     | A name under which the legal entity is registered. |
+| **URI**             | https://iri.suomi.fi/model/nsig/identifier_ |
+| **Range** | ncbv:Identifier |
+| **Multiplicity** |  |
+| **Requirement Level** | Recommended |
 
 ## Class Person
 
@@ -189,17 +208,26 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Name**    | Person |
 | **Description**     |  |
 | **URI**             | https://iri.suomi.fi/model/nsig/Person |
+| **Subclass of** | ncbv:Agent |
 | **Requirement Level** | Mandatory |
 
 ### Attributes of the Person class
 
 ### Associations of the Person class
 
-## Membership
+## Class Identifier
+| **Class**          | Identifier |
+|---------------------|---------|
+| **Name**    | Identifier |
+| **Description**     |  |
+| **URI**             | https://iri.suomi.fi/model/nsig/Identifier |
+| **Requirement Level** | Mandatory |
+
+## Class Membership
 
 | **Class**          | Membership |
 |---------------------|---------|
-| **Name**    | Legal Entity |
+| **Name**    | Membership |
 | **Description**     |  |
 | **URI**             | https://iri.suomi.fi/model/nsig/Membership |
 | **Requirement Level** | Recommended |
