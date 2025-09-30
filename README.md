@@ -157,7 +157,19 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **URI**             | https://iri.suomi.fi/model/nsig/scope |
 | **Requirement Level** | Mandatory |
 
-## Class Legal entity
+
+## Class Agent
+
+| **Class**          | Legal Entity |
+|---------------------|---------|
+| **Name**    | Agent |
+| **Description**     |  |
+| **URI**             | https://iri.suomi.fi/model/nsig/Agent |
+| **Requirement Level** | Mandatory |
+
+### Associations of the Agent Class
+
+## Class Legal Entity
 
 | **Class**          | Legal Entity |
 |---------------------|---------|
@@ -165,6 +177,36 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Description**     | A formal organization that is involved in economic activity. |
 | **URI**             | https://iri.suomi.fi/model/nsig/legalEntity |
 | **Requirement Level** | Mandatory |
+
+### Attributes of the Legal Entity class
+
+### Associations of the Legal Entity class
+
+## Class Person
+
+| **Class**          | Person |
+|---------------------|---------|
+| **Name**    | Person |
+| **Description**     |  |
+| **URI**             | https://iri.suomi.fi/model/nsig/Person |
+| **Requirement Level** | Mandatory |
+
+### Attributes of the Person class
+
+### Associations of the Person class
+
+## Membership
+
+| **Class**          | Membership |
+|---------------------|---------|
+| **Name**    | Legal Entity |
+| **Description**     |  |
+| **URI**             | https://iri.suomi.fi/model/nsig/Membership |
+| **Requirement Level** | Recommended |
+
+### Attributes of the Membership class
+
+### Associations of the Membership  class
 
 ## Class Representation Rule
 
