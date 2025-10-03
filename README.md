@@ -17,16 +17,13 @@ A legal entity can be registered with one or more instances of Signatory rights.
 
 Signatory rights can consist of one or more representation rules. Each rule describes in a structured machine-readable way the conditions for a mandate to be valid by setting requirements for the number of agents (Person or Legal entity) and the roles they must hold in a legal entity. An agent can hold one or many roles in a legal entity and can acquire signatory rights through multiple signatory rules.
 
-## Concept model
+## Overview model
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
        
         class Signatory Rights {
-            Identifier: String
-            Date of issue : Date
-            Modified: Date
-            Status : String
+            Top class
         }
 
         Signatory Rights --> "0..1" Legal Entity : has mandator
@@ -65,6 +62,25 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 
 ```
 ## Complete model
+
+### Nordic Signatory Rights
+Application profile for signatory rights, defined in collaboration by the Nordic countries.
+
+[Link to NSIG](https://tietomallit.suomi.fi/model/nsgi)
+Link to RDF
+Link to JSON-LD
+
+### Nordic Core Business Vocabulary
+The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
+
+[Link to NCBV](https://tietomallit.suomi.fi/model/ncbv)
+Link to RDF
+Link to JSON-LD
+
+### Namespaces we use ??
+skoc concept
+ncbv
+
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
@@ -531,28 +547,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
-
-# References
-
-## Nordic Core Business Vocabulary
-The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
-
-[Link to NCBV](https://tietomallit.suomi.fi/model/ncbv)
-Link to RDF
-Link to JSON-LD
-
-## Nordic Signatory Rights
-Application profile for signatory rights, defined in collaboration by the Nordic countries.
-
-[Link to NSIG](https://tietomallit.suomi.fi/model/nsgi)
-Link to RDF
-Link to JSON-LD
-
-## Namespaces we use ??
-skoc concept
-ncbv
-
-
 
 # Examples
 
