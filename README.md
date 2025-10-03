@@ -497,9 +497,15 @@ Link to JSON-LD
 ## Nordic Signatory Rights
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
 
-Link to Tietomallit
+[Link to Tietomallit](https://tietomallit.suomi.fi/model/ncbv)
 Link to RDF
 Link to JSON-LD
+
+## Namespaces we use ??
+skoc concept
+ncbv
+
+
 
 # Examples
 
