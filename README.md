@@ -86,7 +86,7 @@ Link to JSON-LD
 
 We need a bunch of examples!
 
-# Clases, attributes and associations
+# Classes, attributes and associations
 
 ## Class Signatory Rights 
 
