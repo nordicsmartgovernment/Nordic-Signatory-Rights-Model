@@ -74,7 +74,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Signatory Rights |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
-| **URI**             | https://iri.suomi.fi/model/nsig/signatoryRights |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Mandate |
 | **Requirement Level** | Mandatory |
 
 
@@ -84,7 +84,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Date of Issue |
 | **Description**     | The date when the mandate (signatory rights) was issued.                                                                                                                             |
-| **URI**             | https://iri.suomi.fi/model/nsig/dateOfIssue |
+| **URI**             | https://iri.suomi.fi/model/ncbv/dateOfIssue |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -93,7 +93,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     | Unique identifier for the mandate (signatory rights).                                                                                                                               |
-| **URI**             | https://iri.suomi.fi/model/nsig/identifierAt |
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifierAt |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
@@ -102,7 +102,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Modified |
 | **Description**     | The date of the last update of the mandate (signatory rights).                                                                                                                       |
-| **URI**             | https://iri.suomi.fi/model/nsig/modified |
+| **URI**             | https://iri.suomi.fi/model/ncbv/modified |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -111,7 +111,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Status |
 | **Description**     | This property is used to specify the status of the mandate (signatory rights) in the context of maturity lifecycle.<br>Example: Completed, Withdrawn, Deprecated, Under development. |
-| **URI**             | https://iri.suomi.fi/model/nsig/status |
+| **URI**             | https://iri.suomi.fi/model/ncbv/status |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
@@ -124,7 +124,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Has Scope |
 | **Description**     | A reference to the specific type of the mandate, in this case Signatory rights.                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/hasScope |
+| **URI**             | https://iri.suomi.fi/model/ncbv/hasScope |
 | **Range** | ncbv:Scope |
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
@@ -133,7 +133,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Has Representation Rule |
 | **Description**     | A reference to the representation rule for the signatory rights.<br>A rule that describes who or which agents sigantory rights is granted to                                                         |
-| **URI**             | https://iri.suomi.fi/model/nsig/hasRepresentationRule |
+| **URI**             | https://iri.suomi.fi/model/ncbv/hasRepresentationRule |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 1..* |
 | **Requirement Level** | Mandatory |
@@ -142,7 +142,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Has Mandator |
 | **Description**     | A reference to the mandator (in this case a legal entity) of the mandate.                                                                                                             |  
-| **URI**             | https://iri.suomi.fi/model/nsig/hasMandator |
+| **URI**             | https://iri.suomi.fi/model/ncbv/hasMandator |
 | **Range** | ncbv:Agent |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
@@ -154,7 +154,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Scope |
 | **Description**     | A class to define what powers the Mandator grants to the Mandatee through the Mandate (in this case signatory rights). |
-| **URI**             | https://iri.suomi.fi/model/nsig/scope |
+| **URI**             | https://iri.suomi.fi/model/ncbv/scope |
 | **Requirement Level** | Mandatory |
 
 
@@ -164,7 +164,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Agent |
 | **Description**     |  |
-| **URI**             | https://iri.suomi.fi/model/nsig/Agent |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Agent |
 | **Requirement Level** | Mandatory |
 
 ### Associations of the Agent Class
@@ -175,7 +175,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Legal Entity |
 | **Description**     | A formal organization that is involved in economic activity. |
-| **URI**             | https://iri.suomi.fi/model/nsig/legalEntity |
+| **URI**             | https://iri.suomi.fi/model/ncbv/legalEntity |
 | **Subclass of**             | ncbv:Agent |
 | **Requirement Level** | Mandatory |
 
@@ -185,7 +185,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Legal Name |
 | **Description**     | A name under which the legal entity is registered. |
-| **URI**             | https://iri.suomi.fi/model/nsig/legalName |
+| **URI**             | https://iri.suomi.fi/model/ncbv/legalName |
 | **Range** | xsd:string |
 | **Multiplicity** |  |
 | **Requirement Level** | Recommended |
@@ -196,7 +196,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Legal Identifier |
 | **Description**     | A name under which the legal entity is registered. |
-| **URI**             | https://iri.suomi.fi/model/nsig/identifier_ |
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifier_ |
 | **Range** | ncbv:Identifier |
 | **Multiplicity** |  |
 | **Requirement Level** | Recommended |
@@ -205,7 +205,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Has Member |
 | **Description**     | |
-| **URI**             | https://iri.suomi.fi/model/nsig/hasMember |
+| **URI**             | https://iri.suomi.fi/model/ncbv/hasMember |
 | **Range** | ncbv:Membership |
 | **Multiplicity** | 1..* |
 | **Requirement Level** | Mandatory |
@@ -216,7 +216,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Person |
 | **Description**     |  |
-| **URI**             | https://iri.suomi.fi/model/nsig/Person |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Person |
 | **Subclass of** | ncbv:Agent |
 | **Requirement Level** | Mandatory |
 
@@ -226,7 +226,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Date of Birth |
 | **Description**     | A point in time on which a person was born. |
-| **URI**             | https://iri.suomi.fi/model/nsig/dateOfBirth |
+| **URI**             | https://iri.suomi.fi/model/ncbv/dateOfBirth |
 | **Range** | xsd:date |
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
@@ -235,7 +235,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 |---------------------|---------|
 | **Name**    | Full Name |
 | **Description**     | The complete name of the Person as one string. |
-| **URI**             | https://iri.suomi.fi/model/nsig/fullName |
+| **URI**             | https://iri.suomi.fi/model/ncbv/fullName |
 | **Range** |  |
 | **Multiplicity** |  |
 | **Requirement Level** | Mandatory |
