@@ -244,7 +244,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     | A reference to the identifier of a person. |
-| **URI**             | https://iri.suomi.fi/model/nsig/identifier_ |
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifier_ |
 | **Range** |  |
 | **Multiplicity** |  |
 | **Requirement Level** | Mandatory |
@@ -254,7 +254,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     |  A structured reference that identifies an agent. |
-| **URI**             | https://iri.suomi.fi/model/nsig/Identifier |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Identifier |
 | **Requirement Level** | Mandatory |
 
 ### Attributes of the Identifier Class
@@ -263,7 +263,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Date of Issue |
 | **Description**     |  The date on which the Identifier was assigned. |                                                                                                                        |
-| **URI**             | https://iri.suomi.fi/model/nsig/dateOfIssue |
+| **URI**             | https://iri.suomi.fi/model/ncbv/dateOfIssue |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -272,7 +272,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Notation |
 | **Description**     | 	A string of characters to uniquely identify a concept. |                                                                                                                     |
-| **URI**             | https://iri.suomi.fi/model/nsig/notation |
+| **URI**             | https://iri.suomi.fi/model/ncbv/notation |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
@@ -281,7 +281,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    |  Schema Agency |
 | **Description**     | The name of the agency that issued the identifier. |                                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
+| **URI**             | https://iri.suomi.fi/model/ncbv/schemaAgency |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -290,7 +290,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    |  Schema Name |
 | **Description**     | Name of the scheme used to construct the identifier. |                                                                                                                        |
-| **URI**             | https://iri.suomi.fi/model/nsig/schemaName |
+| **URI**             | https://iri.suomi.fi/model/ncbv/schemaName |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -300,7 +300,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    |  Schema Agency |
 | **Description**     | URI of the scheme used to construct the identifier. |                                                                                                                       |
-| **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
+| **URI**             | https://iri.suomi.fi/model/ncbv/schemaAgency |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -311,7 +311,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Membership |
 | **Description**     | Indicates the nature of an agent's membership of an legal entity. |
-| **URI**             | https://iri.suomi.fi/model/nsig/Membership |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Membership |
 | **Requirement Level** | Recommended |
 
 ### Attributes of the Membership class
@@ -322,7 +322,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Member |
 | **Description**     | Indicates the Agent involved in the Membership relationship. |
-| **URI**             | https://iri.suomi.fi/model/nsig/member |
+| **URI**             | https://iri.suomi.fi/model/ncbv/member |
 | **Range** | ncvb:Membership |
 | **Multiplicity** |1..1|
 | **Requirement Level** | Mandatory |
@@ -331,7 +331,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Role |
 | **Description**     |Indicates the role that the agent plays in a membership relationship with an legal entity. |
-| **URI**             | https://iri.suomi.fi/model/nsig/role |
+| **URI**             | https://iri.suomi.fi/model/ncbv/role |
 | **Range** | ncvb:Role |
 | **Multiplicity** |0..1|
 | **Requirement Level** | Recommended |
@@ -342,7 +342,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **English name**    | Representation Rule |
 | **Description**     | A rule that describes to whom the signatory rights are granted.|
-| **URI**             | https://iri.suomi.fi/model/nsig/representationRule |
+| **URI**             | https://iri.suomi.fi/model/ncbv/representationRule |
 | **Requirement Level** | Mandatory |
 | **Note** | At least one representation rule, expressed either as an instance of this class or of one of its subclasses, must always be provided. Use of the more specific subclasses is recommended whenever the rule can be represented in a structured form. |
 | **Usage note** | Use this class when a representation rule is available only in written or unstructured form and cannot be expressed using structured data. Where the rule can be broken down into structured components, one or more of the specific subclasses should be used instead. |
@@ -352,7 +352,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Description |
 | **Description**     | A textual representation of the rule in a human-readable form.                                                                                                                             |
-| **URI**             | https://iri.suomi.fi/model/nsig/description |
+| **URI**             | https://iri.suomi.fi/model/ncbv/description |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -363,7 +363,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Sequence |
 | **Description**     | Indicates the position of a representation rule within a composite representation rule, defining the order in which the rules are applied or evaluated. |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/sequence |
+| **URI**             | https://iri.suomi.fi/model/ncbv/sequence |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -374,7 +374,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Representation Rule |
 | **Description**     | A rule that specifies representation based on organizational roles and the number of role holders required to act. |
-| **URI**             | https://iri.suomi.fi/model/nsig/RoleBasedRepresentationRule |
+| **URI**             | https://iri.suomi.fi/model/ncbv/RoleBasedRepresentationRule |
 | **Requirement Level** | Recommended |
 | **Usage note** | Use this class when a representation rule can be expressed in terms of organizational roles and the number of individuals holding those roles who must act. For example, when two board members must sign jointly, or when the CEO can act alone. If a representation rule consists of a combination of roles, this must be expressed as separate role-based representation rules within a composite representation rule. |
 
@@ -384,7 +384,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Minimum Number of Memberships/ Minimum Number of Role holders |
 | **Description**     | Specifies the minimum number of individuals holding the specified role that must act for the representation rule to be valid. |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/minimumNumberOfMemberships |
+| **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfMemberships |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -396,7 +396,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Minimum number of Memberships/Minimum Number of Role holders |
 | **Description**     | Specifies a qualitative quantity or proportion of role holders required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/membershipQuantifier |
+| **URI**             | https://iri.suomi.fi/model/ncbv/membershipQuantifier |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -406,7 +406,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Defines Valid Role |
 | **Description**     | Specifies the organizational role that an individual must hold for the role-based representation rule to be valid. |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/definesValidRole |
+| **URI**             | https://iri.suomi.fi/model/ncbv/definesValidRole |
 | **Range** | xsd:string |
 | **Multiplicity** | 1 |
 | **Requirement Level** | Mandatory |
@@ -418,7 +418,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Representation Rule |
 | **Description**     | A rule that specifies representation based on being a member of the mandating legal entity, and the number of such members required to act. |
-| **URI**             | https://iri.suomi.fi/model/nsig/MembershipBasedRepresentationRule |
+| **URI**             | https://iri.suomi.fi/model/ncbv/MembershipBasedRepresentationRule |
 | **Requirement Level** | Recommended|
 | **Usage note** | Use this class when a representation rule can be expressed in terms of members of the mandating legal entity and the number of such members required to act. For example, when two members of a partnership must act jointly, or when three members of an association can sign together. If a representation rule consists of a combination of membership-based rules, these must be expressed as separate membership-based representation rules within a composite representation rule. |
 
@@ -428,7 +428,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Minimum Number of Memberships/Minimum Number of Members |
 | **Description**     | Specifies the minimum number of members of the mandating legal entity that must act for the representation rule to be valid. |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/minimumNumberOfMemberships |
+| **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfMemberships |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -440,7 +440,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Membership Quantifier/ Member Quantifier |
 | **Description**     | Specifies a qualitative quantity or proportion of members of the mandating legal entity required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
-| **URI** | https://iri.suomi.fi/model/nsig/membershipQuantifier |
+| **URI** | https://iri.suomi.fi/model/ncbv/membershipQuantifier |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -450,7 +450,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Defines Valid Role |
 | **Description**     | Specifies the membership(s) in the mandating legal entity that qualify an individual to act under the membership-based representation rule. |                                                                                   
-| **URI**             | https://iri.suomi.fi/model/nsig/definesMembership |
+| **URI**             | https://iri.suomi.fi/model/ncbv/definesMembership |
 | **Range** | xsd:string |
 | **Multiplicity** | 1 .. *|
 | **Requirement Level** | Mandatory |
@@ -462,7 +462,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Representation Rule |
 | **Description**     | A rule consisting of one or more representation rules, each of which may be role-based, membership-based, or composite. |
-| **URI**             | https://iri.suomi.fi/model/nsig/compositeRepresentationRule |
+| **URI**             | https://iri.suomi.fi/model/ncbv/compositeRepresentationRule |
 | **Requirement Level** | Recommended |
 
 ### Associations of the Representation Rule class 
@@ -471,7 +471,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | And |
 | **Description**     | A cumulative logical connection between two or more rules (equivalent to logical AND operator). |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/and |
+| **URI**             | https://iri.suomi.fi/model/ncbv/and |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -480,7 +480,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|
 | **Name**    | Or |
 | **Description**     | An alternative logical connection between two or more rules (equivalent to logical OR operator). |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/nsig/or |
+| **URI**             | https://iri.suomi.fi/model/ncbv/or |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
