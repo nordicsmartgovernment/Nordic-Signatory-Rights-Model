@@ -90,7 +90,7 @@ Link to JSON-LD
 |---------------------|---------|
 | **Name**    | Signatory Rights |
 | **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/Mandate |
+| **URI**             | https://tietomallit.suomi.fi/en/model/ncbv/class/Mandate |
 | **Requirement Level** | Mandatory |
 
 
