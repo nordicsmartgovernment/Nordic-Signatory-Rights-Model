@@ -204,7 +204,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Association**          | Has Member |
 |---------------------|---------|
 | **Name**    | Has Member |
-| **Description**     | A name under which the legal entity is registered. |
+| **Description**     | |
 | **URI**             | https://iri.suomi.fi/model/nsig/hasMember |
 | **Range** | ncbv:Membership |
 | **Multiplicity** | 1..* |
@@ -245,7 +245,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Association**          | Identifier |
 |---------------------|---------|
 | **Name**    | Identifier |
-| **Description**     | A structured reference that identifies a person. |
+| **Description**     | A reference to the identifier of a person. |
 | **URI**             | https://iri.suomi.fi/model/nsig/identifier_ |
 | **Range** |  |
 | **Multiplicity** |  |
@@ -255,7 +255,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Class**          | Identifier |
 |---------------------|---------|
 | **Name**    | Identifier |
-| **Description**     |  |
+| **Description**     |  A structured reference that identifies an agent. |
 | **URI**             | https://iri.suomi.fi/model/nsig/Identifier |
 | **Requirement Level** | Mandatory |
 
@@ -264,7 +264,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Date of Issue |
 |---------------------|---------|
 | **Name**    | Date of Issue |
-| **Description**     |   |                                                                                                                        |
+| **Description**     |  The date on which the Identifier was assigned. |                                                                                                                        |
 | **URI**             | https://iri.suomi.fi/model/nsig/dateOfIssue |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
@@ -273,7 +273,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Notation |
 |---------------------|---------|
 | **Name**    | Notation |
-| **Description**     |    |                                                                                                                     |
+| **Description**     | 	A string of characters to uniquely identify a concept. |                                                                                                                     |
 | **URI**             | https://iri.suomi.fi/model/nsig/notation |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
@@ -282,7 +282,7 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Schema Agency |
 |---------------------|---------|
 | **Name**    |  Schema Agency |
-| **Description**     |                                                                                                                        |
+| **Description**     | The name of the agency that issued the identifier. |                                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
@@ -291,25 +291,17 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **Attribute**          | Schema Name |
 |---------------------|---------|
 | **Name**    |  Schema Name |
-| **Description**     |                                                                                                                        |
+| **Description**     | Name of the scheme used to construct the identifier. |                                                                                                                        |
 | **URI**             | https://iri.suomi.fi/model/nsig/schemaName |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-| **Attribute**          | Schema Agency |
-|---------------------|---------|
-| **Name**    |  Schema Agency |
-| **Description**     |                                                                                                                        |
-| **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
-| **Range** | xsd:string |
-| **Multiplicity** | 0..1 |
-| **Requirement Level** | Recommended |
 
 | **Attribute**          | Schema URI |
 |---------------------|---------|
 | **Name**    |  Schema Agency |
-| **Description**     |                                                                                                                        |
+| **Description**     | URI of the scheme used to construct the identifier. |                                                                                                                       |
 | **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
