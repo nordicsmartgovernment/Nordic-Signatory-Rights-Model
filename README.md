@@ -259,6 +259,62 @@ The Signatory rights model is based on the [Core Criterion and Core Evidence Voc
 | **URI**             | https://iri.suomi.fi/model/nsig/Identifier |
 | **Requirement Level** | Mandatory |
 
+### Attributes of the Identifier Class
+
+| **Attribute**          | Date of Issue |
+|---------------------|---------|
+| **Name**    | Date of Issue |
+| **Description**     |   |                                                                                                                        |
+| **URI**             | https://iri.suomi.fi/model/nsig/dateOfIssue |
+| **Range** | xsd:date |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Attribute**          | Notation |
+|---------------------|---------|
+| **Name**    | Notation |
+| **Description**     |    |                                                                                                                     |
+| **URI**             | https://iri.suomi.fi/model/nsig/notation |
+| **Range** | xsd:string |
+| **Multiplicity** | 1..1 |
+| **Requirement Level** | Mandatory |
+
+| **Attribute**          | Schema Agency |
+|---------------------|---------|
+| **Name**    |  Schema Agency |
+| **Description**     |                                                                                                                        |
+| **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Attribute**          | Schema Name |
+|---------------------|---------|
+| **Name**    |  Schema Name |
+| **Description**     |                                                                                                                        |
+| **URI**             | https://iri.suomi.fi/model/nsig/schemaName |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Attribute**          | Schema Agency |
+|---------------------|---------|
+| **Name**    |  Schema Agency |
+| **Description**     |                                                                                                                        |
+| **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+| **Attribute**          | Schema URI |
+|---------------------|---------|
+| **Name**    |  Schema Agency |
+| **Description**     |                                                                                                                        |
+| **URI**             | https://iri.suomi.fi/model/nsig/schemaAgency |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
 ## Class Membership
 
 | **Class**          | Membership |
