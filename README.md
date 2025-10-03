@@ -433,7 +433,7 @@ We need a bunch of examples!
 
 ### Associations of the Membership Based Representation Rule class
 
-| **Association**          | Membership Quantifier/ Member Quantifier |
+| **Association**          | Member Quantifier |
 |---------------------|---------|
 | **Name**    | Member Quantifier |
 | **Description**     | Specifies a qualitative quantity or proportion of members of the mandating legal entity required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
