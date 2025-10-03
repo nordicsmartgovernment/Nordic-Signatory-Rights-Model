@@ -201,7 +201,7 @@ Link to JSON-LD
 | **Description**     | A name under which the legal entity is registered. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/legalName |
 | **Range** | xsd:string |
-| **Multiplicity** |  |
+| **Multiplicity** | 1..1 |
 | **Requirement Level** | Recommended |
 
 ## Class Person
@@ -291,7 +291,6 @@ Link to JSON-LD
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-
 | **Attribute**          | Schema URI |
 |---------------------|---------|
 | **Name**    |  Schema Agency |
@@ -308,9 +307,7 @@ Link to JSON-LD
 | **Name**    | Membership |
 | **Description**     | Indicates the nature of an agent's membership of an legal entity. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/Membership |
-| **Requirement Level** | Recommended |
-
-### Attributes of the Membership class
+| **Requirement Level** | Recommended | 
 
 ### Associations of the Membership  class
 
@@ -326,7 +323,7 @@ Link to JSON-LD
 | **Association**          | Role |
 |---------------------|---------|
 | **Name**    | Role |
-| **Description**     |Indicates the role that the agent plays in a membership relationship with an legal entity. |
+| **Description**     | Indicates the role that the agent plays in a membership relationship with an legal entity. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/role |
 | **Range** | ncvb:Role |
 | **Multiplicity** |0..1|
@@ -347,7 +344,7 @@ Link to JSON-LD
 | **Attribute**          | Description |
 |---------------------|---------|
 | **Name**    | Description |
-| **Description**     | A textual representation of the rule in a human-readable form.                                                                                                                             |
+| **Description**     | A textual representation of the rule in a human-readable form.|
 | **URI**             | https://iri.suomi.fi/model/ncbv/description |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
@@ -376,11 +373,11 @@ Link to JSON-LD
 
 ### Attributes of the Role Based Representation Rule class
 
-| **Attribute**          | Minimum Number of Memberships/ Minimum Number of Role holders |
+| **Attribute**          | Minimum Number of Role holders |
 |---------------------|---------|
-| **Name**    | Minimum Number of Memberships/ Minimum Number of Role holders |
+| **Name**    | Minimum Number of Role holders |
 | **Description**     | Specifies the minimum number of individuals holding the specified role that must act for the representation rule to be valid. |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfMemberships |
+| **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfRoleHolders |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -388,11 +385,11 @@ Link to JSON-LD
 
 ### Associations of the Role Based Representation Rule class
 
-| **Association**          | MembershipQuantifier/ Role Holde Quantifier |
+| **Association**          | Role Holder Quantifier |
 |---------------------|---------|
-| **Name**    | Minimum number of Memberships/Minimum Number of Role holders |
+| **Name**    | Role holder Quantifier |
 | **Description**     | Specifies a qualitative quantity or proportion of role holders required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/ncbv/membershipQuantifier |
+| **URI**             | https://iri.suomi.fi/model/ncbv/roleHolderQuantifier |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -420,11 +417,11 @@ Link to JSON-LD
 
 ### Attributes of the Membership Based Representation Rule class
 
-| **Attribute**          | Minimum Number of Memberships/Minimum Number of Members |
+| **Attribute**          | Minimum Number of Members |
 |---------------------|---------|
-| **Name**    | Minimum Number of Memberships/Minimum Number of Members |
+| **Name**    | Minimum Number of Members |
 | **Description**     | Specifies the minimum number of members of the mandating legal entity that must act for the representation rule to be valid. |                                                                                                      |
-| **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfMemberships |
+| **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfMembers |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
@@ -434,9 +431,9 @@ Link to JSON-LD
 
 | **Association**          | Membership Quantifier/ Member Quantifier |
 |---------------------|---------|
-| **Name**    | Membership Quantifier/ Member Quantifier |
+| **Name**    | Member Quantifier |
 | **Description**     | Specifies a qualitative quantity or proportion of members of the mandating legal entity required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
-| **URI** | https://iri.suomi.fi/model/ncbv/membershipQuantifier |
+| **URI** | https://iri.suomi.fi/model/ncbv/memberQuantifier |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
