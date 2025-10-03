@@ -490,14 +490,14 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ## Nordic Core Business Vocabulary
 The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
 
-Link to Tietomallit
+[Link to NCBV](https://tietomallit.suomi.fi/model/ncbv)
 Link to RDF
 Link to JSON-LD
 
 ## Nordic Signatory Rights
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
 
-[Link to Tietomallit](https://tietomallit.suomi.fi/model/ncbv)
+[Link to NSIG](https://tietomallit.suomi.fi/model/nsgi)
 Link to RDF
 Link to JSON-LD
 
