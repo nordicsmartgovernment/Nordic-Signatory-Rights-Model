@@ -67,7 +67,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ### Nordic Signatory Rights
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
 
-[Link to NSIG](https://tietomallit.suomi.fi/model/nsgi) Needs to be published before it works!
+[Link to NSIG model](https://tietomallit.suomi.fi/model/nsgi) Needs to be published before it works!
 
 Link to RDF
 
@@ -76,63 +76,13 @@ Link to JSON-LD
 ### Nordic Core Business Vocabulary
 The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
 
-[Link to NCBV](https://tietomallit.suomi.fi/model/ncbv)
+[Link to NCBV model](https://tietomallit.suomi.fi/model/ncbv)
 
 Link to RDF
 
 Link to JSON-LD
 
-### Namespaces we use ??
-skoc concept
-ncbv
-
-```mermaid
- %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
-    classDiagram
-       
-        class Signatory Rights {
-            Identifier: String
-            Date of issue : Date
-            Modified: Date
-            Status : String
-        }
-
-        Signatory Rights --> "0..1" Legal Entity : has mandator
-        Signatory Rights --> "1..*" Representation Rule : has representation rule
-
-        class Legal Entity {
-           The legal entity that grants
-           the signatory rights.
-        }
-
-        class Representation Rule {
-           A rule that describes who or which
-           agents signatory rights is granted to.
-        }
-
-        Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
-        Representation Rule --> "0..*" Membership Based Representation Rule : has membership based representation rule
-
-        class Role Based Representation Rule {
-           "Board member",
-           "Managing Director"...
-        }
-
-        class Membership Based Representation Rule {
-           "Members of an association",
-           "Members of a partnership"...
-        }
-
-        class Composite Representation Rule {
-           A composite rule needs to be broken down
-           into two or more representation rules.
-        }
-
-        Composite Representation Rule --> "0..*" Representation Rule : and
-        Composite Representation Rule --> "0..*" Representation Rule : or
-
-
-```
+# Clases, attributes and associations
 
 ## Class Signatory Rights 
 
