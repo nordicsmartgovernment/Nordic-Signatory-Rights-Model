@@ -23,7 +23,8 @@ Signatory rights can consist of one or more representation rules. Each rule desc
     classDiagram
        
         class Signatory Rights {
-            Top class
+            Signatory rights for
+            the legal entity
         }
 
         Signatory Rights --> "0..1" Legal Entity : has mandator
@@ -66,15 +67,19 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ### Nordic Signatory Rights
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
 
-[Link to NSIG](https://tietomallit.suomi.fi/model/nsgi)
+[Link to NSIG](https://tietomallit.suomi.fi/model/nsgi) Needs to be published before it works!
+
 Link to RDF
+
 Link to JSON-LD
 
 ### Nordic Core Business Vocabulary
 The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
 
 [Link to NCBV](https://tietomallit.suomi.fi/model/ncbv)
+
 Link to RDF
+
 Link to JSON-LD
 
 ### Namespaces we use ??
