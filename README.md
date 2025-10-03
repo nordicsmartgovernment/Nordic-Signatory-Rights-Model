@@ -82,6 +82,10 @@ Link to RDF
 
 Link to JSON-LD
 
+# Examples
+
+We need a bunch of examples!
+
 # Clases, attributes and associations
 
 ## Class Signatory Rights 
@@ -478,6 +482,3 @@ Link to JSON-LD
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-# Examples
-
-We need a bunch of examples!
