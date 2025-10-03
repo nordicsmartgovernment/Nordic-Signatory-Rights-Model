@@ -17,6 +17,54 @@ A legal entity can be registered with one or more instances of Signatory rights.
 
 Signatory rights can consist of one or more representation rules. Each rule describes in a structured machine-readable way the conditions for a mandate to be valid by setting requirements for the number of agents (Person or Legal entity) and the roles they must hold in a legal entity. An agent can hold one or many roles in a legal entity and can acquire signatory rights through multiple signatory rules.
 
+## Concept model
+```mermaid
+ %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
+    classDiagram
+       
+        class Signatory Rights {
+            Identifier: String
+            Date of issue : Date
+            Modified: Date
+            Status : String
+        }
+
+        Signatory Rights --> "0..1" Legal Entity : has mandator
+        Signatory Rights --> "1..*" Representation Rule : has representation rule
+
+        class Legal Entity {
+           The legal entity that grants
+           the signatory rights.
+        }
+
+        class Representation Rule {
+           A rule that describes who or which
+           agents signatory rights is granted to.
+        }
+
+        Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
+        Representation Rule --> "0..*" Membership Based Representation Rule : has membership based representation rule
+
+        class Role Based Representation Rule {
+           "Board member",
+           "Managing Director"...
+        }
+
+        class Membership Based Representation Rule {
+           "Members of an association",
+           "Members of a partnership"...
+        }
+
+        class Composite Representation Rule {
+           A composite rule needs to be broken down
+           into two or more representation rules.
+        }
+
+        Composite Representation Rule --> "0..*" Representation Rule : and
+        Composite Representation Rule --> "0..*" Representation Rule : or
+
+```
+## Complete model
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
