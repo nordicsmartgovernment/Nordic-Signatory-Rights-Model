@@ -179,11 +179,9 @@ Link to JSON-LD
 | **Class**          | Agent |
 |---------------------|---------|
 | **Name**    | Agent |
-| **Description**     |  |
+| **Description**     | An entity that is able to carry out actions |
 | **URI**             | https://iri.suomi.fi/model/ncbv/Agent |
 | **Requirement Level** | Mandatory |
-
-### Associations of the Agent Class
 
 ## Class Legal Entity
 
@@ -206,32 +204,12 @@ Link to JSON-LD
 | **Multiplicity** |  |
 | **Requirement Level** | Recommended |
 
-### Associations of the Legal Entity class
-
-| **Association**          | Legal Identifier |
-|---------------------|---------|
-| **Name**    | Legal Identifier |
-| **Description**     | A name under which the legal entity is registered. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/identifier_ |
-| **Range** | ncbv:Identifier |
-| **Multiplicity** |  |
-| **Requirement Level** | Recommended |
-
-| **Association**          | Has Member |
-|---------------------|---------|
-| **Name**    | Has Member |
-| **Description**     | |
-| **URI**             | https://iri.suomi.fi/model/ncbv/hasMember |
-| **Range** | ncbv:Membership |
-| **Multiplicity** | 1..* |
-| **Requirement Level** | Mandatory |
-
 ## Class Person
 
 | **Class**          | Person |
 |---------------------|---------|
 | **Name**    | Person |
-| **Description**     |  |
+| **Description**     |  An individual human being who may be dead or alive, but not imaginary |
 | **URI**             | https://iri.suomi.fi/model/ncbv/Person |
 | **Subclass of** | ncbv:Agent |
 | **Requirement Level** | Mandatory |
@@ -252,8 +230,8 @@ Link to JSON-LD
 | **Name**    | Full Name |
 | **Description**     | The complete name of the Person as one string. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/fullName |
-| **Range** |  |
-| **Multiplicity** |  |
+| **Range** | xsd:string |
+| **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
 
 ### Associations of the Person class
@@ -263,8 +241,8 @@ Link to JSON-LD
 | **Name**    | Identifier |
 | **Description**     | A reference to the identifier of a person. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/identifier_ |
-| **Range** |  |
-| **Multiplicity** |  |
+| **Range** | xsd:string |
+| **Multiplicity** | 1..* |
 | **Requirement Level** | Mandatory |
 
 ## Class Identifier
