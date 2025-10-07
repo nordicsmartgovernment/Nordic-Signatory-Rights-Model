@@ -22,7 +22,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 | Prefix       | Namespace | Description/Name |
 |---------------------|---------|-----------------|
 | **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
-| **skos**     |               |                 |
+| **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
 | **xsd**   | http://www.w3.org/2001/XMLSchema# | XML Schema Part 2: Datatypes Second Edition |
 |   |    |    |
 
