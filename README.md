@@ -23,7 +23,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 |---------------------|---------|-----------------|
 | **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
 | **skos**     |               |                 |
-| **xsd**   | https://iri.suomi.fi/model/ncbv/Mandate |
+| **xsd**   | [https://iri.suomi.fi/model/ncbv/Mandate](http://www.w3.org/2001/XMLSchema#) | XML Schema Part 2: Datatypes Second Edition |
 |   |    |    |
 
 ## Overview model
