@@ -93,7 +93,7 @@ We need a bunch of examples!
 | **Class**          | Signatory Rights |
 |---------------------|---------|
 | **Name**    | Signatory Rights |
-| **Description**     | The terms under which a mandator grants or delegates authority or power to a mandatee. |
+| **Description**     | Signatory rights are a mandate that grants a mandatee the authority to sign documents or make legally binding commitments on behalf of the mandator. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/Mandate |
 | **Requirement Level** | Mandatory |
 
