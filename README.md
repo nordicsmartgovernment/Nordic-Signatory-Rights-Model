@@ -103,7 +103,7 @@ We need a bunch of examples!
 | **Attribute**          | Date of issue |
 |---------------------|---------|
 | **Name**    | Date of Issue |
-| **Description**     | The date when the mandate (signatory rights) was issued.                                                                                                                             |
+| **Description**     | The date when the signatory rights was issued.                                                                                                                             |
 | **URI**             | https://iri.suomi.fi/model/ncbv/dateOfIssue |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
@@ -112,7 +112,7 @@ We need a bunch of examples!
 | **Attribute**          | Identifier |
 |---------------------|---------|
 | **Name**    | Identifier |
-| **Description**     | Unique identifier for the mandate (signatory rights).                                                                                                                               |
+| **Description**     | Unique identifier for the signatory rights.                                                                                                                               |
 | **URI**             | https://iri.suomi.fi/model/ncbv/identifierAt |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
@@ -121,7 +121,7 @@ We need a bunch of examples!
 | **Attribute**          | Modified |
 |---------------------|---------|
 | **Name**    | Modified |
-| **Description**     | The date of the last update of the mandate (signatory rights).                                                                                                                       |
+| **Description**     | The date of the last update of the signatory rights.                                                                                                                       |
 | **URI**             | https://iri.suomi.fi/model/ncbv/modified |
 | **Range** | xsd:date |
 | **Multiplicity** | 0..1 |
@@ -143,7 +143,7 @@ We need a bunch of examples!
 | **Association**          | Has Scope |
 |---------------------|---------|
 | **Name**    | Has Scope |
-| **Description**     | A reference to the specific type of the mandate, in this case Signatory rights.                                                                                                      |
+| **Description**     | A reference to the scope of the signatory rigths. |                                                                                                      
 | **URI**             | https://iri.suomi.fi/model/ncbv/hasScope |
 | **Range** | ncbv:Scope |
 | **Multiplicity** | 1..1 |
@@ -152,7 +152,7 @@ We need a bunch of examples!
 | **Association**          | Has Representation Rule |
 |---------------------|---------|
 | **Name**    | Has Representation Rule |
-| **Description**     | A reference to the representation rule for the signatory rights.<br>A rule that describes who or which agents sigantory rights is granted to                                                         |
+| **Description**     | A reference to the representation rule for the signatory rights. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/hasRepresentationRule |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 1..* |
@@ -161,9 +161,9 @@ We need a bunch of examples!
 | **Association**          | Has Mandator |
 |---------------------|---------|
 | **Name**    | Has Mandator |
-| **Description**     | A reference to the mandator (in this case a legal entity) of the mandate.                                                                                                             |  
+| **Description**     | Reference to the legal entity acting as mandator of the signatory rights. |  
 | **URI**             | https://iri.suomi.fi/model/ncbv/hasMandator |
-| **Range** | ncbv:Agent |
+| **Range** | ncbv:LegalEntity |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
 | **Note** | The property hasMandator has an or-relationship with the property grantsMandate.<br>At least one of the properties must occur. |
