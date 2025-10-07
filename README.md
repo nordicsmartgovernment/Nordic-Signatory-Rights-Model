@@ -143,7 +143,7 @@ We need a bunch of examples!
 | **Association**          | Has Scope |
 |---------------------|---------|
 | **Name**    | Has Scope |
-| **Description**     | A reference to the scope of the signatory rigths. |                                                                                                      
+| **Description**     | A reference to the scope of the signatory rights. |                                                                                                      
 | **URI**             | https://iri.suomi.fi/model/ncbv/hasScope |
 | **Range** | ncbv:Scope |
 | **Multiplicity** | 1..1 |
@@ -183,16 +183,17 @@ We need a bunch of examples!
 | **Class**          | Agent |
 |---------------------|---------|
 | **Name**    | Agent |
-| **Description**     | An entity that is able to carry out actions |
+| **Description**     | An entity involved in signatory rights as mandator or mandatee. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/Agent |
 | **Requirement Level** | Mandatory |
+| **Note** | This is an abstract class. Therefore only the subclasses ncbv:LegalEntity and ncvb:Person SHOULD be used in a data exhange. |
 
 ## Class Legal Entity
 
 | **Class**          | Legal Entity |
 |---------------------|---------|
 | **Name**    | Legal Entity |
-| **Description**     | A formal organization that is involved in economic activity. |
+| **Description**     | A formal organization participating in signatory rights, in the role of either mandator or mandatee. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/legalEntity |
 | **Subclass of**             | ncbv:Agent |
 | **Requirement Level** | Mandatory |
@@ -208,15 +209,44 @@ We need a bunch of examples!
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Recommended |
 
+### Associations of the Legal Entity class
+
+| **Association**          | Identifier |
+|---------------------|---------|
+| **Name**    | Identifier |
+| **Description**     | A reference to the identifier of a legal entity. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifier_ |
+| **Range** | xsd:string |
+| **Multiplicity** | 1..* |
+| **Requirement Level** | Mandatory 
+
+| **Association**          | Grants Signatory Rights |
+|---------------------|---------|
+| **Name**    | Grants Signatory Rights |
+| **Description**     | A reference to the signatory rights granted by the legal entity, acting as the mandator. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/grantsMandate |
+| **Range** | ncbv:Mandate |
+| **Multiplicity** | 1..* |
+| **Requirement Level** | Mandatory | 
+
+| **Association**          | Has Member |
+|---------------------|---------|
+| **Name**    | Has Member |
+| **Description**     | A reference to a membership associating a mandatee with the legal entity regarding signatory rights. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/hasMember |
+| **Range** | ncbv:Membership |
+| **Multiplicity** | 1..* |
+| **Requirement Level** | Mandatory | 
+
 ## Class Person
 
 | **Class**          | Person |
 |---------------------|---------|
 | **Name**    | Person |
-| **Description**     |  An individual human being who may be dead or alive, but not imaginary |
+| **Description**     |  An individual human being acting as mandatee under signatory rights. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/Person |
 | **Subclass of** | ncbv:Agent |
-| **Requirement Level** | Mandatory |
+| **Requirement Level** | Recommended |
 
 ### Attributes of the Person class
 
@@ -373,7 +403,7 @@ We need a bunch of examples!
 | **Description**     | A rule that specifies representation based on organizational roles and the number of role holders required to act. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/RoleBasedRepresentationRule |
 | **Requirement Level** | Recommended |
-| **Usage note** | Use this class when a representation rule can be expressed in terms of organizational roles and the number of individuals holding those roles who must act. For example, when two board members must sign jointly, or when the CEO can act alone. If a representation rule consists of a combination of roles, this must be expressed as separate role-based representation rules within a composite representation rule. |
+| **Usage note** | Use this class when a representation rule can be expressed in terms of organizational roles and the number of role-holders required to act. For example, when two board members must sign jointly, or when the CEO can act alone. If a representation rule consists of a combination of roles, this must be expressed as separate role-based representation rules within a composite representation rule. |
 
 ### Attributes of the Role Based Representation Rule class
 
@@ -382,10 +412,10 @@ We need a bunch of examples!
 | **Name**    | Minimum Number of Role holders |
 | **Description**     | Specifies the minimum number of individuals holding the specified role that must act for the representation rule to be valid. |                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfRoleHolders |
-| **Range** | xsd:string |
+| **Range** | xsd:positiveInteger |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
-| **Usage note** | Use this property to indicate how many members of the legal entity are required for the rule to be valid. When the rule is part of a composite representation rule, this minimum applies to the specific membership-based rule within the composite. |
+| **Usage note** | Use this property to indicate the minimum number of individuals holding the specified role (role holders) who must act for the representation rule to be valid. When the rule is part of a composite representation rule, this minimum applies to the specific role-based rule within the composite. Either this property or Role Holder Quantifier property SHOULD be used, but not both. |
 
 ### Associations of the Role Based Representation Rule class
 
@@ -394,20 +424,20 @@ We need a bunch of examples!
 | **Name**    | Role holder Quantifier |
 | **Description**     | Specifies a qualitative quantity or proportion of role holders required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/ncbv/roleHolderQuantifier |
-| **Range** | xsd:string |
+| **Range** | skos:Concept |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
-| **Usage note** | Use this property when a role-based representation rule requires a non-numeric quantification of role holders. This property complements MinimumNumberOfRoleHolders and may be used in combination with numeric values if appropriate. |
+| **Usage note** | Use this property when a role-based representation rule requires a non-numeric quantification of role holders. Either this property or Minimum Number Of Role Holders property SHOULD be used, but not both. |
 
 | **Association**          | Defines Valid Role |
 |---------------------|---------|
 | **Name**    | Defines Valid Role |
 | **Description**     | Specifies the organizational role that an individual must hold for the role-based representation rule to be valid. |                                                                                                      |
 | **URI**             | https://iri.suomi.fi/model/ncbv/definesValidRole |
-| **Range** | xsd:string |
-| **Multiplicity** | 1 |
+| **Range** | ncbv:Role |
+| **Multiplicity** | 1..* |
 | **Requirement Level** | Mandatory |
-| **Usage note** | Use this property to indicate which role or roles qualify an individual to act under the rule. The rule is considered satisfied only if the required number of individuals holding the specified role(s) participate. |
+| **Usage note** | Use this property to indicate which role or roles qualify an individual to act under the rule. The rule is considered satisfied only if the required number of individuals holding the specified role(s) participate. Typically, only a single role is referenced. However, in cases where the rule refers to a general role (e.g., “board member”), it may be necessary to specify more precise roles. For example, the rule “Two board members jointly” may require that, in addition to the general board member role, more specific roles such as board chair and board vice-chair are specified. |
 
 ## Class Membership Based Representation Rule
 
@@ -416,7 +446,7 @@ We need a bunch of examples!
 | **Name**    | Representation Rule |
 | **Description**     | A rule that specifies representation based on being a member of the mandating legal entity, and the number of such members required to act. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/MembershipBasedRepresentationRule |
-| **Requirement Level** | Recommended|
+| **Requirement Level** | Recommended |
 | **Usage note** | Use this class when a representation rule can be expressed in terms of members of the mandating legal entity and the number of such members required to act. For example, when two members of a partnership must act jointly, or when three members of an association can sign together. If a representation rule consists of a combination of membership-based rules, these must be expressed as separate membership-based representation rules within a composite representation rule. |
 
 ### Attributes of the Membership Based Representation Rule class
@@ -424,31 +454,31 @@ We need a bunch of examples!
 | **Attribute**          | Minimum Number of Members |
 |---------------------|---------|
 | **Name**    | Minimum Number of Members |
-| **Description**     | Specifies the minimum number of members of the mandating legal entity that must act for the representation rule to be valid. |                                                                                                      |
+| **Description**     | Specifies the minimum number of members of the legal entity who hold the specified signatory rights (mandatees) that must act for the role-based representation rule to be valid. |                                                                 
 | **URI**             | https://iri.suomi.fi/model/ncbv/minimumNumberOfMembers |
-| **Range** | xsd:string |
+| **Range** | xsd:positiveInteger |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
-| **Usage note** | Use this property to indicate how many members of the legal entity are required for the rule to be valid. When the rule is part of a composite representation rule, this minimum applies to the specific membership-based rule within the composite. |
+| **Usage note** | Use this property to indicate the minimum number of mandatees (holders of the specific signatory rights) within the legal entity who are required to act for the rule to be valid. When the rule is part of a composite representation rule, this minimum applies to the specific membership-based rule within the composite. Either this property or the Member Quantifier property SHOULD be used, but not both.|
 
 ### Associations of the Membership Based Representation Rule class
 
 | **Association**          | Member Quantifier |
 |---------------------|---------|
 | **Name**    | Member Quantifier |
-| **Description**     | Specifies a qualitative quantity or proportion of members of the mandating legal entity required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                                                                                                      |
+| **Description**     | Specifies a qualitative quantity or proportion of members of the mandating legal entity required for the rule, used when the number cannot be expressed as a specific numeric value (e.g., “all”, “half”, “majority”). |                            
 | **URI** | https://iri.suomi.fi/model/ncbv/memberQuantifier |
-| **Range** | xsd:string |
+| **Range** | skos:Cocept |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
-| **Usage note** | Use this property when a membership-based representation rule requires a non-numeric quantification of members. This property complements MinimumNumberOfMembers and may be used in combination with numeric values if appropriate.|
+| **Usage note** | Use this property when a membership-based representation rule requires a non-numeric quantification of members. This property complements MinimumNumberOfMembers and may be used in combination with numeric values if appropriate. Either this property or the Minimum Number of Members property SHOULD be used, but not both|
 
 | **Association**          | Defines Valid Membership |
 |---------------------|---------|
 | **Name**    | Defines Valid Role |
-| **Description**     | Specifies the membership(s) in the mandating legal entity that qualify an individual to act under the membership-based representation rule. |                                                                                   
+| **Description**     | Specifies the memberships that qualify individuals to act under the membership-based representation rule. |                                                                                   
 | **URI**             | https://iri.suomi.fi/model/ncbv/definesMembership |
-| **Range** | xsd:string |
+| **Range** | ncbv:Membership |
 | **Multiplicity** | 1 .. *|
 | **Requirement Level** | Mandatory |
 | **Usage note** |Use this property to indicate which members of the legal entity are authorized to act. The rule is considered satisfied only if the required number of these members participate. |
