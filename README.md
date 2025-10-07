@@ -17,6 +17,15 @@ A legal entity can be registered with one or more instances of Signatory rights.
 
 Signatory rights can consist of one or more representation rules. Each rule describes in a structured machine-readable way the conditions for a mandate to be valid by setting requirements for the number of agents (Person or Legal entity) and the roles they must hold in a legal entity. An agent can hold one or many roles in a legal entity and can acquire signatory rights through multiple signatory rules.
 
+## Used namespaces ##
+
+| Prefix       | Namespace | Description/Name |
+|---------------------|---------|-----------------|
+| **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
+| **skos**     |               |                 |
+| **xsd**   | https://iri.suomi.fi/model/ncbv/Mandate |
+|   |    |    |
+
 ## Overview model
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
@@ -130,24 +139,15 @@ We need a bunch of examples!
 | **Attribute**          | Status |
 |---------------------|---------|
 | **Name**    | Status |
-| **Description**     | This property is used to specify the status of the mandate (signatory rights) in the context of maturity lifecycle.<br>Example: Completed, Withdrawn, Deprecated, Under development. |
+| **Description**     | This property is used to specify the status of the mandate (signatory rights) in the context of maturity lifecycle.|
 | **URI**             | https://iri.suomi.fi/model/ncbv/status |
-| **Range** | xsd:string |
+| **Range** | skos:Concept |
 | **Multiplicity** | 0..1 |
-| **Requirement Level** | Optional |
+| **Requirement Level** | Recommended |
 | **Note** | The value MUST be selected from the EU's controlled vocabulary Distribution status https://publications.europa.eu/resource/authority/distribution-status|
 
 
 ### Associations of the Signatory Rights class
-
-| **Association**          | Has Scope |
-|---------------------|---------|
-| **Name**    | Has Scope |
-| **Description**     | A reference to the scope of the signatory rights. |                                                                                                      
-| **URI**             | https://iri.suomi.fi/model/ncbv/hasScope |
-| **Range** | ncbv:Scope |
-| **Multiplicity** | 1..1 |
-| **Requirement Level** | Mandatory |
 
 | **Association**          | Has Representation Rule |
 |---------------------|---------|
@@ -167,16 +167,6 @@ We need a bunch of examples!
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Optional |
 | **Note** | The property hasMandator has an or-relationship with the property grantsMandate.<br>At least one of the properties must occur. |
-
-## Class Scope 
-
-| **Class**          | Scope |
-|---------------------|---------|
-| **Name**    | Scope |
-| **Description**     | A class to define what powers the Mandator grants to the Mandatee through the Mandate (in this case signatory rights). |
-| **URI**             | https://iri.suomi.fi/model/ncbv/scope |
-| **Requirement Level** | Mandatory |
-
 
 ## Class Agent
 
@@ -403,6 +393,7 @@ We need a bunch of examples!
 | **Description**     | A rule that specifies representation based on organizational roles and the number of role holders required to act. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/RoleBasedRepresentationRule |
 | **Requirement Level** | Recommended |
+| **Subclass Of**           | ncvb:RepresentationRule |
 | **Usage note** | Use this class when a representation rule can be expressed in terms of organizational roles and the number of role-holders required to act. For example, when two board members must sign jointly, or when the CEO can act alone. If a representation rule consists of a combination of roles, this must be expressed as separate role-based representation rules within a composite representation rule. |
 
 ### Attributes of the Role Based Representation Rule class
@@ -446,6 +437,7 @@ We need a bunch of examples!
 | **Name**    | Representation Rule |
 | **Description**     | A rule that specifies representation based on being a member of the mandating legal entity, and the number of such members required to act. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/MembershipBasedRepresentationRule |
+| **Subclass Of**           | ncvb:RepresentationRule |
 | **Requirement Level** | Recommended |
 | **Usage note** | Use this class when a representation rule can be expressed in terms of members of the mandating legal entity and the number of such members required to act. For example, when two members of a partnership must act jointly, or when three members of an association can sign together. If a representation rule consists of a combination of membership-based rules, these must be expressed as separate membership-based representation rules within a composite representation rule. |
 
@@ -489,7 +481,8 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Representation Rule |
 | **Description**     | A rule consisting of one or more representation rules, each of which may be role-based, membership-based, or composite. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/compositeRepresentationRule |
+| **URI**             | https://iri.suomi.fi/model/ncbv/CompositeRepresentationRule |
+| **Subclass Of**     | ncvb:RepresentationRule |
 | **Requirement Level** | Recommended |
 
 ### Associations of the Representation Rule class 
@@ -510,5 +503,67 @@ We need a bunch of examples!
 | **URI**             | https://iri.suomi.fi/model/ncbv/or |
 | **Range** | ncbv:RepresentationRule |
 | **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+## Class Membership
+
+| **Class**          | Membership |
+|---------------------|---------|
+| **Name**    | Membership |
+| **Description**     | A membership represents a relationship between an agent and an organization or legal entity, indicating the agent’s role, participation, or affiliation within that entity. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Membership |
+| **Requirement Level** | Recommended |
+
+### Attributes of the Membership class
+
+| **Attribute**          | Identifier |
+|---------------------|---------|
+| **Name**    | Identifier |
+| **Description**     | A structured reference that identifies an agent. |                                                                 
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifier |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+### Attributes of the Membership class
+
+| **Attribute**          | Identifier |
+|---------------------|---------|
+| **Name**    | Identifier |
+| **Description**     | A structured reference that identifies an agent. |                                                                 
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifier |
+| **Range** | xsd:string |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Recommended |
+
+### Associations of the Membership class 
+
+| **Association**          | Member |
+|---------------------|---------|
+| **Name**    | Member |
+| **Description**     | Indicates the agent involved in the membership relationship to the legal entity. |                                                                 
+| **URI**             | https://iri.suomi.fi/model/ncbv/Member |
+| **Range** | ncvb:Agent |
+| **Multiplicity** | 1..1 |
+| **Requirement Level** | Mandatory |
+
+| **Association**          | Role |
+|---------------------|---------|
+| **Name**    | Role |
+| **Description**     | Indicates the role that an agent plays in a membership relationship to the legal entity. |                                                                 
+| **URI**             | https://iri.suomi.fi/model/ncbv/Role |
+| **Range** | ncvb:Role |
+| **Multiplicity** | 0..1 |
+| **Requirement Level** | Mandatory |
+| **Usage note** |Use this property to specify the organizational role associated with the membership. It is mandatory when the membership is part of a Role Based Representation Rule. |
+
+## Class Role
+
+| **Class**          | Role |
+|---------------------|---------|
+| **Name**    | Role |
+| **Description**     | The Role that the Agent plays in a Membership relationship with a legal entity. |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Role |
+| **Subclass Of**           | skos:Concept |
 | **Requirement Level** | Recommended |
 
