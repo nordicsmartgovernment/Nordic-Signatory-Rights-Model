@@ -100,7 +100,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
            Minimum Number of Members : Positive Integer
         }
 
-        Membership Based Representation Rule --> "0..*" Role : defines valid membership
+        Membership Based Representation Rule --> "0..*" Membership : defines valid membership
 
         class Composite Representation Rule {
         }
