@@ -30,8 +30,8 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
-        Representation Rule <|-- Role Based Representation Rule
-        Representation Rule <|-- Membership Based Representation Rule
+        Representation Rule <|-- Role Based Representation Rule : is subclass of
+        Representation Rule <|-- Membership Based Representation Rule : is subclass of
 
         class Signatory Rights {
             Signatory rights for
