@@ -112,7 +112,7 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     | Unique identifier for the signatory rights.                                                                                                                               |
-| **URI**             | https://iri.suomi.fi/model/ncbv/identifierAt |
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifierValue |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
@@ -195,7 +195,7 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     | A reference to the identifier of a legal entity. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/identifier_ |
+| **URI**             | https://iri.suomi.fi/model/ncbv/hasIdentifier |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..* |
 | **Requirement Level** | Mandatory 
@@ -254,7 +254,7 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     | A reference to the identifier of a person. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/identifier_ |
+| **URI**             | https://iri.suomi.fi/model/ncbv/hasIdentifier |
 | **Range** | xsd:string |
 | **Multiplicity** | 1..* |
 | **Requirement Level** | Mandatory |
@@ -264,7 +264,7 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     |  A structured reference that identifies an agent. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/Identifier |
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifierValue |
 | **Requirement Level** | Mandatory |
 
 ### Attributes of the Identifier Class
@@ -510,21 +510,11 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     | A structured reference that identifies an agent. |                                                                 
-| **URI**             | https://iri.suomi.fi/model/ncbv/identifier |
+| **URI**             | https://iri.suomi.fi/model/ncbv/identifierValue |
 | **Range** | xsd:string |
 | **Multiplicity** | 0..1 |
 | **Requirement Level** | Recommended |
 
-### Attributes of the Membership class
-
-| **Attribute**          | Identifier |
-|---------------------|---------|
-| **Name**    | Identifier |
-| **Description**     | A structured reference that identifies an agent. |                                                                 
-| **URI**             | https://iri.suomi.fi/model/ncbv/identifier |
-| **Range** | xsd:string |
-| **Multiplicity** | 0..1 |
-| **Requirement Level** | Recommended |
 
 ### Associations of the Membership class 
 
