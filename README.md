@@ -506,7 +506,7 @@ We need a bunch of examples!
 
 ### Attributes of the Membership class
 
-| **Attribute**          | Identifier |
+| **Attribute**          | Name |
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     | A structured reference that identifies an agent. |                                                                 
@@ -549,7 +549,7 @@ We need a bunch of examples!
 
 ## Used namespaces ##
 
-| Prefix       | Namespace | Description/Name |
+| Prefix       | Namespace | Name |
 |---------------------|---------|-----------------|
 | **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
 | **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
