@@ -113,8 +113,8 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         class Role {
-           A composite rule needs to be broken down
-           into two or more representation rules.
+           Code
+           Name
         }
 ```
 
