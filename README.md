@@ -85,18 +85,18 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         class Representation Rule {
-           A rule that describes who or which
-           agents signatory rights is granted to.
+           Description : Lang String
+           Sequence : Positive Integer
         }
 
         class Role Based Representation Rule {
-           "Board member",
-           "Managing Director"...
+           Minimum Number of Role Holders : Positive Integer
         }
 
+        Role Based Representation Rule --> "0..*" Role : defines valid role
+
         class Membership Based Representation Rule {
-           "Members of an association",
-           "Members of a partnership"...
+           Minimum Number of Members : Positive Integer
         }
 
         class Composite Representation Rule {
@@ -108,6 +108,11 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         Composite Representation Rule --> "0..*" Representation Rule : or
 
         class Agent {
+           Code : 
+           Name : 
+        }
+
+        class Role {
            A composite rule needs to be broken down
            into two or more representation rules.
         }
