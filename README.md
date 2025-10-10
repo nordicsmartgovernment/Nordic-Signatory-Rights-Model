@@ -17,15 +17,6 @@ A legal entity can be registered with one or more instances of Signatory rights.
 
 Signatory rights can consist of one or more representation rules. Each rule describes in a structured machine-readable way the conditions for a mandate to be valid by setting requirements for the number of agents (Person or Legal entity) and the roles they must hold in a legal entity. An agent can hold one or many roles in a legal entity and can acquire signatory rights through multiple signatory rules.
 
-## Used namespaces ##
-
-| Prefix       | Namespace | Description/Name |
-|---------------------|---------|-----------------|
-| **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
-| **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
-| **xsd**   | http://www.w3.org/2001/XMLSchema# | XML Schema Part 2: Datatypes Second Edition |
-|   |    |    |
-
 ## Overview model
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
@@ -566,3 +557,10 @@ We need a bunch of examples!
 | **Subclass Of**           | skos:Concept |
 | **Requirement Level** | Recommended |
 
+## Used namespaces ##
+
+| Prefix       | Namespace | Description/Name |
+|---------------------|---------|-----------------|
+| **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
+| **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
+| **xsd**   | http://www.w3.org/2001/XMLSchema# | XML Schema Part 2: Datatypes Second Edition |
