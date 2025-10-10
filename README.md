@@ -459,7 +459,7 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Defines Valid Role |
 | **Description**     | Specifies the memberships that qualify individuals to act under the membership-based representation rule. |                                                                                   
-| **URI**             | https://iri.suomi.fi/model/ncbv/definesMembership |
+| **URI**             | https://iri.suomi.fi/model/ncbv/definesValidMembership |
 | **Range** | ncbv:Membership |
 | **Multiplicity** | 1 .. *|
 | **Requirement Level** | Mandatory |
