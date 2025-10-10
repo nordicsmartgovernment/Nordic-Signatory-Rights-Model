@@ -121,7 +121,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         class Membership {
         }
 
-        class skosConcept
 ```
 
 ### Nordic Signatory Rights
