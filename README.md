@@ -83,8 +83,16 @@ Link to JSON-LD
 
 # Examples
 Turtle
+
 JSON-LD
+
 JSON-schema
+
+This is how you use Role based representation rule
+
+This is how you use Membership based representation rule
+
+This is how you use Composite representation rule
 
 # Classes, attributes and associations
 
