@@ -100,6 +100,8 @@ Signatory rights can consist of one or more representation rules. Each rule desc
            Minimum Number of Members : Positive Integer
         }
 
+        Membership Based Representation Rule --> "0..*" Role : defines valid membership
+
         class Composite Representation Rule {
         }
 
@@ -107,13 +109,14 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         Composite Representation Rule --> "0..*" Representation Rule : or
 
         class Agent {
-           Code : 
-           Name : 
         }
 
         class Role {
            Code
            Name
+        }
+
+        class Membership {
         }
 ```
 
