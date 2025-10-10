@@ -95,12 +95,14 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         Role Based Representation Rule --> "0..*" Role : defines valid role
+        Role Based Representation Rule --> "1..1" skosConcept : role holder quantifier
 
         class Membership Based Representation Rule {
            Minimum Number of Members : Positive Integer
         }
 
         Membership Based Representation Rule --> "0..*" Membership : defines valid membership
+        Membership Based Representation Rule --> "1..1" skosConcept : member quantifier
 
         class Composite Representation Rule {
         }
@@ -118,6 +120,8 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 
         class Membership {
         }
+
+        class skosConcept
 ```
 
 ### Nordic Signatory Rights
