@@ -121,7 +121,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         class Membership {
         }
 
-        class class "skos:Concept" as SKOSConcept <<external>> {
+        class "skos:Concept" as SKOSConcept <<external>> {
         }
 ```
 
