@@ -101,8 +101,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         class Composite Representation Rule {
-           A composite rule needs to be broken down
-           into two or more representation rules.
         }
 
         Composite Representation Rule --> "0..*" Representation Rule : and
