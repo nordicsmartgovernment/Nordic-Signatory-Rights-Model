@@ -76,7 +76,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
             Status : String
         }
 
-        Signatory Rights --> "0..1" Legal Entity : has mandator
+        Signatory Rights --> "1..1" Legal Entity : has mandator
         Signatory Rights --> "1..*" Representation Rule : has representation rule
 
         class Legal Entity {
