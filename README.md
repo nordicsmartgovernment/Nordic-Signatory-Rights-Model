@@ -130,9 +130,11 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         class Person {
+           Full Name : String
         }
 
         class Legal Entity as Member {
+           Legal Name : String
         }
 ```
 
