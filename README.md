@@ -51,9 +51,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
            agents signatory rights is granted to.
         }
 
-        Representation Rule  --> "0..*" Role Based Representation Rule : has role based representation rule
-        Representation Rule --> "0..*" Membership Based Representation Rule : has membership based representation rule
-
         class Role Based Representation Rule {
            "Board member",
            "Managing Director"...
