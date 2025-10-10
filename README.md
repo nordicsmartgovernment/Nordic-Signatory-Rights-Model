@@ -68,6 +68,8 @@ Signatory rights can consist of one or more representation rules. Each rule desc
     classDiagram
         Representation Rule <|-- Role Based Representation Rule : is subclass of
         Representation Rule <|-- Membership Based Representation Rule : is subclass of
+        Agent <|-- Person : is subclass of
+        Agent <|-- Legal Entity : is subclass of
 
         class Signatory Rights {
             Date of Issue : Date
@@ -121,7 +123,13 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         class Membership {
         }
 
+        Membership --> "0..1" Role : role
+        Membership --> "0..1" Agent : member
+
         class SKOSConcept {
+        }
+
+        class Person {
         }
 ```
 
