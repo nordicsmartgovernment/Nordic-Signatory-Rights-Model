@@ -69,7 +69,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         Representation Rule <|-- Role Based Representation Rule : is subclass of
         Representation Rule <|-- Membership Based Representation Rule : is subclass of
         Agent <|-- Person : is subclass of
-        Agent <|-- Legal Entity : is subclass of
+        Agent <|-- Legal Entity as Member : is subclass of
 
         class Signatory Rights {
             Date of Issue : Date
@@ -130,6 +130,9 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         class Person {
+        }
+
+        class Legal Entity as Member {
         }
 ```
 
