@@ -70,10 +70,10 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         Representation Rule <|-- Membership Based Representation Rule : is subclass of
 
         class Signatory Rights {
-            Date of Issue:date
-            Identifier
-            Modified
-            Status
+            Date of Issue : Date
+            Identifier : String
+            Modified : Date
+            Status : String
         }
 
         Signatory Rights --> "0..1" Legal Entity : has mandator
