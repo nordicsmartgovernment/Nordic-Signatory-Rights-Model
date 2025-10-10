@@ -420,7 +420,7 @@ This is how you use Composite representation rule
 | **Description**     | A textual representation of the rule in a human-readable form.|
 | **URI**             | https://iri.suomi.fi/model/ncbv/description |
 | **Range** | xsd:string |
-| **Multiplicity** | 0..1 |
+| **Multiplicity** | 0..* |
 | **Requirement Level** | Recommended |
 | **Usage note** | Use to provide the rule in text when structured representation is not possible, or together with structured data to convey the rule in a human-readable form. |
 
