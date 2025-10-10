@@ -264,7 +264,7 @@ We need a bunch of examples!
 |---------------------|---------|
 | **Name**    | Identifier |
 | **Description**     |  A structured reference that identifies an agent. |
-| **URI**             | https://iri.suomi.fi/model/ncbv/identifierValue |
+| **URI**             | https://iri.suomi.fi/model/ncbv/Identifier |
 | **Requirement Level** | Mandatory |
 
 ### Attributes of the Identifier Class
