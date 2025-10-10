@@ -83,7 +83,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
            Legal Name : String
         }
 
-        Legal Entity --> 1..1 Signatory Rights:grants mandate
+        Legal Entity --> "1..1" Signatory Rights:grants mandate
 
         class Representation Rule {
            Description : Lang String
