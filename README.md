@@ -613,3 +613,7 @@ This is how you use Composite representation rule
 | **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
 | **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
 | **xsd**   | http://www.w3.org/2001/XMLSchema# | XML Schema Part 2: Datatypes Second Edition |
+
+## More about Representation Rule
+The Representation Rule descripe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
+If you do not have the opportunity to structure the rule, or it is too complex for this, you can simply use the Representation Rule class and the description property:
