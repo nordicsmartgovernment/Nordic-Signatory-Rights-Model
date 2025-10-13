@@ -114,6 +114,9 @@ A complete model showing all classes, attributes, and associations.
            Name
         }
 
+        class SKOSConcept["skos:Concept"] {
+        }
+
         class Membership {
         }
 
@@ -126,9 +129,6 @@ A complete model showing all classes, attributes, and associations.
 
         class Legal Entity Member["LegalEntity"] {
            Legal Name : String
-        }
-
-        class SKOSConcept["skos:Concept"] {
         }
 
         Representation Rule <|-- Role Based Representation Rule : is subclass of
