@@ -106,8 +106,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         Membership Based Representation Rule --> "0..*" Membership : defines valid membership
         Membership Based Representation Rule --> "1..1" SKOSConcept : roleHolderQuantifier
 
-        class "skos:Concept" as SKOSConcept <<external>>
-
         class Composite Representation Rule {
         }
 
