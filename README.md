@@ -66,54 +66,41 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ```mermaid
 %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
 classDiagram
+
+    %% --- Inheritance ---
     RepresentationRule <|-- RoleBasedRepresentationRule : is subclass of
     RepresentationRule <|-- MembershipBasedRepresentationRule : is subclass of
     Agent <|-- Person : is subclass of
     Agent <|-- LegalEntityAsMember : is subclass of
 
-    class SignatoryRights as "Signatory Rights" {
+    %% --- Classes ---
+    class SignatoryRights {
         DateOfIssue : Date
         Identifier : String
         Modified : Date
         Status : String
     }
 
-    SignatoryRights --> "1..1" LegalEntity : has mandator
-    SignatoryRights --> "1..*" RepresentationRule : has representation rule
-
-    class LegalEntity as "Legal Entity" {
+    class LegalEntity {
        LegalName : String
     }
 
-    LegalEntity --> "1..1" SignatoryRights : grants mandate
-
-    class RepresentationRule as "Representation Rule" {
+    class RepresentationRule {
        Description : Lang String
        Sequence : Positive Integer
     }
 
-    class RoleBasedRepresentationRule as "Role Based Representation Rule" {
+    class RoleBasedRepresentationRule {
        MinimumNumberOfRoleHolders : Positive Integer
     }
 
-    RoleBasedRepresentationRule --> "0..*" Role : defines valid role
-    RoleBasedRepresentationRule --> "1..1" SKOSConcept : role holder quantifier
-
-    class MembershipBasedRepresentationRule as "Membership Based Representation Rule" {
+    class MembershipBasedRepresentationRule {
        MinimumNumberOfMembers : Positive Integer
        +roleHolderQuantifier : Concept
     }
 
-    MembershipBasedRepresentationRule --> "0..*" Membership : defines valid membership
-    MembershipBasedRepresentationRule --> SKOSConcept : roleHolderQuantifier
-
-    class "skos:Concept" as SKOSConcept <<external>>
-
-    class CompositeRepresentationRule as "Composite Representation Rule" {
+    class CompositeRepresentationRule {
     }
-
-    CompositeRepresentationRule --> "0..*" RepresentationRule : and
-    CompositeRepresentationRule --> "0..*" RepresentationRule : or
 
     class Agent {
     }
@@ -126,16 +113,43 @@ classDiagram
     class Membership {
     }
 
-    Membership --> "0..1" Role : role
-    Membership --> "0..1" Agent : member
-
     class Person {
        FullName : String
     }
 
-    class LegalEntityAsMember as "Legal Entity as Member" {
+    class LegalEntityAsMember {
        LegalName : String
     }
+
+    class SKOSConcept
+
+    %% --- Visual Labels ---
+    class SignatoryRights as "Signatory Rights"
+    class LegalEntity as "Legal Entity"
+    class RepresentationRule as "Representation Rule"
+    class RoleBasedRepresentationRule as "Role Based Representation Rule"
+    class MembershipBasedRepresentationRule as "Membership Based Representation Rule"
+    class CompositeRepresentationRule as "Composite Representation Rule"
+    class LegalEntityAsMember as "Legal Entity as Member"
+    class SKOSConcept as "skos:Concept" <<external>>
+
+    %% --- Associations ---
+    SignatoryRights --> "1..1" LegalEntity : has mandator
+    SignatoryRights --> "1..*" RepresentationRule : has representation rule
+
+    LegalEntity --> "1..1" SignatoryRights : grants mandate
+
+    RoleBasedRepresentationRule --> "0..*" Role : defines valid role
+    RoleBasedRepresentationRule --> "1..1" SKOSConcept : role holder quantifier
+
+    MembershipBasedRepresentationRule --> "0..*" Membership : defines valid membership
+    MembershipBasedRepresentationRule --> SKOSConcept : roleHolderQuantifier
+
+    CompositeRepresentationRule --> "0..*" RepresentationRule : and
+    CompositeRepresentationRule --> "0..*" RepresentationRule : or
+
+    Membership --> "0..1" Role : role
+    Membership --> "0..1" Agent : member
 ```
 
 ### Nordic Signatory Rights
