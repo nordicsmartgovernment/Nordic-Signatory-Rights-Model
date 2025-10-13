@@ -64,82 +64,77 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ## Complete model
 
 ```mermaid
-%%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
-classDiagram
+ %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
+    classDiagram
+        Representation Rule <|-- Role Based Representation Rule : is subclass of
+        Representation Rule <|-- Membership Based Representation Rule : is subclass of
+        Agent <|-- Person : is subclass of
+        Agent <|-- Legal Entity as Member : is subclass of
 
-    %% --- Inheritance ---
-    RepresentationRule <|-- RoleBasedRepresentationRule : is subclass of
-    RepresentationRule <|-- MembershipBasedRepresentationRule : is subclass of
-    Agent <|-- Person : is subclass of
-    Agent <|-- LegalEntityAsMember : is subclass of
+        class Signatory Rights {
+            Date of Issue : Date
+            Identifier : String
+            Modified : Date
+            Status : String
+        }
 
-    %% --- Classes ---
-    class SignatoryRights {
-        DateOfIssue : Date
-        Identifier : String
-        Modified : Date
-        Status : String
-    }
+        Signatory Rights --> "1..1" Legal Entity : has mandator
+        Signatory Rights --> "1..*" Representation Rule : has representation rule
 
-    class LegalEntity {
-       LegalName : String
-    }
+        class Legal Entity {
+           Legal Name : String
+        }
 
-    class RepresentationRule {
-       Description : Lang String
-       Sequence : Positive Integer
-    }
+        Legal Entity --> "1..1" Signatory Rights:grants mandate
 
-    class RoleBasedRepresentationRule {
-       MinimumNumberOfRoleHolders : Positive Integer
-    }
+        class Representation Rule {
+           Description : Lang String
+           Sequence : Positive Integer
+        }
 
-    class MembershipBasedRepresentationRule {
-       MinimumNumberOfMembers : Positive Integer
-       +roleHolderQuantifier : Concept
-    }
+        class Role Based Representation Rule {
+           Minimum Number of Role Holders : Positive Integer
+        }
 
-    class CompositeRepresentationRule {
-    }
+        Role Based Representation Rule --> "0..*" Role : defines valid role
+        Role Based Representation Rule --> "1..1" SKOSConcept : role holder quantifier
 
-    class Agent {
-    }
+        class Membership Based Representation Rule {
+           Minimum Number of Members : Positive Integer
+        }
 
-    class Role {
-       Code
-       Name
-    }
+        Membership Based Representation Rule --> "0..*" Membership : defines valid membership
+        Membership Based Representation Rule --> "1..1" SKOSConcept : roleHolderQuantifier
 
-    class Membership {
-    }
+        class "skos:Concept" as SKOSConcept <<external>>
 
-    class Person {
-       FullName : String
-    }
+        class Composite Representation Rule {
+        }
 
-    class LegalEntityAsMember {
-       LegalName : String
-    }
+        Composite Representation Rule --> "0..*" Representation Rule : and
+        Composite Representation Rule --> "0..*" Representation Rule : or
 
-    class SKOSConcept
+        class Agent {
+        }
 
-    %% --- Associations ---
-    SignatoryRights --> "1..1" LegalEntity : has mandator
-    SignatoryRights --> "1..*" RepresentationRule : has representation rule
+        class Role {
+           Code
+           Name
+        }
 
-    LegalEntity --> "1..1" SignatoryRights : grants mandate
+        class Membership {
+        }
 
-    RoleBasedRepresentationRule --> "0..*" Role : defines valid role
-    RoleBasedRepresentationRule --> "1..1" SKOSConcept : role holder quantifier
+        Membership --> "0..1" Role : role
+        Membership --> "0..1" Agent : member
 
-    MembershipBasedRepresentationRule --> "0..*" Membership : defines valid membership
-    MembershipBasedRepresentationRule --> SKOSConcept : roleHolderQuantifier
+        class Person {
+           Full Name : String
+        }
 
-    CompositeRepresentationRule --> "0..*" RepresentationRule : and
-    CompositeRepresentationRule --> "0..*" RepresentationRule : or
-
-    Membership --> "0..1" Role : role
-    Membership --> "0..1" Agent : member
+        class Legal Entity as Member {
+           Legal Name : String
+        }
 ```
 
 ### Nordic Signatory Rights
