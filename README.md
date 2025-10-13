@@ -641,4 +641,19 @@ This is how you use Composite representation rule
 
 ## More about Representation Rule
 The Representation Rule descripe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
+
 If you do not have the opportunity to structure the rule, or it is too complex for this, you can simply use the Representation Rule class and the description property:
+
+Example:
+Represetation rule: "Representation by the persons authorised thereto as follows: by any of them jointly with any Board
+member or another person authorised to represent the company"
+
+
+----
+:Rule a ncvb:RepresentationRule ;
+   ncbv:description "Representation by the persons authorised thereto as follows: by any of them jointly with any Board
+member or another person authorised to represent the company"@en, "Oikeutetut edustavat yhtiötä kukin erikseen yhdessä hallituksen jäsenen tai toisen edustamiseen oikeutetun kanssa"@fi  ;
+----
+In addition to describing the rule as text, you can also describe the memberships and roles that are included in the rule.
+
+
