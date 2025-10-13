@@ -80,7 +80,6 @@ A complete model showing all classes, attributes, and associations.
         Signatory Rights --> "1..*" Representation Rule : has representation rule
 
         class AgentLegalEntity["Agent"] {
-           Legal Name : String
         }
 
         class Legal Entity {
