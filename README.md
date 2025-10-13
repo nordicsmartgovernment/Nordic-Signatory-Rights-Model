@@ -113,9 +113,6 @@ A complete model showing all classes, attributes, and associations.
         Composite Representation Rule --> "0..*" Representation Rule : and
         Composite Representation Rule --> "0..*" Representation Rule : or
 
-        class Agent {
-        }
-
         class Role {
            Code
            Name
