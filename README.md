@@ -104,7 +104,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         Membership Based Representation Rule --> "0..*" Membership : defines valid membership
-        Membership Based Representation Rule ..> "1..1" SKOSConcept : roleHolderQuantifier
+        Membership Based Representation Rule ..> "1..1" SKOSConcept : member quantifier
 
         class Composite Representation Rule {
         }
@@ -136,8 +136,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 
         class SKOSConcept {
         }
-
-        style SKOSConcept stroke-dasharray: 4 4, stroke:#000, stroke-width:2px, fill:none
 ```
 
 ### Nordic Signatory Rights
