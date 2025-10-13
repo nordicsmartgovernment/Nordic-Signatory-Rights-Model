@@ -123,16 +123,6 @@ classDiagram
 
     class SKOSConcept
 
-    %% --- Visual Labels ---
-    class SignatoryRights as "Signatory Rights"
-    class LegalEntity as "Legal Entity"
-    class RepresentationRule as "Representation Rule"
-    class RoleBasedRepresentationRule as "Role Based Representation Rule"
-    class MembershipBasedRepresentationRule as "Membership Based Representation Rule"
-    class CompositeRepresentationRule as "Composite Representation Rule"
-    class LegalEntityAsMember as "Legal Entity as Member"
-    class SKOSConcept as "skos:Concept" <<external>>
-
     %% --- Associations ---
     SignatoryRights --> "1..1" LegalEntity : has mandator
     SignatoryRights --> "1..*" RepresentationRule : has representation rule
