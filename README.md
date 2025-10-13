@@ -134,8 +134,9 @@ Signatory rights can consist of one or more representation rules. Each rule desc
            Legal Name : String
         }
 
-        flowchart TD
-           SKOSCocept[/SKOS:Concept/]  
+        class SKOSConcept {
+           style stroke-dasharray: 5 5
+        }  
         
 ```
 
