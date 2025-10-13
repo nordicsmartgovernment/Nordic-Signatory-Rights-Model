@@ -135,9 +135,9 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         class SKOSConcept {
-        }  
+        }
 
-        style SKOSConcept stroke-dasharray: 4 4
+        style SKOSConcept stroke-dasharray : 4 4
 ```
 
 ### Nordic Signatory Rights
