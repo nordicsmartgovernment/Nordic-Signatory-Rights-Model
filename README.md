@@ -125,7 +125,7 @@ A complete model showing all classes, attributes, and associations.
         }
 
         Membership --> "0..1" Role : role
-        Membership --> "0..1" Agent : member
+        Membership --> "0..1" AgentLegalEntity : member
 
         class Person {
            Full Name : String
