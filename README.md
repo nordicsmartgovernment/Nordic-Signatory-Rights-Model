@@ -649,11 +649,11 @@ Represetation rule: "Representation by the persons authorised thereto as follows
 member or another person authorised to represent the company"
 
 
-----
+```
 :Rule a ncvb:RepresentationRule ;
    ncbv:description "Representation by the persons authorised thereto as follows: by any of them jointly with any Board
 member or another person authorised to represent the company"@en, "Oikeutetut edustavat yhtiötä kukin erikseen yhdessä hallituksen jäsenen tai toisen edustamiseen oikeutetun kanssa"@fi  ;
-----
+```
 In addition to describing the rule as text, you can also describe the memberships and roles that are included in the rule.
 
 
