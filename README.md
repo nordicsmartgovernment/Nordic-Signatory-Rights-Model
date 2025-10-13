@@ -66,11 +66,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
-        Representation Rule <|-- Role Based Representation Rule : is subclass of
-        Representation Rule <|-- Membership Based Representation Rule : is subclass of
-        Agent <|-- Person : is subclass of
-        Agent <|-- Legal Entity as Member : is subclass of
-
         class Signatory Rights {
             Date of Issue : Date
             Identifier : String
@@ -136,6 +131,11 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 
         class SKOSConcept {
         }
+
+        Representation Rule <|-- Role Based Representation Rule : is subclass of
+        Representation Rule <|-- Membership Based Representation Rule : is subclass of
+        Agent <|-- Person : is subclass of
+        Agent <|-- Legal Entity as Member : is subclass of
 ```
 
 ### Nordic Signatory Rights
