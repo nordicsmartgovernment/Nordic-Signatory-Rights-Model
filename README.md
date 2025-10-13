@@ -76,14 +76,18 @@ A complete model showing all classes, attributes, and associations.
             Status : String
         }
 
-        Signatory Rights --> "1..1" Legal Entity : has mandator
+        Signatory Rights --> "1..1" AgentLegalEntity : has mandator
         Signatory Rights --> "1..*" Representation Rule : has representation rule
+
+        class AgentLegalEntity["Agent"] {
+           Legal Name : String
+        }
 
         class Legal Entity {
            Legal Name : String
         }
 
-        Legal Entity --> "1..1" Signatory Rights:grants mandate
+        AgentLegalEntity --> "1..1" Signatory Rights:grants mandate
 
         class Representation Rule {
            Description : Lang String
@@ -139,6 +143,7 @@ A complete model showing all classes, attributes, and associations.
         Representation Rule <|-- Membership Based Representation Rule : is subclass of
         Agent <|-- Person : is subclass of
         Agent <|-- Legal Entity Member : is subclass of
+        AgentLegalEntity <|-- Legal Entity : is subclass of
 ```
 
 ### Nordic Signatory Rights
