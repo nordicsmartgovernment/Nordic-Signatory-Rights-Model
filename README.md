@@ -693,3 +693,12 @@ Representation rule: "The members of the Board individually."
   ncbv:minNumberOfRoleHolders "1"^^xsd:positiveInteger ;
   ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
 ```
+Note: Here we set ncbv:minNumbersOfRoleHolders to 1, since the board members do not have the signatory rigths alone, but individually.
+
+** The Membership Based Representation Rule
+Sometimes signatory rights are assigned to one or more named persons. These are often assigned a separate signature role in the national business registers.
+
+For such signatory rights provisions, the Membership Representation Rule is used. Instead of pointing to valid Roles, these are linked to valid Memberships. In addition, the minimum number of members required for the rule to be fulfilled is recorded. If the number can be specified with a numerical value, the ncbv:minNumberOfMembers property is used. If the rule has non-numeric quantification of the number of members, the ncbv:memberQuantifier is used.
+
+
+
