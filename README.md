@@ -104,7 +104,9 @@ Signatory rights can consist of one or more representation rules. Each rule desc
         }
 
         Membership Based Representation Rule --> "0..*" Membership : defines valid membership
-        Membership Based Representation Rule --> "1..1" SKOSConcept : member quantifier
+        Membership Based Representation Rule --> SKOSConcept
+
+        class "skos:Concept" as SKOSConcept <<external>>
 
         class Composite Representation Rule {
         }
@@ -125,9 +127,6 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 
         Membership --> "0..1" Role : role
         Membership --> "0..1" Agent : member
-
-        class SKOSConcept {
-        }
 
         class Person {
            Full Name : String
