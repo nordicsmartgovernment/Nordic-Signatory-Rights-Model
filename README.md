@@ -138,7 +138,7 @@ A complete model showing all classes, attributes, and associations.
         Representation Rule <|-- Role Based Representation Rule : is subclass of
         Representation Rule <|-- Membership Based Representation Rule : is subclass of
         Agent <|-- Person : is subclass of
-        Agent <|-- Legal Entity as Member : is subclass of
+        Agent <|-- Legal Entity Member : is subclass of
 ```
 
 ### Nordic Signatory Rights
