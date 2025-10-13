@@ -132,8 +132,7 @@ A complete model showing all classes, attributes, and associations.
            Legal Name : String
         }
 
-
-        class SKOSConcept {
+        class SKOSConcept["skos:Concept"] {
         }
 
         Representation Rule <|-- Role Based Representation Rule : is subclass of
