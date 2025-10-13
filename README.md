@@ -128,7 +128,7 @@ A complete model showing all classes, attributes, and associations.
            Full Name : String
         }
 
-        class Legal Entity Member["Legal Entity"] {
+        class Legal Entity Member["LegalEntity"] {
            Legal Name : String
         }
 
