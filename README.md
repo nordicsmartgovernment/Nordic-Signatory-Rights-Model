@@ -133,7 +133,7 @@ A complete model showing all classes, attributes, and associations.
         }
 
 
-        namespace SKOSConcept {
+        class SKOSConcept {
         }
 
         Representation Rule <|-- Role Based Representation Rule : is subclass of
