@@ -659,4 +659,4 @@ In addition to describing the rule as text, you can also describe the membership
 ### The Representation Rule Class
 Some signatory rights are assigned to roles. In addition to the role, it specifies how many role holders are needed for the rule to be fulfilled. If the number of role holders can be quantified, then the property ncvb:minNumbersOfRoleHolders is used, e.g. 1, 2 or 3.
 
-Some rules have a non-numeric quantification of role holders. For example, "_all_ the board members jointly" and "_The majority of_ the board members".
+Some rules have a non-numeric quantification of role holders. For example, "__all__ the board members jointly" and "__The majority of__ the board members".
