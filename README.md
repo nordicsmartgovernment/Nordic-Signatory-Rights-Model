@@ -18,6 +18,8 @@ A legal entity can be registered with one or more instances of Signatory rights.
 Signatory rights can consist of one or more representation rules. Each rule describes in a structured machine-readable way the conditions for a mandate to be valid by setting requirements for the number of agents (Person or Legal entity) and the roles they must hold in a legal entity. An agent can hold one or many roles in a legal entity and can acquire signatory rights through multiple signatory rules.
 
 ## Overview model
+An overview or simplified model, showing the important classes with textual descriptions.
+
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
@@ -62,6 +64,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 
 ```
 ## Complete model
+A complete model showing all classes, attributes, and associations.
 
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
@@ -125,7 +128,7 @@ Signatory rights can consist of one or more representation rules. Each rule desc
            Full Name : String
         }
 
-        class Legal Entity as Member {
+        class Legal Entity Member {
            Legal Name : String
         }
 
