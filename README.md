@@ -82,10 +82,6 @@ A complete model showing all classes, attributes, and associations.
         class AgentLegalEntity["Agent"] {
         }
 
-        class Legal Entity {
-           Legal Name : String
-        }
-
         AgentLegalEntity --> "1..1" Signatory Rights:grants mandate
 
         class Representation Rule {
