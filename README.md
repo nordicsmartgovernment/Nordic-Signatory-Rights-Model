@@ -64,78 +64,78 @@ Signatory rights can consist of one or more representation rules. Each rule desc
 ## Complete model
 
 ```mermaid
- %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
-    classDiagram
-        Representation Rule <|-- Role Based Representation Rule : is subclass of
-        Representation Rule <|-- Membership Based Representation Rule : is subclass of
-        Agent <|-- Person : is subclass of
-        Agent <|-- Legal Entity as Member : is subclass of
+%%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
+classDiagram
+    RepresentationRule <|-- RoleBasedRepresentationRule : is subclass of
+    RepresentationRule <|-- MembershipBasedRepresentationRule : is subclass of
+    Agent <|-- Person : is subclass of
+    Agent <|-- LegalEntityAsMember : is subclass of
 
-        class Signatory Rights {
-            Date of Issue : Date
-            Identifier : String
-            Modified : Date
-            Status : String
-        }
+    class SignatoryRights as "Signatory Rights" {
+        DateOfIssue : Date
+        Identifier : String
+        Modified : Date
+        Status : String
+    }
 
-        Signatory Rights --> "1..1" Legal Entity : has mandator
-        Signatory Rights --> "1..*" Representation Rule : has representation rule
+    SignatoryRights --> "1..1" LegalEntity : has mandator
+    SignatoryRights --> "1..*" RepresentationRule : has representation rule
 
-        class Legal Entity {
-           Legal Name : String
-        }
+    class LegalEntity as "Legal Entity" {
+       LegalName : String
+    }
 
-        Legal Entity --> "1..1" Signatory Rights:grants mandate
+    LegalEntity --> "1..1" SignatoryRights : grants mandate
 
-        class Representation Rule {
-           Description : Lang String
-           Sequence : Positive Integer
-        }
+    class RepresentationRule as "Representation Rule" {
+       Description : Lang String
+       Sequence : Positive Integer
+    }
 
-        class Role Based Representation Rule {
-           Minimum Number of Role Holders : Positive Integer
-        }
+    class RoleBasedRepresentationRule as "Role Based Representation Rule" {
+       MinimumNumberOfRoleHolders : Positive Integer
+    }
 
-        Role Based Representation Rule --> "0..*" Role : defines valid role
-        Role Based Representation Rule --> "1..1" SKOSConcept : role holder quantifier
+    RoleBasedRepresentationRule --> "0..*" Role : defines valid role
+    RoleBasedRepresentationRule --> "1..1" SKOSConcept : role holder quantifier
 
-        class Membership Based Representation Rule {
-           Minimum Number of Members : Positive Integer
-           +roleHolderQuantifier : Concept
-        }
+    class MembershipBasedRepresentationRule as "Membership Based Representation Rule" {
+       MinimumNumberOfMembers : Positive Integer
+       +roleHolderQuantifier : Concept
+    }
 
-        Membership Based Representation Rule --> "0..*" Membership : defines valid membership
-        Membership Based Representation Rule --> SKOSConcept : roleHolderQuantifier
+    MembershipBasedRepresentationRule --> "0..*" Membership : defines valid membership
+    MembershipBasedRepresentationRule --> SKOSConcept : roleHolderQuantifier
 
-        class "skos:Concept" as SKOSConcept <<external>>
+    class "skos:Concept" as SKOSConcept <<external>>
 
-        class Composite Representation Rule {
-        }
+    class CompositeRepresentationRule as "Composite Representation Rule" {
+    }
 
-        Composite Representation Rule --> "0..*" Representation Rule : and
-        Composite Representation Rule --> "0..*" Representation Rule : or
+    CompositeRepresentationRule --> "0..*" RepresentationRule : and
+    CompositeRepresentationRule --> "0..*" RepresentationRule : or
 
-        class Agent {
-        }
+    class Agent {
+    }
 
-        class Role {
-           Code
-           Name
-        }
+    class Role {
+       Code
+       Name
+    }
 
-        class Membership {
-        }
+    class Membership {
+    }
 
-        Membership --> "0..1" Role : role
-        Membership --> "0..1" Agent : member
+    Membership --> "0..1" Role : role
+    Membership --> "0..1" Agent : member
 
-        class Person {
-           Full Name : String
-        }
+    class Person {
+       FullName : String
+    }
 
-        class Legal Entity as Member {
-           Legal Name : String
-        }
+    class LegalEntityAsMember as "Legal Entity as Member" {
+       LegalName : String
+    }
 ```
 
 ### Nordic Signatory Rights
