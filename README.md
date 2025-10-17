@@ -198,6 +198,9 @@ Sometimes signatory rights are assigned to one or more named persons. These are 
 For such signatory rights provisions, the Membership Representation Rule is used. Instead of pointing to valid Roles, these are linked to valid Memberships. In addition, the minimum number of members required for the rule to be fulfilled is recorded. If the number can be specified with a numerical value, the ncbv:minNumberOfMembers property is used. If the rule has non-numeric quantification of the number of members, the ncbv:memberQuantifier is used.
 
 ## The Composite Representation Rule
+Needs more text!
+
+## Links to modelling tool
 
 ### Nordic Signatory Rights
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
