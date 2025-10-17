@@ -212,33 +212,11 @@ For such signatory rights provisions, the Membership Representation Rule is used
 Needs more text!
 
 ## Examples
-<div class="tab-container">
-  <div class="tab-buttons">
-    <button class="tab-btn active" data-tab="turtle">Turtle</button>
-    <button class="tab-btn" data-tab="jsonld">JSON-LD</button>
-  </div>
+Turtle
 
-  <div id="turtle" class="tab-content active">
-    <pre><code>@prefix adms: &lt;http://www.w3.org/ns/adms#&gt; .</code></pre>
-  </div>
+JSON-LD
 
-  <div id="jsonld" class="tab-content">
-    <pre><code>{
-  "@context": { "cv": "http://data.europa.eu/m8g/" }
-}</code></pre>
-  </div>
-</div>
-
-<script>
-  const buttons = document.querySelectorAll('.tab-btn');
-  const contents = document.querySelectorAll('.tab-content');
-  buttons.forEach(btn => btn.addEventListener('click', () => {
-    buttons.forEach(b => b.classList.remove('active'));
-    contents.forEach(c => c.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById(btn.dataset.tab).classList.add('active');
-  }));
-</script>
+JSON Schema
 
 ## Links to modelling tool
 
