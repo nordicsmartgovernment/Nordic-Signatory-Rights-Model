@@ -201,54 +201,6 @@ For such signatory rights provisions, the Membership Representation Rule is used
 Needs more text!
 
 ## Examples
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Tabbed Code Example</title>
-  <style>
-    body { font-family: Arial, sans-serif; }
-    .tab-buttons {
-      display: flex;
-      background: #f3f3f3;
-      border: 1px solid #ccc;
-      border-bottom: none;
-    }
-    .tab-buttons button {
-      background: transparent;
-      border: none;
-      padding: 8px 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .tab-buttons button.active {
-      background: white;
-      border-bottom: 2px solid white;
-    }
-    .tab-content {
-      display: none;
-      border: 1px solid #ccc;
-      padding: 0;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    pre {
-      margin: 0;
-      padding: 12px;
-      background: #fdfdfd;
-      overflow-x: auto;
-    }
-    code {
-      font-family: monospace;
-      white-space: pre;
-    }
-  </style>
-</head>
-<body>
-
-<h3>Example Legal Entity</h3>
-
 <div class="tab-container">
   <div class="tab-buttons">
     <button class="tab-btn active" data-tab="turtle">Turtle</button>
@@ -256,32 +208,12 @@ Needs more text!
   </div>
 
   <div id="turtle" class="tab-content active">
-    <pre><code>@prefix adms: &lt;http://www.w3.org/ns/adms#&gt; .
-@prefix cv: &lt;http://data.europa.eu/m8g/&gt; .
-@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
-@prefix ex: &lt;http://example.com/&gt; .
-@prefix legal: &lt;http://www.w3.org/ns/legal#&gt; .
-
-ex:a a legal:LegalEntity ;
-    cv:contactPoint ex:contact ;
-    cv:hasAccountingDocument &lt;https://consult.cbso.nbb.be/api/external/broker/public/deposits/po&gt; ;
-    legal:companyActivity &lt;http://data.europa.eu/ux2/nace2.1/9499&gt; ;
-    legal:companyType legal-form:gl-c-3d9a96e91d2af17bc2d4ca176bb53938 .
-</code></pre>
+    <pre><code>@prefix adms: &lt;http://www.w3.org/ns/adms#&gt; .</code></pre>
   </div>
 
   <div id="jsonld" class="tab-content">
     <pre><code>{
-  "@context": {
-    "cv": "http://data.europa.eu/m8g/",
-    "legal": "http://www.w3.org/ns/legal#"
-  },
-  "@id": "http://example.com/a",
-  "@type": "legal:LegalEntity",
-  "cv:contactPoint": "http://example.com/contact",
-  "cv:hasAccountingDocument": "https://consult.cbso.nbb.be/api/external/broker/public/deposits/po",
-  "legal:companyActivity": "http://data.europa.eu/ux2/nace2.1/9499",
-  "legal:companyType": "http://data.europa.eu/ih3/legal-form/gl-c-3d9a96e91d2af17bc2d4ca176bb53938"
+  "@context": { "cv": "http://data.europa.eu/m8g/" }
 }</code></pre>
   </div>
 </div>
@@ -289,19 +221,13 @@ ex:a a legal:LegalEntity ;
 <script>
   const buttons = document.querySelectorAll('.tab-btn');
   const contents = document.querySelectorAll('.tab-content');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(btn.dataset.tab).classList.add('active');
-    });
-  });
+  buttons.forEach(btn => btn.addEventListener('click', () => {
+    buttons.forEach(b => b.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  }));
 </script>
-
-</body>
-</html>
 
 ## Links to modelling tool
 
