@@ -137,7 +137,7 @@ A complete model showing all classes, attributes, and associations.
         AgentLegalEntity <|-- Legal Entity Member: is subclass of
 ```
 ## More about Representation Rule
-The Representation Rule descripe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
+The Representation Rule describe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
 
 ### The Representation Rule Class
 If you do not have the opportunity to structure the rule, or it is too complex for this, you can simply use the Representation Rule class and the description property.
@@ -154,29 +154,29 @@ member or another person authorised to represent the company"@en , "Oikeutetut e
 In addition to describing the rule as text, you can also describe the memberships and roles that are included in the rule.
 
 ### The Role Based Representation Rule Class
-Some signatory rights are assigned to roles. In addition to the role, it specifies how many role holders are needed for the rule to be fulfilled. If the number of role holders can be quantified, then the property ncvb:minNumbersOfRoleHolders is used, e.g. 1, 2 or 3.
+Some signatory rights are assigned to roles. In addition to the role, it specifies how many role holders are needed for the rule to be fulfilled. If the number of role holders can be quantified, then the property ncbv:minNumbersOfRoleHolders is used, e.g. 1, 2 or 3.
 
 Some rules have a non-numeric quantification of role holders. For example, "__All__ the board members jointly" and "__The majority of__ the board members". We have also included a quantifier "Alone", if if you want to explicitly say that a role holder holds signatory rights alone.
 
-Although the Role Based Representation Rule Class provides the ability to describe a rule in a structured way, one can also use the inherited cbv:description property to provide a more human-readable description in addition.
+Although the Role Based Representation Rule Class provides the ability to describe a rule in a structured way, one can also use the inherited ncbv:description property to provide a more human-readable description in addition.
 
 
 __Example:__
 Representation rule: "Two board members jointly."
 ```
-:Rule1 a ncvb:RoleBasedRepresentationRule ;
+:Rule1 a ncbv:RoleBasedRepresentationRule ;
   ncbv:description "Two boards members jointly"@en , "To styremedlemmer i fellesskap"@nb ;
   ncbv:minNumberOfRoleHolders "2"^^xsd:positiveInteger ;
   ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
 ```
-The memberships with the board roles should be described in addition.
+The memberships with the board member roles should be described in addition.
 
 Note: If the board chair is defined as a board member, ncbv:definesValidRole should include this role. This may vary between countries.
 
 __Example:__
 Representation rule: "Managing Director alone."
 ```
-:Rule2 a ncvb:RoleBasedRepresentationRule ;
+:Rule2 a ncbv:RoleBasedRepresentationRule ;
   ncbv:description "Managing Director alone"@en , "Daglig leder alene"@nb ;
   ncbv:roleHolderQuantifier <http://ex.org/quantifierType/Alone> ;
   ncbv:definesValidRole <http://ex.org/roleType/ManagingDirector> .
@@ -195,7 +195,7 @@ Note: Here we set ncbv:minNumbersOfRoleHolders to 1, since the board members do 
 ## The Membership Based Representation Rule
 Sometimes signatory rights are assigned to one or more named persons. These are often assigned a separate signature role in the national business registers.
 
-For such signatory rights provisions, the Membership Representation Rule is used. Instead of pointing to valid Roles, these are linked to valid Memberships. In addition, the minimum number of members required for the rule to be fulfilled is recorded. If the number can be specified with a numerical value, the ncbv:minNumberOfMembers property is used. If the rule has non-numeric quantification of the number of members, the ncbv:memberQuantifier is used.
+For such signatory rights provisions, the Membership Representation Rule is used. Instead of pointing to valid Roles, these are linked to valid Memberships. In addition, the minimum number of members required for the rule to be fulfilled is documented. If the number can be specified with a numerical value, the ncbv:minNumberOfMembers property is used. If the rule has non-numeric quantification of the number of members, the ncbv:memberQuantifier is used.
 
 ## The Composite Representation Rule
 Needs more text!
