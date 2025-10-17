@@ -127,14 +127,25 @@ A complete model showing all classes, attributes, and associations.
            Full Name : String
         }
 
+        Person --> "1..*" Identifier : identifier
+
         class Legal Entity Member["LegalEntity"] {
            Legal Name : String
+        }
+
+        Legal Entity --> "1..*" Identifier : legal identifier
+
+        class Identifier {
+           Date of Issue : Date
+           Notation : String
+           Schema Agency : String
+           Schema Name : String
         }
 
         Representation Rule <|-- Role Based Representation Rule : is subclass of
         Representation Rule <|-- Membership Based Representation Rule : is subclass of
         AgentLegalEntity <|-- Person : is subclass of
-        AgentLegalEntity <|-- Legal Entity Member: is subclass of
+        AgentLegalEntity <|-- Legal Entity : is subclass of
 ```
 ## More about Representation Rule
 The Representation Rule describe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
