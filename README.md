@@ -201,37 +201,32 @@ For such signatory rights provisions, the Membership Representation Rule is used
 Needs more text!
 
 ## Examples
-<!-- Flikene -->
-<div>
-<ul>
-<li><a href="#Turtle">🗂️ Fane 1</a></li>
-<li><a href="#JSON-LD">📄 Fane 2</a></li>
-<li><a href="#JSON schema">📄 Fane 2</a></li>
-</ul>
+<style>
+.tabs { display: flex; }
+.tab { padding: 0.5em 1em; cursor: pointer; border: 1px solid #ccc; }
+.tabcontent { display: none; border: 1px solid #ccc; padding: 1em; }
+.tabcontent.active { display: block; }
+</style>
+ 
+<div class="tabs">
+<div class="tab" onclick="showTab('a')">Fane A</div>
+<div class="tab" onclick="showTab('b')">Fane B</div>
 </div>
  
-<!-- Innhold -->
-<div id="tab1">
- 
-### 🗂️ Fane 1
- 
-Her er innholdet i fane 1.
- 
+<div id="a" class="tabcontent active">
+Innhold i fane A
 </div>
  
-<div id="tab2">
- 
-### 📄 Fane 2
- 
-Her er innholdet i fane 2.
- 
+<div id="b" class="tabcontent">
+Innhold i fane B
 </div>
-
-Turtle
-
-JSON-LD
-
-JSON-schema
+ 
+<script>
+function showTab(id) {
+  document.querySelectorAll('.tabcontent').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
 
 ## Links to modelling tool
 
