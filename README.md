@@ -235,7 +235,12 @@ Membership based representation rule: "Signing individually: Johan Berg, Lina Ha
 
 
 ## The Composite Representation Rule
-Needs more text!
+Signatory rights representation rules can also be composed of several other representation rules. Such composite rules can consist of role-based rules and/or membership-based rules and combinations of the rule types. For very complex rules, they can also consist of other composite rules.
+To describe such rules, the ncbv:CompositeRepresentationRule class is used. 
+
+The rules that are included are linked together with either the ncbv:or or ncbv:and property, which represents the logical operators OR and AND.
+
+__Example:__
 
 ## Examples
 Turtle
