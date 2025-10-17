@@ -222,21 +222,15 @@ JSON Schema
 
 ### Nordic Signatory Rights
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
+Note that this application profile don't show Legal Entity and Person as subclasses to Agent and don't show Membership Based Representation Rule and Role Based Representation Rule as subclasses to Representation Rule. 
 
 [Link to NSIG model](https://iri.suomi.fi/model/ncig/) Needs to be published before it works!
-
-Link to RDF
-
-Link to JSON-LD
 
 ### Nordic Core Business Vocabulary
 The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
 
-[Link to NCBV model](https://iri.suomi.fi/model/ncbv/)
+[Link to NCBV model](https://iri.suomi.fi/model/ncbv/) Changes done, we need to bublish the latest version!
 
-Link to RDF
-
-Link to JSON-LD
 
 # Classes, attributes and associations
 
