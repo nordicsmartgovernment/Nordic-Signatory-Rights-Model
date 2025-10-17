@@ -200,6 +200,13 @@ For such signatory rights provisions, the Membership Representation Rule is used
 ## The Composite Representation Rule
 Needs more text!
 
+## Examples
+Turtle
+
+JSON-LD
+
+JSON-schema
+
 ## Links to modelling tool
 
 ### Nordic Signatory Rights
@@ -219,19 +226,6 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 Link to RDF
 
 Link to JSON-LD
-
-# Examples
-Turtle
-
-JSON-LD
-
-JSON-schema
-
-This is how you use Role based representation rule
-
-This is how you use Membership based representation rule
-
-This is how you use Composite representation rule
 
 # Classes, attributes and associations
 
