@@ -201,6 +201,32 @@ For such signatory rights provisions, the Membership Representation Rule is used
 Needs more text!
 
 ## Examples
+<!-- Flikene -->
+<div>
+<ul>
+<li><a href="#Turtle">🗂️ Fane 1</a></li>
+<li><a href="#JSON-LD">📄 Fane 2</a></li>
+<li><a href="#JSON schema">📄 Fane 2</a></li>
+</ul>
+</div>
+ 
+<!-- Innhold -->
+<div id="tab1">
+ 
+### 🗂️ Fane 1
+ 
+Her er innholdet i fane 1.
+ 
+</div>
+ 
+<div id="tab2">
+ 
+### 📄 Fane 2
+ 
+Her er innholdet i fane 2.
+ 
+</div>
+
 Turtle
 
 JSON-LD
