@@ -212,25 +212,25 @@ __Example:__
 Membership based representation rule: "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"
 ```
 #Memberships
-:membership1 a ncbv:Membership ;
-    ncbv:member :people/johanBerg ;
+<http://example.com/membership1> a ncbv:Membership ;
+    ncbv:member <http://example.com/people/johanBerg> ;
     ncbv:role <http://example.com/role/signatory> .
 
-:membership2 a ncbv:Membership ;
-    ncbv:member :people/linaHansen ;
+<http://example.com/membership2> a ncbv:Membership ;
+    ncbv:member <http://example.com/people/linaHansen> ;
     ncbv:role <http://example.com/role/signatory> .
 
-:membership3 a ncbv:Membership ;
-    ncbv:member :people/amirNiemi ;
+<http://example.com/membership3> a ncbv:Membership ;
+    ncbv:member <http://example.com/people/amirNiemi> ;
     ncbv:role <http://example.com/role/signatory> .
 ```
 
 ```
 #The Membership Based Rule
-:Rule1 a ncbv:RoleBasedRepresentationRule ;
+:Rule4 a ncbv:RoleBasedRepresentationRule ;
   ncbv:description "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"@en , "Signerande var för sig: Johan Berg, Lina Hansen, Amir Niemi"@se ;
   ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
-  ncbv:definesValidMembership <http://example.com/people/johanBerg> , <http://example.com/people/linaHansen> , <http://example.com/people/amirNiemi> .
+  ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
 ```
 
 
