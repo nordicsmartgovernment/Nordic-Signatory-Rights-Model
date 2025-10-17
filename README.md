@@ -208,6 +208,32 @@ Sometimes signatory rights are assigned to one or more named persons. These are 
 
 For such signatory rights provisions, the Membership Representation Rule is used. Instead of pointing to valid Roles, these are linked to valid Memberships. In addition, the minimum number of members required for the rule to be fulfilled is documented. If the number can be specified with a numerical value, the ncbv:minNumberOfMembers property is used. If the rule has non-numeric quantification of the number of members, the ncbv:memberQuantifier is used.
 
+__Example:__
+Membership based representation rule: "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"
+```
+#Memberships
+:membership1 a ncbv:Membership ;
+    ncbv:member :people/johanBerg ;
+    ncbv:role <http://example.com/role/signatory> .
+
+:membership2 a ncbv:Membership ;
+    ncbv:member :people/linaHansen ;
+    ncbv:role <http://example.com/role/signatory> .
+
+:membership3 a ncbv:Membership ;
+    ncbv:member :people/amirNiemi ;
+    ncbv:role <http://example.com/role/signatory> .
+```
+
+```
+#The Membership Based Rule
+:Rule1 a ncbv:RoleBasedRepresentationRule ;
+  ncbv:description "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"@en , "Signerande var för sig: Johan Berg, Lina Hansen, Amir Niemi"@se ;
+  ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
+  ncbv:definesValidMembership <http://example.com/people/johanBerg> , <http://example.com/people/linaHansen> , <http://example.com/people/amirNiemi> .
+```
+
+
 ## The Composite Representation Rule
 Needs more text!
 
