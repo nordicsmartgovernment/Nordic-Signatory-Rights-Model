@@ -89,19 +89,19 @@ A complete model showing all classes, attributes, and associations.
            Sequence : Positive Integer
         }
 
-        class Membership Based Representation Rule {
-           Minimum Number of Members : Positive Integer
-        }
-
-        Membership Based Representation Rule --> "0..*" Membership : defines valid membership
-        Membership Based Representation Rule ..> "1..1" SKOSConcept : member quantifier
-
         class Role Based Representation Rule {
            Minimum Number of Role Holders : Positive Integer
         }
 
         Role Based Representation Rule --> "0..*" Role : defines valid role
         Role Based Representation Rule ..> "1..1" SKOSConcept : role holder quantifier
+
+        class Membership Based Representation Rule {
+           Minimum Number of Members : Positive Integer
+        }
+
+        Membership Based Representation Rule --> "0..*" Membership : defines valid membership
+        Membership Based Representation Rule ..> "1..1" SKOSConcept : member quantifier
 
         class Composite Representation Rule {
         }
