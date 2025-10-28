@@ -241,8 +241,11 @@ To describe such rules, the ncbv:CompositeRepresentationRule class is used.
 The rules that are included are linked together with either the ncbv:or or ncbv:and property, which represents the logical operators OR and AND. The order of the rules associated with an ncbv:or or ncbv:and property is not important for technical validation purposes. However, if you want to improve readability, you can use nbcv:sequence to specify the order.
 
 __Example:__
-Representation rule: Managing Director alone or two members of the Board jointly.
-
+Representation rule: Managing Director alone or two members of the Board jointly. 
+This can be seen as two Role Based Representation Rules linked together with an OR relationship:
+1. Managing Director alone OR 
+2. Two members of the Board jointly.
+ 
 ```
 #The Composite Representation Rule
 :Rule5 a ncbv:CompositeRepresentationRule ;
@@ -261,6 +264,28 @@ Representation rule: Managing Director alone or two members of the Board jointly
 
 ```
 
+__Example:__
+We can also have combinations of Role Based Representation Rules and Membership Based Representation Rules.
+Representation rule: A member of the Board must sign jointly with one of the following: Johan Berg, Lina Hansen, Amir Niemi.
+
+```
+#The Composite Representation Rule
+:Rule8 a ncbv:CompositeRepresentationRule ;
+  ncbv:description "A member of the Board must sign jointly with one of the following: Johan Berg, Lina Hansen, Amir Niemi."@en ,
+ "Et styremedlem må signere sammen med en av følgende: Johan Berg, Lina Hansen, Amir Niemi."@no ;
+  ncbv:and :Rule9 , :Rule10 .
+
+:Rule9 a ncbv:ncbv:RoleBasedRepresentationRule ;
+  ncbv:sequence "1"^^xsd:positiveInteger ;
+  ncbv:minNumberOfRoleHolders "1"^^xsd:positiveInteger ;
+  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
+
+:Rule10 a ncbv:MembershipBasedRepresentationRule ;
+  ncbv:sequence "1"^^xsd:positiveInteger ;
+  ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
+  ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
+
+```
 ## Examples
 Turtle
 
