@@ -227,7 +227,7 @@ Membership based representation rule: "Signing individually: Johan Berg, Lina Ha
 
 ```
 #The Membership Based Rule
-:Rule4 a ncbv:RoleBasedRepresentationRule ;
+:Rule4 a ncbv:MembershipBasedRepresentationRule ;
   ncbv:description "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"@en , "Signerande var för sig: Johan Berg, Lina Hansen, Amir Niemi"@se ;
   ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
   ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
@@ -235,12 +235,31 @@ Membership based representation rule: "Signing individually: Johan Berg, Lina Ha
 
 
 ## The Composite Representation Rule
-Signatory rights representation rules can also be composed of several other representation rules. Such composite rules can consist of role-based rules and/or membership-based rules and combinations of the rule types. For very complex rules, they can also consist of other composite rules.
+A signatory rights representation rule can also be composed of several other representation rules. Such composite rules can consist of role-based rules and/or membership-based rules. For very complex rules, they can also consist of other composite rules.
 To describe such rules, the ncbv:CompositeRepresentationRule class is used. 
 
-The rules that are included are linked together with either the ncbv:or or ncbv:and property, which represents the logical operators OR and AND.
+The rules that are included are linked together with either the ncbv:or or ncbv:and property, which represents the logical operators OR and AND. The order of the rules associated with an ncbv:or or ncbv:and property is not important for technical validation purposes. However, if you want to improve readability, you can use nbcv:sequence to specify the order.
 
 __Example:__
+Representation rule: Managing Director alone or two members of the Board jointly.
+
+```
+#The Composite Representation Rule
+:Rule5 a ncbv:CompositeRepresentationRule ;
+  ncbv:description "Managing Director alone or two members of the Board jointly."@en , "Framkvæmdastjóri einn eða tveir stjórnarmenn saman."@is ;
+  ncbv:or :Rule6 , :Rule7 .
+
+:Rule 6 a ncbv:RoleBasedRepresentationRule ;
+  ncbv:sequence "1"^^xsd:positiveInteger ;
+  ncbv:roleHolderQuantifier <http://ex.org/quantifierType/Alone> ;
+  ncbv:definesValidRole <http://ex.org/roleType/ManagingDirector> .
+
+:Rule7 a ncbv:ncbv:RoleBasedRepresentationRule ;
+  ncbv:sequence "2"^^xsd:positiveInteger ;
+  ncbv:minNumberOfRoleHolders "2"^^xsd:positiveInteger ;
+  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
+
+```
 
 ## Examples
 Turtle
