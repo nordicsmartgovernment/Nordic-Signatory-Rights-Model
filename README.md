@@ -129,7 +129,7 @@ A complete model showing all classes, attributes, and associations.
 
         Person --> "1..*" Identifier : identifier
 
-        class Legal Entity Member["LegalEntity"] {
+        class Legal Entity ["LegalEntity"] {
            Legal Name : String
         }
 
