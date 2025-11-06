@@ -287,7 +287,7 @@ Representation rule: A member of the Board must sign jointly with one of the fol
 
 ```
 ## Examples
-Signatory rights jointly by two board memebers - https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers
+[Signatory rights jointly by two board memebers] (https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)
 
 
 ## Links to modelling tool
