@@ -287,7 +287,7 @@ Representation rule: A member of the Board must sign jointly with one of the fol
 
 ```
 ## Examples
-Turtle
+Signatory rights jointly by two board memebers 
 
 JSON-LD
 
