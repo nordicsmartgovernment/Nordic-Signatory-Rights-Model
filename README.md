@@ -77,7 +77,7 @@ A complete model showing all classes, attributes, and associations.
         }
 
         Signatory Rights --> "1..1" AgentLegalEntity : has mandator
-        Signatory Rights --> "1..*" Representation Rule : has representation rule
+        Signatory Rights --> "1..1" Representation Rule : has representation rule
 
         class AgentLegalEntity["Agent"] {
         }
