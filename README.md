@@ -264,6 +264,14 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 
 # Classes, attributes and associations
 
+## Used namespaces ##
+
+| Prefix       | Namespace | Name |
+|---------------------|---------|-----------------|
+| **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
+| **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
+| **xsd**   | http://www.w3.org/2001/XMLSchema# | XML Schema Part 2: Datatypes Second Edition |
+
 ## Class Signatory Rights 
 
 | **Class**          | Signatory Rights |
@@ -723,14 +731,6 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 | **URI**             | https://iri.suomi.fi/model/ncbv/Role |
 | **Subclass Of**           | skos:Concept |
 | **Requirement Level** | Recommended |
-
-## Used namespaces ##
-
-| Prefix       | Namespace | Name |
-|---------------------|---------|-----------------|
-| **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
-| **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
-| **xsd**   | http://www.w3.org/2001/XMLSchema# | XML Schema Part 2: Datatypes Second Edition |
 
 
 
