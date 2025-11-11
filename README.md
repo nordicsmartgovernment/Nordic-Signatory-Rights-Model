@@ -32,7 +32,7 @@ An overview or simplified model, showing the important classes with textual desc
         }
 
         Signatory Rights --> "0..1" Legal Entity : has mandator
-        Signatory Rights --> "1..*" Representation Rule : has representation rule
+        Signatory Rights --> "1..1" Representation Rule : has representation rule
 
         class Legal Entity {
            The legal entity that grants
