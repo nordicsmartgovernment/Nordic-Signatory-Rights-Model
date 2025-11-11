@@ -23,6 +23,53 @@ An overview or simplified model, showing the important classes with textual desc
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
+        Representation Rule <|-- Role Based Representation Rule : is subclass of
+        Representation Rule <|-- Membership Based Representation Rule : is subclass of
+
+        class Signatory Rights {
+            Signatory rights for
+            the legal entity
+        }
+
+        Signatory Rights --> "0..1" Legal Entity : has mandator
+        Signatory Rights --> "1..1" Representation Rule : has representation rule
+
+        class Legal Entity {
+           The legal entity that grants
+           the signatory rights.
+        }
+
+        class Representation Rule {
+           A rule that describes who or which
+           agents signatory rights is granted to.
+        }
+
+        class Role Based Representation Rule {
+           "Board member",
+           "Managing Director"...
+        }
+
+        class Membership Based Representation Rule {
+           "Members of an association",
+           "Members of a partnership"...
+        }
+
+        class Composite Representation Rule {
+           A composite rule needs to be broken down
+           into two or more representation rules.
+        }
+
+        Composite Representation Rule --> "0..*" Representation Rule : and
+        Composite Representation Rule --> "0..*" Representation Rule : or
+
+```mermaid
+
+## Complete model
+A complete model showing all classes, attributes, and associations.
+
+```mermaid
+ %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
+    classDiagram
         class Legal Entity ["LegalEntity"] {
            Legal Name : String
         }
