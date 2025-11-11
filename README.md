@@ -23,132 +23,84 @@ An overview or simplified model, showing the important classes with textual desc
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
-        Representation Rule <|-- Role Based Representation Rule : is subclass of
-        Representation Rule <|-- Membership Based Representation Rule : is subclass of
+        class Legal Entity ["LegalEntity"] {
+           Legal Name : String
+        }
+        direction TB
+
+        Legal Entity --> "1..1" Signatory Rights:grants mandate
+        Legal Entity --> "1..1" Identifier : legal identifier
 
         class Signatory Rights {
-            Signatory rights for
-            the legal entity
+            Date of Issue : Date
+            Identifier : String
+            Modified : Date
+            Status : String
         }
 
-        Signatory Rights --> "0..1" Legal Entity : has mandator
+        Signatory Rights --> "1..1" LegalEntity : has mandator
         Signatory Rights --> "1..1" Representation Rule : has representation rule
 
-        class Legal Entity {
-           The legal entity that grants
-           the signatory rights.
+        class AgentLegalEntity["Agent"] {
         }
 
         class Representation Rule {
-           A rule that describes who or which
-           agents signatory rights is granted to.
+           Description : Lang String
+           Sequence : Positive Integer
         }
 
         class Role Based Representation Rule {
-           "Board member",
-           "Managing Director"...
+           Minimum Number of Role Holders : Positive Integer
         }
+
+        Role Based Representation Rule --> "0..*" Role : defines valid role
+        Role Based Representation Rule ..> "1..1" SKOSConcept : role holder quantifier
 
         class Membership Based Representation Rule {
-           "Members of an association",
-           "Members of a partnership"...
+           Minimum Number of Members : Positive Integer
         }
 
+        Membership Based Representation Rule --> "0..*" Membership : defines valid membership
+        Membership Based Representation Rule ..> "1..1" SKOSConcept : member quantifier
+
         class Composite Representation Rule {
-           A composite rule needs to be broken down
-           into two or more representation rules.
         }
 
         Composite Representation Rule --> "0..*" Representation Rule : and
         Composite Representation Rule --> "0..*" Representation Rule : or
 
-```mermaid
-## Complete model
-A complete model showing all classes, attributes, and associations.
+        class Role {
+           Code
+           Name
+        }
 
+        class SKOSConcept["skos:Concept"] {
+        }
+
+        class Membership {
+        }
+
+        Membership --> "0..1" Role : role
+        Membership --> "0..1" AgentLegalEntity : member
+
+        class Person {
+           Full Name : String
+        }
+
+        Person --> "1..*" Identifier : identifier
+
+        class Identifier {
+           Date of Issue : Date
+           Notation : String
+           Schema Agency : String
+           Schema Name : String
+        }
+
+        Representation Rule <|-- Role Based Representation Rule : is subclass of
+        Representation Rule <|-- Membership Based Representation Rule : is subclass of
+        AgentLegalEntity <|-- Person : is subclass of
+        AgentLegalEntity <|-- Legal Entity : is subclass of
 ```
-%%{init:{'flowchart':{'nodeSpacing': 50, 'rankSpacing': 90, 'htmlLabels': false}}}%%
-classDiagram
-direction TB
-
-class LegalEntity {
-    +legalName : String
-}
-
-class SignatoryRights {
-    +dateOfIssue : Date
-    +identifier : String
-    +modified : Date
-    +status : String
-}
-
-class RepresentationRule {
-    +description : LangString
-    +sequence : PositiveInteger
-}
-
-class RoleBasedRepresentationRule {
-    +minimumRoleHolders : PositiveInteger
-}
-
-class MembershipBasedRepresentationRule {
-    +minimumMembers : PositiveInteger
-}
-
-class CompositeRepresentationRule {
-}
-
-class Role {
-    +code : String
-    +name : String
-}
-
-class Membership {
-}
-
-class AgentLegalEntity {
-}
-
-class Person {
-    +fullName : String
-}
-
-class Identifier {
-    +dateOfIssue : Date
-    +notation : String
-    +schemaAgency : String
-    +schemaName : String
-}
-
-class SKOSConcept {
-}
-
-LegalEntity --> "1..1" SignatoryRights : grants mandate
-LegalEntity --> "1..1" Identifier : legal identifier
-
-SignatoryRights --> "1..1" LegalEntity : has mandator
-SignatoryRights --> "1..1" RepresentationRule : has representation
-
-RepresentationRule <|-- RoleBasedRepresentationRule
-RepresentationRule <|-- MembershipBasedRepresentationRule
-
-RoleBasedRepresentationRule --> "0..*" Role : valid role
-RoleBasedRepresentationRule ..> "1..1" SKOSConcept : quantifier
-
-MembershipBasedRepresentationRule --> "0..*" Membership : valid membership
-MembershipBasedRepresentationRule ..> "1..1" SKOSConcept : quantifier
-
-CompositeRepresentationRule --> "0..*" RepresentationRule : and/or
-
-Membership --> "0..1" Role
-Membership --> "0..1" AgentLegalEntity : member
-
-AgentLegalEntity <|-- Person
-AgentLegalEntity <|-- LegalEntity
-
-Person --> "1..*" Identifier
-```
-
 ## More about Representation Rule
 The Representation Rule describe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
 
