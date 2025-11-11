@@ -131,8 +131,8 @@ A complete model showing all classes, attributes, and associations.
            Legal Name : String
         }
 
-        Legal Entity --> "1..1" Identifier : legal identifier
         Legal Entity --> "1..1" Signatory Rights:grants mandate
+        Legal Entity --> "1..1" Identifier : legal identifier
 
         class Identifier {
            Date of Issue : Date
