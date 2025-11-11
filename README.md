@@ -76,13 +76,11 @@ A complete model showing all classes, attributes, and associations.
             Status : String
         }
 
-        Signatory Rights --> "1..1" AgentLegalEntity : has mandator
+        Signatory Rights --> "1..1" LegalEntity : has mandator
         Signatory Rights --> "1..1" Representation Rule : has representation rule
 
         class AgentLegalEntity["Agent"] {
         }
-
-        AgentLegalEntity --> "1..1" Signatory Rights:grants mandate
 
         class Representation Rule {
            Description : Lang String
@@ -134,6 +132,7 @@ A complete model showing all classes, attributes, and associations.
         }
 
         Legal Entity --> "1..1" Identifier : legal identifier
+        Legal Entity --> "1..1" Signatory Rights:grants mandate
 
         class Identifier {
            Date of Issue : Date
