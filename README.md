@@ -369,7 +369,7 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 | **Description**     | A reference to the representation rule for the signatory rights. |
 | **URI**             | https://iri.suomi.fi/model/ncbv/hasRepresentationRule |
 | **Range** | ncbv:RepresentationRule |
-| **Multiplicity** | 1..* |
+| **Multiplicity** | 1..1 |
 | **Requirement Level** | Mandatory |
 
 | **Association**          | Has Mandator |
