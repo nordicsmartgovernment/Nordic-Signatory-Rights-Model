@@ -62,7 +62,7 @@ An overview or simplified model, showing the important classes with textual desc
         Composite Representation Rule --> "0..*" Representation Rule : and
         Composite Representation Rule --> "0..*" Representation Rule : or
 
-```mermaid
+```
 
 ## Complete model
 A complete model showing all classes, attributes, and associations.
