@@ -3,7 +3,10 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Overview Model](#overview-model)
-- [Classes, attributes and associations](#classes,-attributes-and-associations)
+- [Classes, attributes and associations](#classes-attributes-and-associations)
+- [More about Representation Rule](more-about-representation-rule)
+- [Examples](examples)
+- [Links](links)
 
 ## Introduction
 This document proposes a generic approach for how to exchange signatory rights as structured and machine-readable rules within the EU. The Signatory rights model work started in [Nordic Smart Government and Business program](https://nordicsmartgovernment.org/) and has been continued in Nordic Smart Government Network, Data Quality and Sematic Group. The model is based on the [Nordic Core Business Vocabulary](https://tietomallit.suomi.fi/en/model/ncbv?ver=0.0.5). 
@@ -770,7 +773,7 @@ Representation rule: A member of the Board must sign jointly with one of the fol
 | [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.jsonld)    | Role based | json-ld |
 
 
-## Links to modelling tool
+## Links
 
 ### Nordic Signatory Rights
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
