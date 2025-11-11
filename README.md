@@ -291,8 +291,8 @@ Representation rule: A member of the Board must sign jointly with one of the fol
 | **Example**          | Representation rule | Format |
 |---------------------|---------|---------|
 | [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)    | Role based | json |
-| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)    | Role based | turtle |
-| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)    | Role based | json-ld |
+| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.turtle)    | Role based | turtle |
+| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.jsonld)    | Role based | json-ld |
 
 
 ## Links to modelling tool
@@ -315,7 +315,7 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 
 | Prefix       | Namespace | Name |
 |---------------------|---------|-----------------|
-| **ncbv**    | https://iri.suomi.fi/model/ncbv/  |      |
+| **ncbv**    | https://iri.suomi.fi/model/ncbv/  | Nordic Core Business Vocabulary |
 | **skos**     |     http://www.w3.org/2004/02/skos/core#    |  	SKOS Simple Knowledge Organization System |
 | **xsd**   | http://www.w3.org/2001/XMLSchema# | XML Schema Part 2: Datatypes Second Edition |
 
