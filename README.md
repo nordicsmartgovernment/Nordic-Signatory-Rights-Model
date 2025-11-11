@@ -38,7 +38,6 @@ An overview or simplified model, showing the important classes with textual desc
            The legal entity that grants
            the signatory rights.
         }
-        direction TL
 
         class Representation Rule {
            A rule that describes who or which
@@ -131,6 +130,7 @@ A complete model showing all classes, attributes, and associations.
         class Legal Entity ["LegalEntity"] {
            Legal Name : String
         }
+        direction TL
 
         Legal Entity --> "1..1" Signatory Rights:grants mandate
         Legal Entity --> "1..1" Identifier : legal identifier
