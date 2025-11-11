@@ -38,6 +38,7 @@ An overview or simplified model, showing the important classes with textual desc
            The legal entity that grants
            the signatory rights.
         }
+        direction TL
 
         class Representation Rule {
            A rule that describes who or which
