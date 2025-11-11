@@ -3,6 +3,7 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Overview Model](#overview-model)
+- [Classes, attributes and associations](#classes,-attributes-and-associations)
 
 ## Introduction
 This document proposes a generic approach for how to exchange signatory rights as structured and machine-readable rules within the EU. The Signatory rights model work started in [Nordic Smart Government and Business program](https://nordicsmartgovernment.org/) and has been continued in Nordic Smart Government Network, Data Quality and Sematic Group. The model is based on the [Nordic Core Business Vocabulary](https://tietomallit.suomi.fi/en/model/ncbv?ver=0.0.5). 
@@ -151,166 +152,6 @@ A complete model showing all classes, attributes, and associations.
         AgentLegalEntity <|-- Person : is subclass of
         AgentLegalEntity <|-- Legal Entity : is subclass of
 ```
-## More about Representation Rule
-The Representation Rule describe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
-
-### The Representation Rule Class
-If you do not have the opportunity to structure the rule, or it is too complex for this, you can simply use the Representation Rule class and the description property.
-
-__Example:__
-Represetation rule: "Representation by the persons authorised thereto as follows: by any of them jointly with any Board
-member or another person authorised to represent the company"
-
-```
-:Rule a ncvb:RepresentationRule ;
-   ncbv:description "Representation by the persons authorised thereto as follows: by any of them jointly with any Board
-member or another person authorised to represent the company"@en , "Oikeutetut edustavat yhtiötä kukin erikseen yhdessä hallituksen jäsenen tai toisen edustamiseen oikeutetun kanssa"@fi .
-```
-In addition to describing the rule as text, you can also describe the memberships and roles that are included in the rule.
-
-### The Role Based Representation Rule Class
-Some signatory rights are assigned to roles. In addition to the role, it specifies how many role holders are needed for the rule to be fulfilled. If the number of role holders can be quantified, then the property ncbv:minNumbersOfRoleHolders is used, e.g. 1, 2 or 3.
-
-Some rules have a non-numeric quantification of role holders. For example, "__All__ the board members jointly" and "__The majority of__ the board members". We have also included a quantifier "Alone", if if you want to explicitly say that a role holder holds signatory rights alone.
-
-Although the Role Based Representation Rule Class provides the ability to describe a rule in a structured way, one can also use the inherited ncbv:description property to provide a more human-readable description in addition.
-
-
-__Example:__
-Representation rule: "Two board members jointly."
-```
-:Rule1 a ncbv:RoleBasedRepresentationRule ;
-  ncbv:description "Two boards members jointly"@en , "To styremedlemmer i fellesskap"@nb ;
-  ncbv:minNumberOfRoleHolders "2"^^xsd:positiveInteger ;
-  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
-```
-The memberships with the board member roles should be described in addition.
-
-Note: If the board chair is defined as a board member, ncbv:definesValidRole should include this role. This may vary between countries.
-
-__Example:__
-Representation rule: "Managing Director alone."
-```
-:Rule2 a ncbv:RoleBasedRepresentationRule ;
-  ncbv:description "Managing Director alone"@en , "Daglig leder alene"@nb ;
-  ncbv:roleHolderQuantifier <http://ex.org/quantifierType/Alone> ;
-  ncbv:definesValidRole <http://ex.org/roleType/ManagingDirector> .
-```
-
-__Example:__
-Representation rule: "The members of the Board individually."
-```
-:Rule3 a ncvb:RoleBasedRepresentationRule ;
-  ncbv:description "The members of the Board individually."@en , "Styrets medlemmer hver for seg"@nb ;
-  ncbv:minNumberOfRoleHolders "1"^^xsd:positiveInteger ;
-  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
-```
-Note: Here we set ncbv:minNumbersOfRoleHolders to 1, since the board members do not have the signatory rigths alone, but individually.
-
-## The Membership Based Representation Rule
-Sometimes signatory rights are assigned to one or more named persons. These are often assigned a separate signature role in the national business registers.
-
-For such signatory rights provisions, the Membership Representation Rule is used. Instead of pointing to valid Roles, these are linked to valid Memberships. In addition, the minimum number of members required for the rule to be fulfilled is documented. If the number can be specified with a numerical value, the ncbv:minNumberOfMembers property is used. If the rule has non-numeric quantification of the number of members, the ncbv:memberQuantifier is used.
-
-__Example:__
-Membership based representation rule: "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"
-```
-#Memberships
-<http://example.com/membership1> a ncbv:Membership ;
-    ncbv:member <http://example.com/people/johanBerg> ;
-    ncbv:role <http://example.com/role/signatory> .
-
-<http://example.com/membership2> a ncbv:Membership ;
-    ncbv:member <http://example.com/people/linaHansen> ;
-    ncbv:role <http://example.com/role/signatory> .
-
-<http://example.com/membership3> a ncbv:Membership ;
-    ncbv:member <http://example.com/people/amirNiemi> ;
-    ncbv:role <http://example.com/role/signatory> .
-```
-
-```
-#The Membership Based Rule
-:Rule4 a ncbv:MembershipBasedRepresentationRule ;
-  ncbv:description "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"@en , "Signerande var för sig: Johan Berg, Lina Hansen, Amir Niemi"@se ;
-  ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
-  ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
-```
-
-
-## The Composite Representation Rule
-A signatory rights representation rule can also be composed of several other representation rules. Such composite rules can consist of role-based rules and/or membership-based rules. For very complex rules, they can also consist of other composite rules.
-To describe such rules, the ncbv:CompositeRepresentationRule class is used. 
-
-The rules that are included are linked together with either the ncbv:or or ncbv:and property, which represents the logical operators OR and AND. The order of the rules associated with an ncbv:or or ncbv:and property is not important for technical validation purposes. However, if you want to improve readability, you can use nbcv:sequence to specify the order.
-
-__Example:__
-Representation rule: Managing Director alone or two members of the Board jointly. 
-This can be seen as two Role Based Representation Rules linked together with an OR relationship:
-1. Managing Director alone OR 
-2. Two members of the Board jointly.
- 
-```
-#The Composite Representation Rule
-:Rule5 a ncbv:CompositeRepresentationRule ;
-  ncbv:description "Managing Director alone or two members of the Board jointly."@en , "Framkvæmdastjóri einn eða tveir stjórnarmenn saman."@is ;
-  ncbv:or :Rule6 , :Rule7 .
-
-:Rule 6 a ncbv:RoleBasedRepresentationRule ;
-  ncbv:sequence "1"^^xsd:positiveInteger ;
-  ncbv:roleHolderQuantifier <http://ex.org/quantifierType/Alone> ;
-  ncbv:definesValidRole <http://ex.org/roleType/ManagingDirector> .
-
-:Rule7 a ncbv:ncbv:RoleBasedRepresentationRule ;
-  ncbv:sequence "2"^^xsd:positiveInteger ;
-  ncbv:minNumberOfRoleHolders "2"^^xsd:positiveInteger ;
-  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
-
-```
-
-__Example:__
-We can also have combinations of Role Based Representation Rules and Membership Based Representation Rules.
-Representation rule: A member of the Board must sign jointly with one of the following: Johan Berg, Lina Hansen, Amir Niemi.
-
-```
-#The Composite Representation Rule
-:Rule8 a ncbv:CompositeRepresentationRule ;
-  ncbv:description "A member of the Board must sign jointly with one of the following: Johan Berg, Lina Hansen, Amir Niemi."@en ,
- "Et styremedlem må signere sammen med en av følgende: Johan Berg, Lina Hansen, Amir Niemi."@no ;
-  ncbv:and :Rule9 , :Rule10 .
-
-:Rule9 a ncbv:ncbv:RoleBasedRepresentationRule ;
-  ncbv:sequence "1"^^xsd:positiveInteger ;
-  ncbv:minNumberOfRoleHolders "1"^^xsd:positiveInteger ;
-  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
-
-:Rule10 a ncbv:MembershipBasedRepresentationRule ;
-  ncbv:sequence "1"^^xsd:positiveInteger ;
-  ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
-  ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
-
-```
-## Examples
-| **Example**          | Representation rule | Format |
-|---------------------|---------|---------|
-| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)    | Role based | json |
-| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.turtle)    | Role based | turtle |
-| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.jsonld)    | Role based | json-ld |
-
-
-## Links to modelling tool
-
-### Nordic Signatory Rights
-Application profile for signatory rights, defined in collaboration by the Nordic countries.
-Note that this application profile don't show Legal Entity and Person as subclasses to Agent and don't show Membership Based Representation Rule and Role Based Representation Rule as subclasses to Representation Rule. 
-
-[Link to NSIG model](https://iri.suomi.fi/model/ncig/) Needs to be published before it works!
-
-### Nordic Core Business Vocabulary
-The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
-
-[Link to NCBV model](https://iri.suomi.fi/model/ncbv/) Changes done, we need to bublish the latest version!
-
 
 # Classes, attributes and associations
 
@@ -781,6 +622,166 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 | **URI**             | https://iri.suomi.fi/model/ncbv/Role |
 | **Subclass Of**           | skos:Concept |
 | **Requirement Level** | Recommended |
+
+## More about Representation Rule
+The Representation Rule describe who the signatory rights are granted to. Rules about who can represent a legal entity are often given in written form, e.g. "Two board members in common". The subclasses of the Representation Class make it possible to represent this as structured data.
+
+### The Representation Rule Class
+If you do not have the opportunity to structure the rule, or it is too complex for this, you can simply use the Representation Rule class and the description property.
+
+__Example:__
+Represetation rule: "Representation by the persons authorised thereto as follows: by any of them jointly with any Board
+member or another person authorised to represent the company"
+
+```
+:Rule a ncvb:RepresentationRule ;
+   ncbv:description "Representation by the persons authorised thereto as follows: by any of them jointly with any Board
+member or another person authorised to represent the company"@en , "Oikeutetut edustavat yhtiötä kukin erikseen yhdessä hallituksen jäsenen tai toisen edustamiseen oikeutetun kanssa"@fi .
+```
+In addition to describing the rule as text, you can also describe the memberships and roles that are included in the rule.
+
+### The Role Based Representation Rule Class
+Some signatory rights are assigned to roles. In addition to the role, it specifies how many role holders are needed for the rule to be fulfilled. If the number of role holders can be quantified, then the property ncbv:minNumbersOfRoleHolders is used, e.g. 1, 2 or 3.
+
+Some rules have a non-numeric quantification of role holders. For example, "__All__ the board members jointly" and "__The majority of__ the board members". We have also included a quantifier "Alone", if if you want to explicitly say that a role holder holds signatory rights alone.
+
+Although the Role Based Representation Rule Class provides the ability to describe a rule in a structured way, one can also use the inherited ncbv:description property to provide a more human-readable description in addition.
+
+
+__Example:__
+Representation rule: "Two board members jointly."
+```
+:Rule1 a ncbv:RoleBasedRepresentationRule ;
+  ncbv:description "Two boards members jointly"@en , "To styremedlemmer i fellesskap"@nb ;
+  ncbv:minNumberOfRoleHolders "2"^^xsd:positiveInteger ;
+  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
+```
+The memberships with the board member roles should be described in addition.
+
+Note: If the board chair is defined as a board member, ncbv:definesValidRole should include this role. This may vary between countries.
+
+__Example:__
+Representation rule: "Managing Director alone."
+```
+:Rule2 a ncbv:RoleBasedRepresentationRule ;
+  ncbv:description "Managing Director alone"@en , "Daglig leder alene"@nb ;
+  ncbv:roleHolderQuantifier <http://ex.org/quantifierType/Alone> ;
+  ncbv:definesValidRole <http://ex.org/roleType/ManagingDirector> .
+```
+
+__Example:__
+Representation rule: "The members of the Board individually."
+```
+:Rule3 a ncvb:RoleBasedRepresentationRule ;
+  ncbv:description "The members of the Board individually."@en , "Styrets medlemmer hver for seg"@nb ;
+  ncbv:minNumberOfRoleHolders "1"^^xsd:positiveInteger ;
+  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
+```
+Note: Here we set ncbv:minNumbersOfRoleHolders to 1, since the board members do not have the signatory rigths alone, but individually.
+
+## The Membership Based Representation Rule
+Sometimes signatory rights are assigned to one or more named persons. These are often assigned a separate signature role in the national business registers.
+
+For such signatory rights provisions, the Membership Representation Rule is used. Instead of pointing to valid Roles, these are linked to valid Memberships. In addition, the minimum number of members required for the rule to be fulfilled is documented. If the number can be specified with a numerical value, the ncbv:minNumberOfMembers property is used. If the rule has non-numeric quantification of the number of members, the ncbv:memberQuantifier is used.
+
+__Example:__
+Membership based representation rule: "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"
+```
+#Memberships
+<http://example.com/membership1> a ncbv:Membership ;
+    ncbv:member <http://example.com/people/johanBerg> ;
+    ncbv:role <http://example.com/role/signatory> .
+
+<http://example.com/membership2> a ncbv:Membership ;
+    ncbv:member <http://example.com/people/linaHansen> ;
+    ncbv:role <http://example.com/role/signatory> .
+
+<http://example.com/membership3> a ncbv:Membership ;
+    ncbv:member <http://example.com/people/amirNiemi> ;
+    ncbv:role <http://example.com/role/signatory> .
+```
+
+```
+#The Membership Based Rule
+:Rule4 a ncbv:MembershipBasedRepresentationRule ;
+  ncbv:description "Signing individually: Johan Berg, Lina Hansen, Amir Niemi"@en , "Signerande var för sig: Johan Berg, Lina Hansen, Amir Niemi"@se ;
+  ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
+  ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
+```
+
+
+## The Composite Representation Rule
+A signatory rights representation rule can also be composed of several other representation rules. Such composite rules can consist of role-based rules and/or membership-based rules. For very complex rules, they can also consist of other composite rules.
+To describe such rules, the ncbv:CompositeRepresentationRule class is used. 
+
+The rules that are included are linked together with either the ncbv:or or ncbv:and property, which represents the logical operators OR and AND. The order of the rules associated with an ncbv:or or ncbv:and property is not important for technical validation purposes. However, if you want to improve readability, you can use nbcv:sequence to specify the order.
+
+__Example:__
+Representation rule: Managing Director alone or two members of the Board jointly. 
+This can be seen as two Role Based Representation Rules linked together with an OR relationship:
+1. Managing Director alone OR 
+2. Two members of the Board jointly.
+ 
+```
+#The Composite Representation Rule
+:Rule5 a ncbv:CompositeRepresentationRule ;
+  ncbv:description "Managing Director alone or two members of the Board jointly."@en , "Framkvæmdastjóri einn eða tveir stjórnarmenn saman."@is ;
+  ncbv:or :Rule6 , :Rule7 .
+
+:Rule 6 a ncbv:RoleBasedRepresentationRule ;
+  ncbv:sequence "1"^^xsd:positiveInteger ;
+  ncbv:roleHolderQuantifier <http://ex.org/quantifierType/Alone> ;
+  ncbv:definesValidRole <http://ex.org/roleType/ManagingDirector> .
+
+:Rule7 a ncbv:ncbv:RoleBasedRepresentationRule ;
+  ncbv:sequence "2"^^xsd:positiveInteger ;
+  ncbv:minNumberOfRoleHolders "2"^^xsd:positiveInteger ;
+  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
+
+```
+
+__Example:__
+We can also have combinations of Role Based Representation Rules and Membership Based Representation Rules.
+Representation rule: A member of the Board must sign jointly with one of the following: Johan Berg, Lina Hansen, Amir Niemi.
+
+```
+#The Composite Representation Rule
+:Rule8 a ncbv:CompositeRepresentationRule ;
+  ncbv:description "A member of the Board must sign jointly with one of the following: Johan Berg, Lina Hansen, Amir Niemi."@en ,
+ "Et styremedlem må signere sammen med en av følgende: Johan Berg, Lina Hansen, Amir Niemi."@no ;
+  ncbv:and :Rule9 , :Rule10 .
+
+:Rule9 a ncbv:ncbv:RoleBasedRepresentationRule ;
+  ncbv:sequence "1"^^xsd:positiveInteger ;
+  ncbv:minNumberOfRoleHolders "1"^^xsd:positiveInteger ;
+  ncbv:definesValidRole <http://ex.org/roleType/BoardMember> .
+
+:Rule10 a ncbv:MembershipBasedRepresentationRule ;
+  ncbv:sequence "1"^^xsd:positiveInteger ;
+  ncbv:minNumberOfMembers "1"^^xsd:positiveInteger ;
+  ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
+
+```
+## Examples
+| **Example**          | Representation rule | Format |
+|---------------------|---------|---------|
+| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)    | Role based | json |
+| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.turtle)    | Role based | turtle |
+| [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.jsonld)    | Role based | json-ld |
+
+
+## Links to modelling tool
+
+### Nordic Signatory Rights
+Application profile for signatory rights, defined in collaboration by the Nordic countries.
+Note that this application profile don't show Legal Entity and Person as subclasses to Agent and don't show Membership Based Representation Rule and Role Based Representation Rule as subclasses to Representation Rule. 
+
+[Link to NSIG model](https://iri.suomi.fi/model/ncig/) Needs to be published before it works!
+
+### Nordic Core Business Vocabulary
+The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
+
+[Link to NCBV model](https://iri.suomi.fi/model/ncbv/) Changes done, we need to bublish the latest version!
 
 
 
