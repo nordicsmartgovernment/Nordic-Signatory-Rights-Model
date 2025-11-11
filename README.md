@@ -44,6 +44,19 @@ An overview or simplified model, showing the important classes with textual desc
         class AgentLegalEntity["Agent"] {
         }
 
+        class Person {
+           Full Name : String
+        }
+
+        Person --> "1..*" Identifier : identifier
+
+        class Identifier {
+           Date of Issue : Date
+           Notation : String
+           Schema Agency : String
+           Schema Name : String
+        }
+
         class Representation Rule {
            Description : Lang String
            Sequence : Positive Integer
@@ -82,19 +95,6 @@ An overview or simplified model, showing the important classes with textual desc
 
         Membership --> "0..1" Role : role
         Membership --> "0..1" AgentLegalEntity : member
-
-        class Person {
-           Full Name : String
-        }
-
-        Person --> "1..*" Identifier : identifier
-
-        class Identifier {
-           Date of Issue : Date
-           Notation : String
-           Schema Agency : String
-           Schema Name : String
-        }
 
         Representation Rule <|-- Role Based Representation Rule : is subclass of
         Representation Rule <|-- Membership Based Representation Rule : is subclass of
