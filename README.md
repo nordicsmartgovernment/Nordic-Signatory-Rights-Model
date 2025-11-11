@@ -5,7 +5,7 @@
 - [Overview Model](#overview-model)
 - [Classes, attributes and associations](#classes-attributes-and-associations)
 - [More about Representation Rule](more-about-representation-rule)
-- [Examples](examples)
+- [Examples](examples-1)
 - [Links](links)
 
 ## Introduction
@@ -765,7 +765,7 @@ Representation rule: A member of the Board must sign jointly with one of the fol
   ncbv:definesValidMembership <http://example.com/membership1> , <http://example.com/membership2> , <http://example.com/membership3> .
 
 ```
-## Examples
+## Examples 1
 | **Example**          | Representation rule | Format |
 |---------------------|---------|---------|
 | [Signatory rights jointly by two board memebers](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)    | Role based | json |
