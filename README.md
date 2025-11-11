@@ -3,10 +3,11 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Overview Model](#overview-model)
+- [Complete Model](#complete-model)
 - [Classes, attributes and associations](#classes-attributes-and-associations)
-- [More about Representation Rule](more-about-representation-rule)
-- [Examples](examples-1)
-- [Links](links)
+- [More about Representation Rule](#more-about-representation-rule)
+- [Examples](#examples-1)
+- [Links](#links)
 
 ## Introduction
 This document proposes a generic approach for how to exchange signatory rights as structured and machine-readable rules within the EU. The Signatory rights model work started in [Nordic Smart Government and Business program](https://nordicsmartgovernment.org/) and has been continued in Nordic Smart Government Network, Data Quality and Sematic Group. The model is based on the [Nordic Core Business Vocabulary](https://tietomallit.suomi.fi/en/model/ncbv?ver=0.0.5). 
