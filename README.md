@@ -69,6 +69,14 @@ A complete model showing all classes, attributes, and associations.
 ```mermaid
  %%{init:{'flowchart':{'nodeSpacing': 30, 'rankSpacing': 95, 'htmlLabels': false}}}%%
     classDiagram
+        class Legal Entity ["LegalEntity"] {
+           Legal Name : String
+        }
+        direction TL
+
+        Legal Entity --> "1..1" Signatory Rights:grants mandate
+        Legal Entity --> "1..1" Identifier : legal identifier
+
         class Signatory Rights {
             Date of Issue : Date
             Identifier : String
@@ -126,14 +134,6 @@ A complete model showing all classes, attributes, and associations.
         }
 
         Person --> "1..*" Identifier : identifier
-
-        class Legal Entity ["LegalEntity"] {
-           Legal Name : String
-        }
-        direction TL
-
-        Legal Entity --> "1..1" Signatory Rights:grants mandate
-        Legal Entity --> "1..1" Identifier : legal identifier
 
         class Identifier {
            Date of Issue : Date
