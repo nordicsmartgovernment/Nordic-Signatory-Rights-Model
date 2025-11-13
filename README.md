@@ -785,7 +785,7 @@ Note that this application profile don't show Legal Entity and Person as subclas
 ### Nordic Core Business Vocabulary
 The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
 
-[Link to NCBV model](https://iri.suomi.fi/model/ncbv/) Changes done, we need to bublish the latest version!
+[Link to NCBV model version 0.0.6](https://tietomallit.suomi.fi/en/model/ncbv?ver=0.0.6)
 
 
 
