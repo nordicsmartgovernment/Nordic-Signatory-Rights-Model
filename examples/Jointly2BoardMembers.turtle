@@ -1,1 +1,86 @@
-Example here
+@prefix ncbv: <https://iri.suomi.fi/model/ncbv/> .
+@prefix ex: <https://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix nsgrole: <https://raw.githubusercontent.com/nordicsmartgovernment/controlled-vocabularies/refs/heads/main/NordicRoles/NordicRoleVocabulary.ttl> .
+
+#Signatory Rights
+ex:Mandate     a ncbv:Mandate ;
+    ncbv:identifierValue "NSR-2025-00045"^^xsd:string ;
+    ncbv:dateOfIssue "2025-05-10~"^^xsd:date ;
+    ncbv:modified   "2025-10-15"^^xsd:date ;
+    ncbv:status <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
+    ncbv:hasMandator ex:NordicVentures ;
+    ncbv:hasRepresentationRule ex:RepresentationRule .
+
+
+#Mandator
+ex:NordicVentures     a ncbv:LegalEntity ;
+    ncbv:legalName "Nordic Ventures AB" ;
+    ncbv:hasIdentifier  [
+        a ncbv:Identifier ;
+         ncbv:notation "556987-6543" ;
+         ncbv:schemaName "Swedish Organisation Number" ;
+         ncbv:schemaAgency "Bolagsverket" ;
+         ncbv:dateOfIssue    "2010-05-10"
+    ] ;
+    ncbv:hasMembership  ex:Membership1 , ex:ex:Membership2 , ex:Membership3 , ex:ex:Membership4 .
+
+#Membership that applies to role requirements defined by the Representation rule.
+ex:Membership1 a ncbv:Membership ;
+    ncbv:member ex:AnnaKarlsson ;
+       ncbv:role nsgrole:SE_LE .
+
+ex:Membership2 a ncbv:Membership ;
+    ncbv:member ex:BjornNilsson ;
+    ncbv:role nsgrole:SE_LE .
+
+ex:ex:Membership3 a ncbv:Membership ;
+    ncbv:member ex:ClaraEriksson ;
+    ncbv:role nsgrole:SE_LE .
+
+ex:ex:Membership4 a ncbv:Membership ;
+    ncbv:member ex:DavidSjoberg ;
+    ncbv:role nsgrole:SE_LE .
+
+# Persons
+ex:AnnaKarlsson a ncbv:Person ;
+    ncbv:fullName "Anna Karlson" ;
+     ncbv:hasIdentifier [
+      a ncbv:Identifier ;
+      ncbv:notation "19760312-7890" ;
+      ncbv:schemaName "Swedish Personal Identity Number" ;
+      ncbv:schemaAgency "Skatteverket"
+    ] .
+ 
+ ex:BjornNilsson a ncbv:Person ;
+    ncbv:fullName "Björn Nilsson" ;
+     ncbv:hasIdentifier [
+      a ncbv:Identifier ;
+      ncbv:notation "19810405-2345" ;
+      ncbv:schemaName "Swedish Personal Identity Number" ;
+      ncbv:schemaAgency "Skatteverket"
+    ] .
+ 
+ex:ClaraEriksson a ncbv:Person ;
+    ncbv:fullName "Clara Eriksson" ;
+    ncbv:hasIdentifier [
+      a ncbv:Identifier ;
+      ncbv:notation "19791209-1122" ;
+      ncbv:schemaName "Swedish Personal Identity Number" ;
+      ncbv:schemaAgency "Skatteverket"
+    ] .
+    
+ex:DavidSjoberg a ncbv:Person ;
+    ncbv:fullName "David Sjöberg" ;
+    ncbv:hasIdentifier [
+      a ncbv:Identifier ;
+      ncbv:notation "19871022-9988" ;
+      ncbv:schemaName "Swedish Personal Identity Number" ;
+      ncbv:schemaAgency "Skatteverket"
+    ] .
+
+#RepresentationRule
+ex:RepresentationRule a ncbv:RoleBasedRepresentationRule ;
+    ncbv:description "The company is signed jointly by two board members"@en , "Företaget tecknas gemensamt av två styrelseledamöter."@sv ;
+    ncbv:minNumberOfRoleHolders "2"^^xsd:integer ;
+    ncbv:definesValidRole nsgrole:SE_LE . Example here
