@@ -1,1 +1,158 @@
-Example...
+{
+  "@context": {
+    "ncbv": "https://iri.suomi.fi/model/ncbv/",
+    "ex": "https://example.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "nsgrole": "https://raw.githubusercontent.com/nordicsmartgovernment/controlled-vocabularies/refs/heads/main/NordicRoles/NordicRoleVocabulary.ttl#",
+
+    "Mandate": "ncbv:Mandate",
+    "LegalEntity": "ncbv:LegalEntity",
+    "Membership": "ncbv:Membership",
+    "Person": "ncbv:Person",
+    "Identifier": "ncbv:Identifier",
+    "RoleBasedRepresentationRule": "ncbv:RoleBasedRepresentationRule",
+
+    "identifierValue": {
+      "@id": "ncbv:identifierValue",
+      "@type": "xsd:string"
+    },
+    "dateOfIssue": {
+      "@id": "ncbv:dateOfIssue",
+      "@type": "xsd:date"
+    },
+    "modified": {
+      "@id": "ncbv:modified",
+      "@type": "xsd:date"
+    },
+    "status": {"@id": "ncbv:status", "@type": "@id"},
+    "hasMandator": {"@id": "ncbv:hasMandator", "@type": "@id"},
+    "hasRepresentationRule": {"@id": "ncbv:hasRepresentationRule", "@type": "@id"},
+
+    "legalName": "ncbv:legalName",
+    "hasIdentifier": {"@id": "ncbv:hasIdentifier", "@type": "@id"},
+    "notation": "ncbv:notation",
+    "schemaName": "ncbv:schemaName",
+    "schemaAgency": "ncbv:schemaAgency",
+    "hasMembership": {"@id": "ncbv:hasMembership", "@type": "@id"},
+
+    "member": {"@id": "ncbv:member", "@type": "@id"},
+    "role": {"@id": "ncbv:role", "@type": "@id"},
+
+    "fullName": "ncbv:fullName",
+    "description": {"@id": "ncbv:description", "@container": "@language"},
+    "minNumberOfRoleHolders": {
+      "@id": "ncbv:minNumberOfRoleHolders",
+      "@type": "xsd:integer"
+    },
+    "definesValidRole": {"@id": "ncbv:definesValidRole", "@type": "@id"}
+  },
+
+  "@graph": [
+    {
+      "@id": "ex:Mandate",
+      "@type": "Mandate",
+      "identifierValue": "NSR-2025-00045",
+      "dateOfIssue": "2025-05-10",
+      "modified": "2025-10-15",
+      "status": "http://publications.europa.eu/resource/authority/distribution-status/COMPLETED",
+      "hasMandator": "ex:NordicVentures",
+      "hasRepresentationRule": "ex:RepresentationRule"
+    },
+    {
+      "@id": "ex:NordicVentures",
+      "@type": "LegalEntity",
+      "legalName": "Nordic Ventures AB",
+      "hasIdentifier": {
+        "@type": "Identifier",
+        "notation": "556987-6543",
+        "schemaName": "Swedish Organisation Number",
+        "schemaAgency": "Bolagsverket",
+        "dateOfIssue": "2010-05-10"
+      },
+      "hasMembership": [
+        "ex:Membership1",
+        "ex:Membership2",
+        "ex:Membership3",
+        "ex:Membership4"
+      ]
+    },
+    {
+      "@id": "ex:Membership1",
+      "@type": "Membership",
+      "member": "ex:AnnaKarlsson",
+      "role": "nsgrole:SE_LE"
+    },
+    {
+      "@id": "ex:Membership2",
+      "@type": "Membership",
+      "member": "ex:BjornNilsson",
+      "role": "nsgrole:SE_LE"
+    },
+    {
+      "@id": "ex:Membership3",
+      "@type": "Membership",
+      "member": "ex:ClaraEriksson",
+      "role": "nsgrole:SE_LE"
+    },
+    {
+      "@id": "ex:Membership4",
+      "@type": "Membership",
+      "member": "ex:DavidSjoberg",
+      "role": "nsgrole:SE_LE"
+    },
+    {
+      "@id": "ex:AnnaKarlsson",
+      "@type": "Person",
+      "fullName": "Anna Karlson",
+      "hasIdentifier": {
+        "@type": "Identifier",
+        "notation": "19760312-7890",
+        "schemaName": "Swedish Personal Identity Number",
+        "schemaAgency": "Skatteverket"
+      }
+    },
+    {
+      "@id": "ex:BjornNilsson",
+      "@type": "Person",
+      "fullName": "Björn Nilsson",
+      "hasIdentifier": {
+        "@type": "Identifier",
+        "notation": "19810405-2345",
+        "schemaName": "Swedish Personal Identity Number",
+        "schemaAgency": "Skatteverket"
+      }
+    },
+    {
+      "@id": "ex:ClaraEriksson",
+      "@type": "Person",
+      "fullName": "Clara Eriksson",
+      "hasIdentifier": {
+        "@type": "Identifier",
+        "notation": "19791209-1122",
+        "schemaName": "Swedish Personal Identity Number",
+        "schemaAgency": "Skatteverket"
+      }
+    },
+    {
+      "@id": "ex:DavidSjoberg",
+      "@type": "Person",
+      "fullName": "David Sjöberg",
+      "hasIdentifier": {
+        "@type": "Identifier",
+        "notation": "19871022-9988",
+        "schemaName": "Swedish Personal Identity Number",
+        "schemaAgency": "Skatteverket"
+      }
+    },
+    {
+      "@id": "ex:RepresentationRule",
+      "@type": "RoleBasedRepresentationRule",
+      "description": {
+        "en": "The company is signed jointly by two board members",
+        "sv": "Företaget tecknas gemensamt av två styrelseledamöter."
+      },
+      "minNumberOfRoleHolders": 2,
+      "definesValidRole": "nsgrole:SE_LE"
+    }
+  ]
+}
