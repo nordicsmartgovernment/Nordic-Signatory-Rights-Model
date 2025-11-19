@@ -140,6 +140,8 @@ A complete model showing all classes, attributes, and associations.
         class Role {
         }
 
+        Role ..> "1..1" SKOSConcept : has role
+
         class SKOSConcept["skos:Concept"] {
         }
 
