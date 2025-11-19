@@ -789,6 +789,7 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 
 ### Controlled vocabulary
 Sugestions on controlled vocabularies that can be used for roles and quantifier.
+
 [Link to suggested controlled vocabularies](https://nordicsmartgovernment.github.io/controlled-vocabularies/)
 
 
