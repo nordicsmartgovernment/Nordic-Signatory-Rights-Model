@@ -780,7 +780,7 @@ Representation rule: A member of the Board must sign jointly with one of the fol
 Application profile for signatory rights, defined in collaboration by the Nordic countries.
 Note that this application profile don't show Legal Entity and Person as subclasses to Agent and don't show Membership Based Representation Rule and Role Based Representation Rule as subclasses to Representation Rule. 
 
-[Link to NSIG model](https://iri.suomi.fi/model/nsig/) Needs to be published before it works!
+[Link to NSIG model](https://tietomallit.suomi.fi/en/model/nsig?ver=0.0.2). 
 
 ### Nordic Core Business Vocabulary
 The Nordic core business vocabulary, defined in collaboration by the Nordic countries.
