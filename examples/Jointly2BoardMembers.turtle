@@ -1,7 +1,7 @@
 @prefix ncbv: <https://iri.suomi.fi/model/ncbv/> .
 @prefix ex: <https://example.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix nsgrole: <https://raw.githubusercontent.com/nordicsmartgovernment/controlled-vocabularies/refs/heads/main/NordicRoles/NordicRoleVocabulary.ttl> .
+@prefix nsgrole: <https://raw.githubusercontent.com/nordicsmartgovernment/controlled-vocabularies/refs/heads/main/NordicRoles/NordicRoleVocabulary.ttl#> .
 
 #Signatory Rights
 ex:Mandate     a ncbv:Mandate ;
