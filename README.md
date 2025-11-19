@@ -788,6 +788,7 @@ The Nordic core business vocabulary, defined in collaboration by the Nordic coun
 [Link to NCBV model version 0.0.7](https://tietomallit.suomi.fi/en/model/ncbv?ver=0.0.7)
 
 ### Controlled vocabulary
+Sugestions on controlled vocabularies that can be used for roles and quantifier.
 [Link to suggested controlled vocabularies](https://nordicsmartgovernment.github.io/controlled-vocabularies/)
 
 
