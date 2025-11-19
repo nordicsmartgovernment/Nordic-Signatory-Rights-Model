@@ -4,7 +4,7 @@
       "identifierValue": ["NSR-2025-00045"],
       "dateOfIssue": ["2025-05-10"],
       "modified": ["2025-10-15"],
-      "status": ["active"],
+      "status": ["completed"],
       "hasMandator": {
         "legalEntity": {
           "legalName": ["Nordic Ventures AB"],
