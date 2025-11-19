@@ -138,8 +138,6 @@ A complete model showing all classes, attributes, and associations.
         Composite Representation Rule --> "0..*" Representation Rule : or
 
         class Role {
-           Code
-           Name
         }
 
         class SKOSConcept["skos:Concept"] {
