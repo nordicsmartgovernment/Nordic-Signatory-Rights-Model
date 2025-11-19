@@ -83,4 +83,4 @@ ex:DavidSjoberg a ncbv:Person ;
 ex:RepresentationRule a ncbv:RoleBasedRepresentationRule ;
     ncbv:description "The company is signed jointly by two board members"@en , "Företaget tecknas gemensamt av två styrelseledamöter."@sv ;
     ncbv:minNumberOfRoleHolders "2"^^xsd:integer ;
-    ncbv:definesValidRole nsgrole:SE_LE . Example here
+    ncbv:definesValidRole nsgrole:SE_LE .
