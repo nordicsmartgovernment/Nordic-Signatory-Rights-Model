@@ -88,7 +88,7 @@
         "description": "The company is signed jointly by two board members."
         "sequence": "1"
         "type": "RoleBasedRepresentationRule",
-        "minimumNumberOfRoleHolders": "2",
+        "minimumNumberOfRoleHolders": 2,
         "definesValidRole": [
           {
                 "notation": ["SE_LE"],
