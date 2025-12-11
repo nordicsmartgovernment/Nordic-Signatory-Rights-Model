@@ -44,7 +44,7 @@ An overview or simplified model, showing the important classes with textual desc
 
         class Legal Entity {
            The legal entity that grants
-           the signatory rights.
+           the signatory rights. The Mandatee.
         }
 
         class Representation Rule {
