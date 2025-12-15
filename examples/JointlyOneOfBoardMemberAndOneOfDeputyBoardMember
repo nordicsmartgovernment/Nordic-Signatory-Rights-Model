@@ -85,7 +85,8 @@
         }
       },
       "hasRepresentationRule": {
-        "description": "The company is signed jointly by one of the board members and one of the deputy board members."
+        "description": "The company is signed jointly by one of the board members and one of the deputy board members.",
+		"type": "CompositeRepresentationRule",
         "and" [
 		      {
 			      "sequence": "1"
@@ -109,7 +110,7 @@
 			        },
 			      ],
 		      }
-		    ]
+		  ]
       }
     }
   ]
