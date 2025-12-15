@@ -772,6 +772,8 @@ Representation rule: A member of the Board must sign jointly with one of the fol
 | [Signatory rights jointly by two board members](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers)    | Role based | json |
 | [Signatory rights jointly by two board members](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.turtle)    | Role based | turtle |
 | [Signatory rights jointly by two board members](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/Jointly2BoardMembers.jsonld)    | Role based | json-ld |
+| [Signatory rights jointly by one of the board members AND one of the deputy board members](https://github.com/nordicsmartgovernment/Nordic-Signatory-Rights-Model/blob/main/examples/JointlyOneOfBoardMemberAndOneOfDeputyBoardMember)    | Role based | json |
+
 
 
 ## Links
