@@ -1,0 +1,116 @@
+{
+  "signatoryRights": [
+    {
+      "identifierValue": ["NSR-2025-00045"],
+      "dateOfIssue": ["2025-05-10"],
+      "modified": ["2025-10-15"],
+      "status": ["completed"],
+      "hasMandator": {
+        "legalEntity": {
+          "legalName": ["Nordic Ventures AB"],
+          "legalIdentifier": [
+            {
+              "notation": ["556987-6543"],
+              "schemeName": ["Swedish Organisation Number"],
+              "schemaAgency": ["Bolagsverket"],
+              "dateOfIssue": ["2010-05-10"]
+            }
+          ]
+		      "hasMembership": [
+            {
+              "person": {
+                "fullName": ["Anna Karlsson"],
+                "hasIdentifier": [
+                  {
+                    "notation": ["19760312-7890"],
+                    "schemeName": ["Swedish Personal Identity Number"],
+                    "schemaAgency": ["Skatteverket"]
+                  }
+                ]
+              },
+              "role": {
+                "notation": ["SE_LE"],
+                "prefLabel": ["Styrelseledamot"]
+              }
+            },
+            {
+              "person": {
+                "fullName": ["Björn Nilsson"],
+                "hasIdentifier": [
+                  {
+                    "notation": ["19810405-2345"],
+                    "schemeName": ["Swedish Personal Identity Number"],
+                    "schemaAgency": ["Skatteverket"]
+                  }
+                ]
+              },
+              "role": {
+                "notation": ["SE_LE"],
+                "prefLabel": ["Styrelseledamot"]
+              }
+            },
+            {
+              "person": {
+                "fullName": ["Clara Eriksson"],
+                "hasIdentifier": [
+                  {
+                    "notation": ["19791209-1122"],
+                    "schemeName": ["Swedish Personal Identity Number"],
+                    "schemaAgency": ["Skatteverket"]
+                  }
+                ]
+              },
+              "role": {
+                "notation": ["SE_SU"],
+                "prefLabel": ["Styrelsesuppleant"]
+              }
+            },
+            {
+              "person": {
+                "fullName": ["David Sjöberg"],
+                "hasIdentifier": [
+                  {
+                    "notation": ["19871022-9988"],
+                    "schemeName": ["Swedish Personal Identity Number"],
+                    "schemaAgency": ["Skatteverket"]
+                  }
+                ]
+              },
+              "role": {
+                "notation": ["SE_SU"],
+                "prefLabel": ["Styrelsesuppleant"]
+              }
+            }
+		      ]
+        }
+      },
+      "hasRepresentationRule": {
+        "description": "The company is signed jointly by one of the board members and one of the deputy board members."
+        "and" [
+		      {
+			      "sequence": "1"
+			      "type": "RoleBasedRepresentationRule",
+			      "minimumNumberOfRoleHolders": 1,
+			      "definesValidRole": [
+			        {
+				        "notation": ["SE_LE"],
+				        "prefLabel": ["Styrelseledamot"]
+		  	      }
+			      ]   
+		      },
+		      {
+			      "sequence": "2"
+			      "type": "RoleBasedRepresentationRule",
+			      "minimumNumberOfRoleHolders": 1,
+			      "definesValidRole": [
+			        {
+				        "notation": ["SE_SU"],
+				        "prefLabel": ["Styrelsesuppleant"]
+			        },
+			      ],
+		      }
+		    ]
+      }
+    }
+  ]
+}
