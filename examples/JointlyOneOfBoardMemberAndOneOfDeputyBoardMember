@@ -96,7 +96,7 @@
 			        {
 				        "notation": ["SE_LE"],
 				        "prefLabel": ["Styrelseledamot"]
-		  	      }
+		  	        }
 			      ]   
 		      },
 		      {
@@ -107,8 +107,8 @@
 			        {
 				        "notation": ["SE_SU"],
 				        "prefLabel": ["Styrelsesuppleant"]
-			        },
-			      ],
+			        }
+			      ]
 		      }
 		  ]
       }
